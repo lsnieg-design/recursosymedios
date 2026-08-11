@@ -42,5 +42,39 @@
 </main>
 <footer><div>Aprender · crear · transformar</div><small>Recursos y Medios Didácticos · Instituto Miguel Raspanti</small></footer>
 <script src="script.js"></script>
+<script>
+function enviarAlturaAMoodle() {
+
+  const altura = Math.max(
+    document.body.scrollHeight,
+    document.documentElement.scrollHeight
+  );
+
+  window.parent.postMessage(
+    {
+      type: "recursos-medios-height",
+      height: altura
+    },
+    "https://campus.raspanti.website"
+  );
+}
+
+window.addEventListener("load", enviarAlturaAMoodle);
+
+window.addEventListener("resize", enviarAlturaAMoodle);
+
+if (typeof ResizeObserver !== "undefined") {
+
+  const observer = new ResizeObserver(function() {
+    enviarAlturaAMoodle();
+  });
+
+  observer.observe(document.body);
+}
+
+setTimeout(enviarAlturaAMoodle, 300);
+setTimeout(enviarAlturaAMoodle, 1000);
+setTimeout(enviarAlturaAMoodle, 2000);
+</script>
 </body>
 </html>
