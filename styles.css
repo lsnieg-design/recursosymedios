@@ -21,3 +21,47 @@ footer{text-align:center;background:var(--burg2);color:#f2d477;border-top:4px so
 .class-footer-nav{display:flex;justify-content:space-between;gap:12px;margin-top:20px}.class-footer-nav a{background:var(--burg2);color:#fff;padding:12px 16px;border-radius:22px;font-size:12px;font-weight:800}.class-footer-nav a.next{background:var(--teal)}
 @media(max-width:900px){.cards,.unit-2 .cards,.unit-3 .cards{grid-template-columns:repeat(2,1fr)}.welcome{grid-template-columns:1fr}}
 @media(max-width:650px){.hero-inner{padding:38px 22px 32px}.container{padding:20px 14px 35px}.cards,.unit-2 .cards,.unit-3 .cards{grid-template-columns:1fr}.class-wrap{padding:20px 14px 40px}.class-hero{padding:28px 23px}.section-body{padding:18px}.material-card{display:block}.material-btn{display:inline-block;margin-top:14px}.class-footer-nav{display:block}.class-footer-nav a{display:inline-block;margin:4px 0}.slides-frame{aspect-ratio:16/10}}
+
+/* =====================================================
+   BOTÓN CLASE ESCRITA
+   ===================================================== */
+
+.written-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #247d7b;
+    color: #ffffff !important;
+
+    padding: 12px 20px;
+
+    border-radius: 24px;
+
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .3px;
+
+    text-decoration: none !important;
+
+    border: 0;
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        background .18s ease;
+}
+
+.written-button:hover {
+    background: #1d6967;
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 16px rgba(36, 125, 123, .25);
+}
+
+.written-button:active {
+    transform: translateY(0);
+}
