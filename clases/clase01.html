@@ -250,7 +250,7 @@
 
   <div class="section-title">
 
-     <div class="section-icon">
+    <div class="section-icon">
       03
     </div>
 
@@ -289,7 +289,7 @@
 
       <a
         class="written-button"
-       href="https://drive.google.com/file/d/1pPy1sXvKq8fN-ksNG06LQdh2Kq_4w9ed/view?usp=drive_link"
+        href="https://drive.google.com/file/d/1pPy1sXvKq8fN-ksNG06LQdh2Kq_4w9ed/view?usp=drive_link"
         target="_blank"
         rel="noopener"
       >
@@ -339,8 +339,6 @@
     <div class="biblio-list">
 
 
-      <!-- BIBLIOGRAFÍA -->
-
       <div class="biblio-item">
 
         <strong>
@@ -358,6 +356,7 @@
             margin-top:10px;
             color:#8f1010;
             font-weight:800;
+            text-decoration:none;
           "
         >
           ABRIR MATERIAL →
@@ -392,6 +391,7 @@
     ← HOJA DE RUTA
   </a>
 
+
   <a
     id="next-class"
     class="next"
@@ -423,17 +423,21 @@
   </small>
 
 </footer>
-<script>
 
-/* =====================================================
-   CONTROL DE ACCESO Y NAVEGACIÓN
-   CLASE 01
-   ===================================================== */
+
+
+<!-- =====================================================
+     CONTROL DE FECHAS Y NAVEGACIÓN
+     ===================================================== -->
+
+<script>
 
 const numeroClaseActual = 1;
 
 
-/* Fechas oficiales de cursada */
+/*
+  Cronograma oficial de las 12 clases.
+*/
 
 const fechasClases = {
 
@@ -453,22 +457,25 @@ const fechasClases = {
 };
 
 
-/* Fecha actual */
+/*
+  Fecha actual.
+*/
 
 const ahora = new Date();
 
 
-/* Fecha de esta clase */
+/*
+  Fecha de habilitación de esta clase.
+*/
 
-const fechaClaseActual =
-  new Date(
-    fechasClases[numeroClaseActual] +
-    "T00:00:00"
-  );
+const fechaClaseActual = new Date(
+  fechasClases[numeroClaseActual] + "T00:00:00"
+);
+
 
 
 /* =====================================================
-   SI LA CLASE TODAVÍA NO ESTÁ HABILITADA
+   BLOQUEO DE CLASE FUTURA
    ===================================================== */
 
 if (ahora < fechaClaseActual) {
@@ -532,7 +539,11 @@ if (ahora < fechaClaseActual) {
           color:#247d7b;
           font-weight:800;
         ">
-          Se habilita el ${fechasClases[numeroClaseActual].split("-").reverse().join("/")}
+          Se habilita el
+          ${fechasClases[numeroClaseActual]
+            .split("-")
+            .reverse()
+            .join("/")}
         </p>
 
         <a
@@ -561,8 +572,9 @@ if (ahora < fechaClaseActual) {
 }
 
 
+
 /* =====================================================
-   SIGUIENTE CLASE
+   BOTÓN SIGUIENTE CLASE
    ===================================================== */
 
 const siguienteClase =
@@ -594,7 +606,80 @@ if (
 
 }
 
+
+
+/* =====================================================
+   ALTURA PARA MOODLE
+   ===================================================== */
+
+function enviarAlturaAMoodle() {
+
+  const altura = Math.max(
+    document.body.scrollHeight,
+    document.documentElement.scrollHeight
+  );
+
+
+  window.parent.postMessage(
+    {
+      type: "recursos-medios-height",
+      height: altura
+    },
+    "https://campus.raspanti.website"
+  );
+
+}
+
+
+window.addEventListener(
+  "load",
+  enviarAlturaAMoodle
+);
+
+
+window.addEventListener(
+  "resize",
+  enviarAlturaAMoodle
+);
+
+
+if (
+  typeof ResizeObserver !== "undefined"
+) {
+
+  const observer =
+    new ResizeObserver(
+      function() {
+        enviarAlturaAMoodle();
+      }
+    );
+
+  observer.observe(
+    document.body
+  );
+
+}
+
+
+setTimeout(
+  enviarAlturaAMoodle,
+  300
+);
+
+
+setTimeout(
+  enviarAlturaAMoodle,
+  1000
+);
+
+
+setTimeout(
+  enviarAlturaAMoodle,
+  2000
+);
+
 </script>
+
 
 </body>
 
