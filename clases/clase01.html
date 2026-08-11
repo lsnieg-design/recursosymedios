@@ -463,6 +463,20 @@ const fechasClases = {
 
 const ahora = new Date();
 
+/* =====================================================
+   MODO PREVISUALIZACIÓN
+   Para ver clases antes de su fecha de habilitación.
+
+   Usar:
+   ?preview=1
+   ===================================================== */
+
+const parametros =
+  new URLSearchParams(window.location.search);
+
+const modoPreview =
+  parametros.get("preview") === "1";
+
 
 /*
   Fecha de habilitación de esta clase.
@@ -478,7 +492,7 @@ const fechaClaseActual = new Date(
    BLOQUEO DE CLASE FUTURA
    ===================================================== */
 
-if (ahora < fechaClaseActual) {
+if (ahora < fechaClaseActual && !modoPreview) {
 
   document.body.innerHTML = `
 
@@ -597,7 +611,7 @@ if (
     );
 
 
-  if (ahora >= fechaSiguiente) {
+ if (ahora >= fechaSiguiente || modoPreview) {
 
     botonSiguiente.style.display =
       "inline-flex";
