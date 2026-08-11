@@ -65,3 +65,66 @@ footer{text-align:center;background:var(--burg2);color:#f2d477;border-top:4px so
 .written-button:active {
     transform: translateY(0);
 }
+/* =====================================================
+   NUMERACIÓN DE LAS SECCIONES DE LA CLASE
+   ===================================================== */
+
+.s-intro .section-icon {
+    background: #9e1919;
+    color: #ffffff;
+}
+
+.s-slides .section-icon {
+    background: #c58a1b;
+    color: #ffffff;
+}
+
+.s-written .section-icon {
+    background: #247d7b;
+    color: #ffffff;
+}
+
+.s-biblio .section-icon {
+    background: #c58a1b;
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   BOTÓN CLASE ESCRITA
+   ===================================================== */
+
+.written-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #247d7b;
+    color: #ffffff !important;
+
+    padding: 12px 20px;
+    border-radius: 24px;
+
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .3px;
+
+    text-decoration: none !important;
+
+    border: 0;
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        background .18s ease;
+}
+
+.written-button:hover {
+    background: #1d6967;
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 16px rgba(36, 125, 123, .25);
+}
