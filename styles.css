@@ -128,3 +128,38 @@ footer{text-align:center;background:var(--burg2);color:#f2d477;border-top:4px so
 
     box-shadow: 0 7px 16px rgba(36, 125, 123, .25);
 }
+
+/* =====================================================
+   DOCUMENTACIÓN GENERAL DE LA MATERIA
+   ===================================================== */
+
+.unit-nav .general-link {
+  background: #fffdf8;
+  color: #8f1010;
+  border: 2px solid #c58a1b;
+  transition: all .18s ease;
+}
+
+.unit-nav .general-link:hover {
+  background: #c58a1b;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(197,138,27,.22);
+}
+
+.unit-nav .nav-separator {
+  display: inline-block;
+  width: 1px;
+  height: 28px;
+  background: #d8cbb4;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
+@media(max-width:650px) {
+
+  .unit-nav .nav-separator {
+    display: none;
+  }
+
+}
