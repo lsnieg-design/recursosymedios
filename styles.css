@@ -163,3 +163,87 @@ footer{text-align:center;background:var(--burg2);color:#f2d477;border-top:4px so
   }
 
 }
+
+/* =====================================================
+   AJUSTE PARA MOODLE · RESPONSIVE
+   ===================================================== */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+iframe,
+video {
+  max-width: 100%;
+}
+
+.hero,
+.hero-inner,
+.container,
+.class-wrap {
+  max-width: 100%;
+}
+
+.container,
+.class-wrap {
+  width: 100%;
+}
+
+.unit,
+.unit-head,
+.cards,
+.card,
+.welcome,
+.closing {
+  max-width: 100%;
+}
+
+.cards {
+  width: 100%;
+}
+
+.card {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+
+  .container,
+  .class-wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .container,
+  .class-wrap {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .hero-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
