@@ -1,0 +1,1656 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    Enseñar en la Era Digital · Instituto Miguel Raspanti
+  </title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #f7f3eb;
+      color: #444;
+      font-family:
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero {
+
+      background:
+        linear-gradient(
+          135deg,
+          #7a0019 0%,
+          #a32035 100%
+        );
+
+      color: white;
+
+      padding:
+        75px
+        7%
+        80px;
+
+      border-bottom:
+        5px solid #c89b4b;
+    }
+
+
+    .hero-inner {
+
+      max-width: 1150px;
+
+      margin: auto;
+    }
+
+
+    .brand {
+
+      font-family: Georgia, serif;
+
+      font-size: 24px;
+
+      font-weight: bold;
+
+      margin-bottom: 25px;
+    }
+
+
+    .eyebrow {
+
+      font-size: 11px;
+
+      font-weight: 900;
+
+      letter-spacing: 2px;
+
+      color: #f1d58f;
+
+      margin-bottom: 15px;
+    }
+
+
+    .hero h1 {
+
+      font-size:
+        clamp(
+          40px,
+          6vw,
+          72px
+        );
+
+      line-height: .98;
+
+      margin: 0;
+
+      letter-spacing: -2px;
+    }
+
+
+    .hero-subtitle {
+
+      margin-top: 25px;
+
+      max-width: 780px;
+
+      font-size: 20px;
+
+      line-height: 1.55;
+
+      opacity: .93;
+    }
+
+
+    .hero-tag {
+
+      display: inline-block;
+
+      margin-top: 25px;
+
+      padding: 9px 16px;
+
+      border:
+        1px solid
+        rgba(255,255,255,.4);
+
+      border-radius: 30px;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
+    }
+
+
+
+    /* =====================================================
+       CONTENEDOR
+       ===================================================== */
+
+    .container {
+
+      width: 100%;
+
+      max-width: 1100px;
+
+      margin:
+        -35px
+        auto
+        70px;
+
+      padding:
+        0 20px;
+    }
+
+
+
+    /* =====================================================
+       BIENVENIDA
+       ===================================================== */
+
+    .welcome {
+
+      background: white;
+
+      border-radius: 20px;
+
+      padding: 35px 40px;
+
+      box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.08);
+
+      margin-bottom: 30px;
+
+      display: grid;
+
+      grid-template-columns:
+        1.4fr
+        .6fr;
+
+      gap: 30px;
+
+      align-items: center;
+    }
+
+
+    .kicker {
+
+      color: #7a0019;
+
+      font-size: 11px;
+
+      font-weight: 900;
+
+      letter-spacing: 1.7px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 8px;
+    }
+
+
+    .welcome h2 {
+
+      margin: 0 0 10px;
+
+      color: #7a0019;
+
+      font-size: 30px;
+    }
+
+
+    .welcome p {
+
+      margin: 0;
+
+      line-height: 1.65;
+
+      font-size: 15px;
+    }
+
+
+    .progress-box {
+
+      background: #f8f4ec;
+
+      border-radius: 15px;
+
+      padding: 20px;
+    }
+
+
+    .progress-title {
+
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      align-items: center;
+
+      margin-bottom: 10px;
+
+      color: #7a0019;
+
+      font-size: 13px;
+
+      font-weight: 800;
+    }
+
+
+    .progress-track {
+
+      width: 100%;
+
+      height: 10px;
+
+      background: #e6dccb;
+
+      border-radius: 20px;
+
+      overflow: hidden;
+    }
+
+
+    #progress-bar {
+
+      width: 0%;
+
+      height: 100%;
+
+      background:
+        linear-gradient(
+          90deg,
+          #7a0019,
+          #c89b4b
+        );
+
+      transition:
+        width .5s ease;
+    }
+
+
+
+    /* =====================================================
+       ACCESOS
+       ===================================================== */
+
+    .quick-links {
+
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin:
+        0 0
+        35px;
+    }
+
+
+    .quick-link {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      padding:
+        11px
+        18px;
+
+      border:
+        1px solid
+        #d9c8a7;
+
+      background: white;
+
+      color: #7a0019;
+
+      border-radius: 30px;
+
+      font-size: 12px;
+
+      font-weight: 900;
+
+      transition: .2s ease;
+    }
+
+
+    .quick-link:hover {
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 5px 15px
+        rgba(0,0,0,.08);
+    }
+
+
+
+    /* =====================================================
+       PRESENTACIÓN
+       ===================================================== */
+
+    .intro-block {
+
+      background: white;
+
+      border-radius: 20px;
+
+      padding: 40px;
+
+      margin-bottom: 40px;
+
+      box-shadow:
+        0 5px 20px
+        rgba(0,0,0,.05);
+    }
+
+
+    .intro-block h2 {
+
+      margin:
+        0 0
+        15px;
+
+      color: #7a0019;
+
+      font-size: 29px;
+    }
+
+
+    .intro-block p {
+
+      max-width: 850px;
+
+      font-size: 16px;
+
+      line-height: 1.75;
+
+      margin:
+        0 0
+        15px;
+    }
+
+
+    .quote {
+
+      margin-top: 25px;
+
+      padding:
+        20px
+        25px;
+
+      border-left:
+        5px solid
+        #c89b4b;
+
+      background: #fdf2e9;
+
+      color: #765d35;
+
+      border-radius: 8px;
+
+      font-style: italic;
+
+      line-height: 1.6;
+    }
+
+
+
+    /* =====================================================
+       RECORRIDO
+       ===================================================== */
+
+    .section-heading {
+
+      margin-bottom: 20px;
+    }
+
+
+    .section-heading h2 {
+
+      margin: 0;
+
+      color: #7a0019;
+
+      font-size: 32px;
+    }
+
+
+    .section-heading p {
+
+      margin:
+        7px 0
+        0;
+
+      color: #666;
+
+      line-height: 1.5;
+    }
+
+
+
+    /* =====================================================
+       CLASES
+       ===================================================== */
+
+    .classes {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          1fr
+        );
+
+      gap: 16px;
+
+      margin-bottom: 45px;
+    }
+
+
+    .class-card {
+
+      background: white;
+
+      border:
+        1px solid
+        #e4d9c8;
+
+      border-radius: 17px;
+
+      padding: 22px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+    }
+
+
+    .class-card:hover {
+
+      transform:
+        translateY(-3px);
+
+      box-shadow:
+        0 10px 25px
+        rgba(0,0,0,.08);
+    }
+
+
+    .class-card::before {
+
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      top: 0;
+
+      width: 100%;
+
+      height: 4px;
+
+      background: #7a0019;
+    }
+
+
+    .class-number {
+
+      display: inline-flex;
+
+      width: 43px;
+
+      height: 43px;
+
+      align-items: center;
+
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #7a0019;
+
+      color: white;
+
+      font-size: 13px;
+
+      font-weight: 900;
+
+      margin-bottom: 15px;
+    }
+
+
+    .class-card:nth-child(even)
+    .class-number {
+
+      background: #c89b4b;
+    }
+
+
+    .class-card h3 {
+
+      margin:
+        0 0
+        8px;
+
+      color: #7a0019;
+
+      font-size: 20px;
+    }
+
+
+    .class-card p {
+
+      margin: 0 0 17px;
+
+      font-size: 14px;
+
+      line-height: 1.6;
+
+      color: #666;
+    }
+
+
+    .class-content {
+
+      padding-top: 14px;
+
+      border-top:
+        1px solid
+        #eee6da;
+
+      font-size: 12px;
+
+      color: #777;
+
+      line-height: 1.5;
+    }
+
+
+    .enter-class {
+
+      display: inline-block;
+
+      margin-top: 16px;
+
+      padding:
+        10px
+        17px;
+
+      background: #7a0019;
+
+      color: white;
+
+      border-radius: 8px;
+
+      font-size: 11px;
+
+      font-weight: 900;
+
+      transition: .2s ease;
+    }
+
+
+    .enter-class:hover {
+
+      background: #5f0014;
+    }
+
+
+
+    /* =====================================================
+       EVALUACIÓN
+       ===================================================== */
+
+    .final-block {
+
+      background:
+        linear-gradient(
+          135deg,
+          #7a0019,
+          #a32035
+        );
+
+      color: white;
+
+      border-radius: 22px;
+
+      padding:
+        45px
+        40px;
+
+      margin-top: 20px;
+
+      margin-bottom: 45px;
+    }
+
+
+    .final-block .kicker {
+
+      color: #f1d58f;
+    }
+
+
+    .final-block h2 {
+
+      margin:
+        0 0
+        15px;
+
+      font-size: 30px;
+    }
+
+
+    .final-block p {
+
+      max-width: 800px;
+
+      line-height: 1.7;
+
+      margin-bottom: 10px;
+    }
+
+
+    .final-list {
+
+      margin-top: 25px;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          1fr
+        );
+
+      gap: 12px;
+    }
+
+
+    .final-item {
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          .1
+        );
+
+      border:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          .2
+        );
+
+      border-radius: 12px;
+
+      padding: 18px;
+
+      font-size: 13px;
+
+      line-height: 1.5;
+    }
+
+
+
+    /* =====================================================
+       CIERRE
+       ===================================================== */
+
+    .closing {
+
+      text-align: center;
+
+      padding:
+        20px
+        10px;
+    }
+
+
+    .closing h2 {
+
+      color: #7a0019;
+
+      margin:
+        0 0
+        10px;
+    }
+
+
+    .closing p {
+
+      color: #777;
+
+      margin: 0;
+
+      line-height: 1.6;
+    }
+
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    footer {
+
+      background: #292929;
+
+      color: white;
+
+      text-align: center;
+
+      padding:
+        30px
+        20px;
+
+      border-top:
+        4px solid
+        #c89b4b;
+    }
+
+
+    footer div {
+
+      font-weight: 700;
+
+      margin-bottom: 5px;
+    }
+
+
+    footer small {
+
+      opacity: .7;
+    }
+
+
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+
+    @media(max-width:800px) {
+
+      .hero {
+
+        padding:
+          55px
+          25px
+          65px;
+      }
+
+
+      .welcome {
+
+        grid-template-columns: 1fr;
+
+        padding: 28px;
+      }
+
+
+      .classes {
+
+        grid-template-columns: 1fr;
+      }
+
+
+      .final-list {
+
+        grid-template-columns: 1fr;
+      }
+
+
+      .intro-block {
+
+        padding: 28px;
+      }
+
+
+      .final-block {
+
+        padding: 30px 25px;
+      }
+
+    }
+
+
+    @media(max-width:500px) {
+
+      .container {
+
+        padding:
+          0 12px;
+      }
+
+
+      .hero h1 {
+
+        font-size: 40px;
+      }
+
+
+      .hero-subtitle {
+
+        font-size: 17px;
+      }
+
+
+      .welcome h2 {
+
+        font-size: 25px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<header class="hero">
+
+  <div class="hero-inner">
+
+    <div class="brand">
+      RASPANTI
+    </div>
+
+    <div class="eyebrow">
+      INSTITUTO MIGUEL RASPANTI · FORMACIÓN DOCENTE
+    </div>
+
+    <h1>
+      Enseñar en<br>
+      la Era Digital
+    </h1>
+
+    <p class="hero-subtitle">
+      De la pantalla al vínculo.
+      Un recorrido para pensar la enseñanza
+      bimodal y virtual con sentido pedagógico.
+    </p>
+
+    <div class="hero-tag">
+      8 CLASES · MODALIDAD VIRTUAL
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<main class="container">
+
+
+  <!-- ===================================================
+       BIENVENIDA
+       =================================================== -->
+
+  <section class="welcome">
+
+    <div>
+
+      <div class="kicker">
+        BIENVENIDAS Y BIENVENIDOS
+      </div>
+
+      <h2>
+        Este es nuestro recorrido
+      </h2>
+
+      <p>
+        La propuesta parte de una pregunta sencilla:
+        ¿cómo enseñamos cuando la pantalla también es
+        parte del aula?
+      </p>
+
+      <p style="margin-top:10px;">
+        Vamos a recorrer distintas dimensiones de la
+        enseñanza digital para pasar del uso de herramientas
+        a la construcción de experiencias de aprendizaje.
+      </p>
+
+    </div>
+
+
+    <div class="progress-box">
+
+      <div class="progress-title">
+
+        <span>
+          TU RECORRIDO
+        </span>
+
+        <span id="progress-number">
+          0 / 8
+        </span>
+
+      </div>
+
+      <div class="progress-track">
+
+        <div id="progress-bar"></div>
+
+      </div>
+
+      <div
+        id="progress-text"
+        style="font-size:11px;color:#777;margin-top:10px;"
+      >
+        Explorá las clases para comenzar.
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ===================================================
+       ACCESOS
+       =================================================== -->
+
+  <nav class="quick-links">
+
+    <a
+      class="quick-link"
+      href="programa.html"
+    >
+      📄 PROGRAMA
+    </a>
+
+    <a
+      class="quick-link"
+      href="hoja-de-ruta.html"
+    >
+      🗺️ HOJA DE RUTA
+    </a>
+
+    <a
+      class="quick-link"
+      href="presentacion-docente.html"
+    >
+      👩‍🏫 PRESENTACIÓN DOCENTE
+    </a>
+
+  </nav>
+
+
+
+  <!-- ===================================================
+       INTRODUCCIÓN
+       =================================================== -->
+
+  <section class="intro-block">
+
+    <div class="kicker">
+      ANTES DE EMPEZAR
+    </div>
+
+    <h2>
+      De la pantalla al vínculo
+    </h2>
+
+    <p>
+      La enseñanza en el nivel superior atraviesa un cambio
+      de paradigma: presencialidad y virtualidad ya no tienen
+      por qué pensarse como compartimentos separados.
+    </p>
+
+    <p>
+      En este curso vamos a trabajar sobre la mediación
+      pedagógica, el diseño del aula virtual, la planificación
+      combinada, la interacción sincrónica, la gamificación,
+      la inteligencia artificial, la evaluación y el feedback.
+    </p>
+
+    <div class="quote">
+      La tecnología no es un fin en sí mismo.
+      Es un medio para garantizar el derecho a la educación,
+      la continuidad pedagógica y la inclusión.
+    </div>
+
+  </section>
+
+
+
+  <!-- ===================================================
+       RECORRIDO
+       =================================================== -->
+
+  <section>
+
+    <div class="section-heading">
+
+      <div class="kicker">
+        EL RECORRIDO
+      </div>
+
+      <h2>
+        8 estaciones para transformar la enseñanza
+      </h2>
+
+      <p>
+        Cada clase abre una pregunta y propone herramientas
+        para pensar y construir una práctica docente diferente.
+      </p>
+
+    </div>
+
+
+
+    <div class="classes">
+
+
+      <!-- CLASE 1 -->
+
+      <article class="class-card">
+
+        <div class="class-number">
+          01
+        </div>
+
+        <h3>
+          Identidad Docente
+        </h3>
+
+        <p>
+          De la transmisión a la mediación.
+          El docente curador y la hospitalidad en red.
+        </p>
+
+        <div class="class-content">
+          <strong>
+            Eje 1
+          </strong>
+          · Identidad digital docente,
+          tutoría, acompañamiento y curaduría
+          de contenidos.
+        </div>
+
+        <a
+          class="enter-class"
+          href="clases/clase01.html"
+        >
+          ENTRAR A LA CLASE →
+        </a>
+
+      </article>
+
+
+
+      <!-- CLASE 2 -->
+
+      <article class="class-card">
+
+        <div class="class-number">
+          02
+        </div>
+
+        <h3>
+          Planificación Combinada
+        </h3>
+
+        <p>
+          Aula Invertida y gestión de la ecología
+          del tiempo entre asincronía y sincronía.
+        </p>
+
+        <div class="class-content">
+          <strong>
+            Eje 2
+          </strong>
+          · Flipped Classroom,
+          hojas de ruta y secuenciación
+          didáctica en la bimodalidad.
+        </div>
+
+        <a
+          class="enter-class"
+          href="clases/clase02.html"
+        >
+          ENTRAR A LA CLASE →
+        </a>
+
+      </article>
+
+
+
+      <!-- CLASE 3 -->
+
+      <article class="class-card">
+
+        <div class="class-number">
+          03
+        </div>
+
+        <h3>
+          Arquitectura Digital
+        </h3>
+
+        <p>
+          El aula virtual como espacio habitable,
+          navegable y claro.
+        </p>
+
+        <div class="class-content">
+          <strong>
+            Eje 3
+          </strong>
+          · Anatomía del aula virtual,
+          cinco momentos de la clase y
+          organización visual.
+        </div>
+
+        <a
+          class="enter-class"
+          href="clases/clase03.html"
+        >
+          ENTRAR A LA CLASE →
+        </a>
+
+      </article>
+
+
+
+      <!-- CLASE 4 -->
+
+      <article class="class-card">
+
+        <div class="class-number">
+          04
+        </div>
+
+        <h3>
+          Sincronía Dinámica
+        </h3>
+
+        <p>
+          El encuentro sincrónico como espacio
+          de intercambio, energía y síntesis.
+        </p>
+
+        <div class="class-content">
+          <strong>
+            Eje 4
+          </strong>
+          · Interacción en tiempo real,
+          participación, cámara y chat
+          como herramientas pedagógicas.
+        </div>
+
+        <a
+          class="enter-class"
+          href="clases/clase04.html"
+        >
+          ENTRAR A LA CLASE →
+        </a>
+
+      </article>
+
+
+
+      <!-- CLASE 5 -->
+
+      <article class="class-card">
+
+        <div class="class-number">
+          05
+        </div>
+
+        <h3>
+          Gamificación
+        </h3>
+
+        <p>
+          El juego como motor de búsqueda,
+          desafío y recuperación de saberes.
+        </p>
+
+        <div class="class-content">
+          <strong>
+            Eje 5
+          </strong>
+          · Puntos, niveles, misiones,
+          salas de escape, trivias y
+          aprendizaje a través del desafío.
+        </div>
+
+        <a
+          class="enter-class"
+          href="clases/clase05.html"
+        >
+          ENTRAR A LA CLASE →
+        </a>
+
+      </article>
+
+
+
+      <!-- CLASE 6 -->
+
+      <article class="class-card">
+
+        <div class="class-number">
+          06
+        </div>
+
+        <h3>
+          IA en Educación
+        </h3>
+
+        <p>
+          La inteligencia artificial como
+          copiloto pedagógico.
+        </p>
+
+        <div class="class-content">
+          <strong>
+            Eje 6
+          </strong>
+          · Ética, responsabilidad,
+          prompts y creación de recursos
+          didácticos con IA.
+        </div>
+
+        <a
+          class="enter-class"
+          href="clases/clase06.html"
+        >
+          ENTRAR A LA CLASE →
+        </a>
+
+      </article>
+
+
+
+      <!-- CLASE 7 -->
+
+      <article class="class-card">
+
+        <div class="class-number">
+          07
+        </div>
+
+        <h3>
+          Rúbricas de Evaluación
+        </h3>
+
+        <p>
+          Evaluación auténtica, criterios claros
+          y transparencia pedagógica.
+        </p>
+
+        <div class="class-content">
+          <strong>
+            Eje 7
+          </strong>
+          · Rúbricas analíticas y holísticas,
+          coevaluación y autoevaluación digital.
+        </div>
+
+        <a
+          class="enter-class"
+          href="clases/clase07.html"
+        >
+          ENTRAR A LA CLASE →
+        </a>
+
+      </article>
+
+
+
+      <!-- CLASE 8 -->
+
+      <article class="class-card">
+
+        <div class="class-number">
+          08
+        </div>
+
+        <h3>
+          Vínculo y Feedback
+        </h3>
+
+        <p>
+          La retroalimentación como forma de
+          acompañar, sostener y cerrar.
+        </p>
+
+        <div class="class-content">
+          <strong>
+            Eje 8
+          </strong>
+          · Feedback narrativo y cualitativo,
+          herramientas de audio y video
+          y cierre del ciclo.
+        </div>
+
+        <a
+          class="enter-class"
+          href="clases/clase08.html"
+        >
+          ENTRAR A LA CLASE →
+        </a>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ===================================================
+       EVALUACIÓN FINAL
+       =================================================== -->
+
+  <section class="final-block">
+
+    <div class="kicker">
+      ACREDITACIÓN
+    </div>
+
+    <h2>
+      El recorrido termina en una producción propia
+    </h2>
+
+    <p>
+      La evaluación será procesual y estará basada
+      en una producción auténtica.
+    </p>
+
+    <p>
+      La propuesta final consiste en el armado real
+      de una unidad didáctica en un aula virtual,
+      recuperando lo trabajado durante las 8 clases.
+    </p>
+
+
+    <div class="final-list">
+
+      <div class="final-item">
+        🗺️
+        <br>
+        <strong>
+          Hoja de ruta
+        </strong>
+        <br>
+        Un recorrido claro para tus estudiantes.
+      </div>
+
+      <div class="final-item">
+        🎮
+        <br>
+        <strong>
+          Recurso gamificado
+        </strong>
+        <br>
+        Una experiencia que invite a participar.
+      </div>
+
+      <div class="final-item">
+        📊
+        <br>
+        <strong>
+          Rúbrica de evaluación
+        </strong>
+        <br>
+        Criterios claros y transparentes.
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ===================================================
+       CIERRE
+       =================================================== -->
+
+  <section class="closing">
+
+    <h2>
+      Enseñar en la Era Digital
+    </h2>
+
+    <p>
+      No se trata solamente de aprender a usar herramientas.
+      Se trata de diseñar mejores condiciones para enseñar,
+      aprender y encontrarnos.
+    </p>
+
+  </section>
+
+
+</main>
+
+
+
+<footer>
+
+  <div>
+    Aprender · diseñar · acompañar · transformar
+  </div>
+
+  <small>
+    Enseñar en la Era Digital · Instituto Miguel Raspanti
+  </small>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT · PROGRESO
+     ===================================================== -->
+
+<script>
+
+(function() {
+
+  const total = 8;
+
+  const visitadas =
+    JSON.parse(
+      localStorage.getItem(
+        "eraDigitalClases"
+      ) || "[]"
+    );
+
+  function actualizar() {
+
+    const cantidad =
+      visitadas.length;
+
+    const porcentaje =
+      (cantidad / total) * 100;
+
+    const barra =
+      document.getElementById(
+        "progress-bar"
+      );
+
+    const numero =
+      document.getElementById(
+        "progress-number"
+      );
+
+    const texto =
+      document.getElementById(
+        "progress-text"
+      );
+
+    if (barra) {
+
+      barra.style.width =
+        porcentaje + "%";
+
+    }
+
+    if (numero) {
+
+      numero.textContent =
+        cantidad + " / " + total;
+
+    }
+
+    if (texto) {
+
+      if (cantidad === 0) {
+
+        texto.textContent =
+          "Explorá las clases para comenzar.";
+
+      } else if (cantidad === total) {
+
+        texto.textContent =
+          "¡Recorrido completo! Ahora es momento de producir.";
+
+      } else {
+
+        texto.textContent =
+          "Ya recorriste " +
+          cantidad +
+          " de las 8 clases.";
+
+      }
+
+    }
+
+  }
+
+
+  actualizar();
+
+
+  document
+    .querySelectorAll(
+      ".enter-class"
+    )
+    .forEach(
+      function(link) {
+
+        link.addEventListener(
+          "click",
+          function() {
+
+            const href =
+              link.getAttribute(
+                "href"
+              );
+
+            const match =
+              href.match(
+                /clase(\d+)\.html/
+              );
+
+            if (!match) {
+              return;
+            }
+
+            const numero =
+              parseInt(
+                match[1],
+                10
+              );
+
+            if (
+              !visitadas.includes(
+                numero
+              )
+            ) {
+
+              visitadas.push(
+                numero
+              );
+
+              visitadas.sort(
+                function(a,b) {
+                  return a - b;
+                }
+              );
+
+              localStorage.setItem(
+                "eraDigitalClases",
+                JSON.stringify(
+                  visitadas
+                )
+              );
+
+            }
+
+          }
+        );
+
+      }
+    );
+
+})();
+
+</script>
+
+
+</body>
+
+</html>
