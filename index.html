@@ -1,113 +1,1689 @@
 <!doctype html>
 <html lang="es">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Recursos y Medios Didácticos · Raspanti</title>
-<link rel="stylesheet" href="styles.css">
+
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <title>
+    Recursos y Medios Didácticos · Raspanti
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+
+  <!-- =====================================================
+       AJUSTES ESPECÍFICOS DE LA NUEVA PORTADA
+       ===================================================== -->
+
+  <style>
+
+    /* -----------------------------------------------------
+       BASE
+       ----------------------------------------------------- */
+
+    html,
+    body {
+      width:100%;
+      max-width:100%;
+      overflow-x:hidden;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing:border-box;
+    }
+
+
+    /* -----------------------------------------------------
+       PORTADA
+       ----------------------------------------------------- */
+
+    .home-container {
+      width:100%;
+      max-width:1180px;
+      margin:0 auto;
+      padding:30px 24px 60px;
+    }
+
+
+    /* -----------------------------------------------------
+       ACCESOS
+       ----------------------------------------------------- */
+
+    .document-links {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      margin:0 0 28px;
+    }
+
+    .document-links a {
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+
+      padding:10px 17px;
+
+      border:1px solid #d29a1a;
+      border-radius:30px;
+
+      background:#fffdf8;
+
+      color:#8f1010;
+      text-decoration:none;
+
+      font-size:12px;
+      font-weight:800;
+
+      transition:
+        transform .2s ease,
+        background .2s ease;
+    }
+
+    .document-links a:hover {
+      background:#f7edda;
+      transform:translateY(-2px);
+    }
+
+
+    /* -----------------------------------------------------
+       DESTACADO · CLASE ACTUAL
+       ----------------------------------------------------- */
+
+    .featured-class {
+      position:relative;
+
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:30px;
+      align-items:center;
+
+      margin-bottom:32px;
+      padding:30px 34px;
+
+      border-radius:22px;
+
+      background:#fffdf8;
+
+      border:1px solid #e1d5bd;
+
+      border-left:7px solid #8f1010;
+
+      box-shadow:
+        0 10px 28px rgba(70,45,20,.07);
+    }
+
+
+    .featured-kicker {
+      margin-bottom:8px;
+
+      color:#c98d12;
+
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+    }
+
+
+    .featured-class h2 {
+      margin:0 0 7px;
+
+      color:#8f1010;
+
+      font-size:30px;
+      line-height:1.1;
+    }
+
+
+    .featured-class .featured-unit {
+      margin:0 0 13px;
+
+      color:#247d7b;
+
+      font-size:13px;
+      font-weight:800;
+    }
+
+
+    .featured-class .featured-desc {
+      max-width:760px;
+
+      margin:0;
+
+      color:#5e584f;
+
+      font-size:14px;
+      line-height:1.55;
+    }
+
+
+    .featured-date {
+      margin-top:12px;
+
+      color:#777064;
+
+      font-size:12px;
+      font-weight:700;
+    }
+
+
+    .featured-button {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+
+      min-width:190px;
+
+      padding:14px 22px;
+
+      border-radius:30px;
+
+      background:#8f1010;
+      color:#fff;
+
+      text-decoration:none;
+
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.2px;
+
+      transition:
+        transform .2s ease,
+        background .2s ease;
+    }
+
+
+    .featured-button:hover {
+      background:#751010;
+      transform:translateY(-2px);
+    }
+
+
+    /* -----------------------------------------------------
+       PROGRESO
+       ----------------------------------------------------- */
+
+    .progress-mini {
+      display:flex;
+      align-items:center;
+      gap:15px;
+
+      margin-bottom:34px;
+
+      padding:16px 20px;
+
+      border-radius:15px;
+
+      background:#f4eee2;
+    }
+
+
+    .progress-info {
+      min-width:145px;
+    }
+
+
+    .progress-info strong {
+      display:block;
+
+      color:#8f1010;
+
+      font-size:12px;
+      font-weight:900;
+    }
+
+
+    .progress-info span {
+      display:block;
+
+      margin-top:3px;
+
+      color:#777064;
+
+      font-size:11px;
+    }
+
+
+    .progress-track-home {
+      flex:1;
+
+      height:9px;
+
+      overflow:hidden;
+
+      border-radius:20px;
+
+      background:#ddd3c0;
+    }
+
+
+    .progress-fill-home {
+      width:0;
+      height:100%;
+
+      border-radius:20px;
+
+      background:#c98d12;
+
+      transition:width .5s ease;
+    }
+
+
+    /* -----------------------------------------------------
+       TÍTULO DE RECORRIDO
+       ----------------------------------------------------- */
+
+    .route-heading {
+      margin:0 0 18px;
+    }
+
+
+    .route-heading .kicker {
+      margin-bottom:5px;
+
+      color:#c98d12;
+
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+    }
+
+
+    .route-heading h2 {
+      margin:0;
+
+      color:#8f1010;
+
+      font-size:27px;
+    }
+
+
+    .route-heading p {
+      margin:6px 0 0;
+
+      color:#6e675c;
+
+      font-size:13px;
+    }
+
+
+    /* -----------------------------------------------------
+       UNIDADES DESPLEGABLES
+       ----------------------------------------------------- */
+
+    .units-list {
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+
+    .unit-dropdown {
+      overflow:hidden;
+
+      border:1px solid #ded2bd;
+      border-radius:18px;
+
+      background:#fffdf8;
+
+      box-shadow:
+        0 5px 15px rgba(70,45,20,.04);
+
+      transition:
+        box-shadow .2s ease;
+    }
+
+
+    .unit-dropdown[open] {
+      box-shadow:
+        0 10px 25px rgba(70,45,20,.08);
+    }
+
+
+    .unit-summary {
+      display:grid;
+      grid-template-columns:80px 1fr auto;
+      gap:18px;
+      align-items:center;
+
+      min-height:90px;
+
+      padding:17px 22px;
+
+      cursor:pointer;
+
+      list-style:none;
+    }
+
+
+    .unit-summary::-webkit-details-marker {
+      display:none;
+    }
+
+
+    .unit-summary::marker {
+      display:none;
+    }
+
+
+    .unit-number {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      width:58px;
+      height:58px;
+
+      border-radius:14px;
+
+      color:#fff;
+
+      font-size:12px;
+      font-weight:900;
+      text-align:center;
+    }
+
+
+    .unit-1 .unit-number {
+      background:#a91414;
+    }
+
+
+    .unit-2 .unit-number {
+      background:#c98d12;
+    }
+
+
+    .unit-3 .unit-number {
+      background:#247d7b;
+    }
+
+
+    .unit-summary h3 {
+      margin:0 0 4px;
+
+      color:#8f1010;
+
+      font-size:19px;
+      line-height:1.15;
+    }
+
+
+    .unit-2 .unit-summary h3 {
+      color:#a36e08;
+    }
+
+
+    .unit-3 .unit-summary h3 {
+      color:#247d7b;
+    }
+
+
+    .unit-summary p {
+      margin:0;
+
+      color:#777064;
+
+      font-size:12px;
+    }
+
+
+    .unit-toggle {
+      display:flex;
+      align-items:center;
+      gap:7px;
+
+      color:#8f1010;
+
+      font-size:11px;
+      font-weight:900;
+      white-space:nowrap;
+    }
+
+
+    .unit-toggle::after {
+      content:"+";
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      width:27px;
+      height:27px;
+
+      border-radius:50%;
+
+      background:#f2eadb;
+
+      font-size:18px;
+      line-height:1;
+    }
+
+
+    .unit-dropdown[open]
+    .unit-toggle::after {
+      content:"−";
+    }
+
+
+    /* -----------------------------------------------------
+       CONTENIDO DE LA UNIDAD
+       ----------------------------------------------------- */
+
+    .unit-content {
+      padding:0 20px 20px;
+
+      border-top:1px solid #eadfce;
+    }
+
+
+    .class-grid-home {
+      display:grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap:12px;
+
+      padding-top:18px;
+    }
+
+
+    .class-card-home {
+      display:flex;
+      flex-direction:column;
+
+      min-width:0;
+      min-height:180px;
+
+      padding:17px;
+
+      border:1px solid #ded5c7;
+      border-top:4px solid #c98d12;
+
+      border-radius:13px;
+
+      background:#fdfbf7;
+    }
+
+
+    .class-card-home.available {
+      border-top-color:#247d7b;
+    }
+
+
+    .class-card-top {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      margin-bottom:13px;
+    }
+
+
+    .class-num-home {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      width:34px;
+      height:34px;
+
+      border-radius:50%;
+
+      background:#a91414;
+      color:#fff;
+
+      font-size:11px;
+      font-weight:900;
+    }
+
+
+    .class-date-home {
+      color:#777064;
+
+      font-size:10px;
+      font-weight:800;
+    }
+
+
+    .class-card-home h4 {
+      margin:0 0 7px;
+
+      color:#8f1010;
+
+      font-size:15px;
+      line-height:1.2;
+    }
+
+
+    .class-card-home p {
+      margin:0;
+
+      color:#666056;
+
+      font-size:11px;
+      line-height:1.45;
+    }
+
+
+    .class-status-home {
+      margin-top:auto;
+      padding-top:15px;
+
+      color:#9a8d78;
+
+      font-size:9px;
+      font-weight:900;
+      letter-spacing:.3px;
+      text-transform:uppercase;
+    }
+
+
+    .class-status-home.available {
+      color:#247d7b;
+    }
+
+
+    .class-open-home {
+      display:inline-flex;
+
+      margin-top:7px;
+      padding:8px 13px;
+
+      border-radius:20px;
+
+      background:#8f1010;
+      color:#fff;
+
+      text-decoration:none;
+
+      font-size:9px;
+      font-weight:900;
+    }
+
+
+    .class-open-home:hover {
+      background:#751010;
+    }
+
+
+    /* -----------------------------------------------------
+       CIERRE
+       ----------------------------------------------------- */
+
+    .closing-home {
+      margin-top:28px;
+      padding:25px 28px;
+
+      border-radius:18px;
+
+      background:#454545;
+      color:#fff;
+    }
+
+
+    .closing-home .kicker {
+      color:#e0ad45;
+
+      font-size:10px;
+      font-weight:900;
+      letter-spacing:1.5px;
+    }
+
+
+    .closing-home h2 {
+      margin:7px 0;
+
+      font-size:21px;
+    }
+
+
+    .closing-home p {
+      margin:0;
+
+      color:#e9e9e9;
+
+      font-size:12px;
+    }
+
+
+    /* -----------------------------------------------------
+       RESPONSIVE
+       ----------------------------------------------------- */
+
+    @media (max-width:850px) {
+
+      .featured-class {
+        grid-template-columns:1fr;
+      }
+
+      .featured-button {
+        width:100%;
+      }
+
+      .class-grid-home {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+    }
+
+
+    @media (max-width:600px) {
+
+      .home-container {
+        padding:20px 14px 40px;
+      }
+
+      .featured-class {
+        padding:23px 20px;
+      }
+
+      .featured-class h2 {
+        font-size:25px;
+      }
+
+      .progress-mini {
+        display:block;
+      }
+
+      .progress-info {
+        margin-bottom:10px;
+      }
+
+      .unit-summary {
+        grid-template-columns:55px 1fr auto;
+        gap:12px;
+
+        padding:14px;
+      }
+
+      .unit-number {
+        width:48px;
+        height:48px;
+      }
+
+      .unit-summary h3 {
+        font-size:16px;
+      }
+
+      .unit-toggle {
+        font-size:0;
+      }
+
+      .class-grid-home {
+        grid-template-columns:1fr;
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
+
+
+<!-- =====================================================
+     ENCABEZADO
+     ===================================================== -->
+
 <header class="hero">
+
   <div class="hero-inner">
-    <div class="brand">RASPANTI</div>
-    <div class="eyebrow">INSTITUTO MIGUEL RASPANTI</div>
-    <h1>Recursos y<br>Medios Didácticos</h1>
-    <p class="subtitle">HOJA DE RUTA · AULA VIRTUAL · 2026</p>
-    <p class="hero-copy">Un recorrido para pensar los medios, los recursos, la tecnología educativa y la accesibilidad.</p>
+
+    <div class="brand">
+      RASPANTI
+    </div>
+
+    <div class="eyebrow">
+      INSTITUTO MIGUEL RASPANTI
+    </div>
+
+    <h1>
+      Recursos y<br>
+      Medios Didácticos
+    </h1>
+
+    <p class="subtitle">
+      HOJA DE RUTA · AULA VIRTUAL · 2026
+    </p>
+
+    <p class="hero-copy">
+      Un recorrido para pensar los medios, los recursos,
+      la tecnología educativa y la accesibilidad.
+    </p>
+
   </div>
+
 </header>
-<main class="container">
-<section class="welcome">
+
+
+
+<main class="home-container">
+
+
+<!-- =====================================================
+     CLASE ACTUAL / PRÓXIMO ENCUENTRO
+     ===================================================== -->
+
+<section
+  id="featured-class"
+  class="featured-class"
+>
+
   <div>
-    <div class="kicker">BIENVENIDAS Y BIENVENIDOS</div>
-    <h2>Tu recorrido por la materia</h2>
-    <p>Las clases se habilitan de acuerdo con el cronograma de cursada.</p>
+
+    <div
+      id="featured-kicker"
+      class="featured-kicker"
+    >
+      PRÓXIMO ENCUENTRO
+    </div>
+
+    <h2 id="featured-title">
+      Cargando...
+    </h2>
+
+    <p
+      id="featured-unit"
+      class="featured-unit"
+    >
+    </p>
+
+    <p
+      id="featured-desc"
+      class="featured-desc"
+    >
+    </p>
+
+    <div
+      id="featured-date"
+      class="featured-date"
+    >
+    </div>
+
   </div>
-  <div class="progress-box">
-    <strong id="progress-label">0 de 12 clases disponibles</strong>
-    <div class="progress-track"><div id="progress-bar"></div></div>
+
+
+  <div>
+
+    <a
+      id="featured-button"
+      class="featured-button"
+      href="#"
+    >
+      INGRESAR →
+    </a>
+
   </div>
+
 </section>
-<nav class="unit-nav">
+
+
+
+<!-- =====================================================
+     PROGRESO
+     ===================================================== -->
+
+<section class="progress-mini">
+
+  <div class="progress-info">
+
+    <strong id="progress-label">
+      0 de 12 clases disponibles
+    </strong>
+
+    <span id="progress-subtitle">
+      Tu recorrido por la materia
+    </span>
+
+  </div>
+
+
+  <div class="progress-track-home">
+
+    <div
+      id="progress-bar"
+      class="progress-fill-home"
+    >
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DOCUMENTOS
+     ===================================================== -->
+
+<nav class="document-links">
 
   <a
     href="https://drive.google.com/file/d/1s00GdR8cFIS2H24pEitCUTgNoga5lstx/view?usp=drive_link"
     target="_blank"
     rel="noopener"
-    class="general-link"
   >
     📄 PROGRAMA 2026
   </a>
+
 
   <a
     href="https://drive.google.com/file/d/1PelyBl8CNLrdGFQwOp_hoNlwDBGnm1yR/view?usp=drive_link"
     target="_blank"
     rel="noopener"
-    class="general-link"
   >
     🧭 HOJA DE RUTA 2026
   </a>
 
-  <span class="nav-separator"></span>
-
-  <a href="#unidad-1" class="u1">
-    UNIDAD 1
-  </a>
-
-  <a href="#unidad-2" class="u2">
-    UNIDAD 2
-  </a>
-
-  <a href="#unidad-3" class="u3">
-    UNIDAD 3
-  </a>
-
-  <a href="#cierre" class="uc">
-    CIERRE
-  </a>
-
 </nav>
-<div id="roadmap"></div>
-<section id="cierre" class="closing">
-<div><div class="kicker">CIERRE DE LA MATERIA</div><h2>Trabajos finales · Coloquios</h2><p><strong>16 de noviembre de 2026</strong></p><p>Entrega de trabajos finales, coloquios y encuentro de cierre.</p></div>
-<a href="#">↑ Volver al inicio</a>
+
+
+
+<!-- =====================================================
+     TÍTULO DEL RECORRIDO
+     ===================================================== -->
+
+<section class="route-heading">
+
+  <div class="kicker">
+    TU RECORRIDO
+  </div>
+
+  <h2>
+    Unidades de la materia
+  </h2>
+
+  <p>
+    Abrí cada unidad para ver sus clases.
+  </p>
+
 </section>
+
+
+
+<!-- =====================================================
+     UNIDADES
+     ===================================================== -->
+
+<div
+  id="units-list"
+  class="units-list"
+>
+
+
+<!-- UNIDAD 1 -->
+
+<details
+  class="unit-dropdown unit-1"
+>
+
+  <summary class="unit-summary">
+
+    <div class="unit-number">
+      UNIDAD<br>1
+    </div>
+
+    <div>
+
+      <h3>
+        Conceptos y enfoques sobre medios
+      </h3>
+
+      <p>
+        3 clases · 24/08 → 07/09
+      </p>
+
+    </div>
+
+    <div class="unit-toggle">
+      VER CLASES
+    </div>
+
+  </summary>
+
+
+  <div class="unit-content">
+
+    <div
+      id="unit-1-cards"
+      class="class-grid-home"
+    >
+    </div>
+
+  </div>
+
+</details>
+
+
+
+<!-- UNIDAD 2 -->
+
+<details
+  class="unit-dropdown unit-2"
+>
+
+  <summary class="unit-summary">
+
+    <div class="unit-number">
+      UNIDAD<br>2
+    </div>
+
+    <div>
+
+      <h3>
+        Cultura, crítica y tecnología educativa
+      </h3>
+
+      <p>
+        4 clases · 14/09 → 05/10
+      </p>
+
+    </div>
+
+    <div class="unit-toggle">
+      VER CLASES
+    </div>
+
+  </summary>
+
+
+  <div class="unit-content">
+
+    <div
+      id="unit-2-cards"
+      class="class-grid-home"
+    >
+    </div>
+
+  </div>
+
+</details>
+
+
+
+<!-- UNIDAD 3 -->
+
+<details
+  class="unit-dropdown unit-3"
+>
+
+  <summary class="unit-summary">
+
+    <div class="unit-number">
+      UNIDAD<br>3
+    </div>
+
+    <div>
+
+      <h3>
+        Inclusión y accesibilidad educativa
+      </h3>
+
+      <p>
+        5 clases · 12/10 → 09/11
+      </p>
+
+    </div>
+
+    <div class="unit-toggle">
+      VER CLASES
+    </div>
+
+  </summary>
+
+
+  <div class="unit-content">
+
+    <div
+      id="unit-3-cards"
+      class="class-grid-home"
+    >
+    </div>
+
+  </div>
+
+</details>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     CIERRE
+     ===================================================== -->
+
+<section class="closing-home">
+
+  <div class="kicker">
+    CIERRE DE LA MATERIA
+  </div>
+
+  <h2>
+    Trabajos finales · Coloquios
+  </h2>
+
+  <p>
+    <strong>
+      16 de noviembre de 2026
+    </strong>
+    · Entrega de trabajos finales, coloquios
+    y encuentro de cierre.
+  </p>
+
+</section>
+
+
 </main>
-<footer><div>Aprender · crear · transformar</div><small>Recursos y Medios Didácticos · Instituto Miguel Raspanti</small></footer>
-<script src="script.js"></script>
+
+
+
+<!-- =====================================================
+     PIE
+     ===================================================== -->
+
+<footer>
+
+  <div>
+    Aprender · crear · transformar
+  </div>
+
+  <small>
+    Recursos y Medios Didácticos · Instituto Miguel Raspanti
+  </small>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
 <script>
+
+
+/* =====================================================
+   CRONOGRAMA
+   ===================================================== */
+
+const clases = [
+
+  {
+    n:1,
+    d:"2026-08-24",
+    t:"Presentación de la materia",
+    u:1,
+    desc:"Conceptualización de medios y recursos. Características y funciones de los medios y los recursos didácticos."
+  },
+
+  {
+    n:2,
+    d:"2026-09-01",
+    t:"Paradigmas de la utilización de medios",
+    u:1,
+    desc:"Paradigmas técnico, práctico y estratégico."
+  },
+
+  {
+  n:3,
+  d:"2026-09-07",
+  t:"Concepción de medios",
+  u:1,
+  desc:"Medios impresos, audiovisuales, manipulativos e informáticos."
+},
+  {
+    n:4,
+    d:"2026-09-07",
+    t:"Concepciones de enseñanza",
+    u:2,
+    desc:"Concepciones de enseñanza."
+  },
+
+  {
+    n:5,
+    d:"2026-09-14",
+    t:"Cultura escolar vs. cultura mediática",
+    u:2,
+    desc:"Desbordes y conflictos entre la cultura escolar y la cultura mediática."
+  },
+
+  {
+    n:6,
+    d:"2026-09-21",
+    t:"Mirada crítica sobre la educación",
+    u:2,
+    desc:"Tecnologías en y para la educación. Rol e identidad docente en la era digital."
+  },
+
+  {
+    n:7,
+    d:"2026-09-28",
+    t:"Tecnología educativa y gamificación",
+    u:2,
+    desc:"Tecnología educativa en sentido didáctico. Gamificación."
+  },
+
+  {
+    n:8,
+    d:"2026-10-05",
+    t:"¿De qué hablamos cuando hablamos de discapacidad?",
+    u:3,
+    desc:"Aproximación al concepto de discapacidad."
+  },
+
+  {
+    n:9,
+    d:"2026-10-19",
+    t:"Discapacidad visual y auditiva",
+    u:3,
+    desc:"Medios y recursos específicos."
+  },
+
+  {
+    n:10,
+    d:"2026-10-26",
+    t:"Discapacidad neuromotora, intelectual y TES",
+    u:3,
+    desc:"Medios y recursos específicos."
+  },
+
+  {
+    n:11,
+    d:"2026-11-02",
+    t:"DUA · Diseño Universal del Aprendizaje y CAA",
+    u:3,
+    desc:"Diseño Universal del Aprendizaje y Comunicación Aumentativa y Alternativa."
+  },
+
+  {
+    n:12,
+    d:"2026-11-09",
+    t:"Encuentro de elaboración de trabajos finales",
+    u:3,
+    desc:"Elaboración de trabajos finales. Entrega de borrador."
+  }
+
+];
+
+
+
+/* =====================================================
+   FECHAS
+   ===================================================== */
+
+function disponible(fecha) {
+
+  return new Date()
+    >= new Date(
+      fecha + "T00:00:00"
+    );
+
+}
+
+
+function bonito(fecha) {
+
+  const [y,m,d] =
+    fecha.split("-");
+
+  return `${d}/${m}/${y}`;
+
+}
+
+
+
+/* =====================================================
+   GENERAR TARJETAS
+   ===================================================== */
+
+function generarTarjetas() {
+
+  [1,2,3].forEach(
+    function(unidad) {
+
+      const contenedor =
+        document.getElementById(
+          `unit-${unidad}-cards`
+        );
+
+      if (!contenedor) return;
+
+      contenedor.innerHTML = "";
+
+
+      clases
+        .filter(
+          c => c.u === unidad
+        )
+        .forEach(
+          function(c) {
+
+            const ok =
+              disponible(c.d);
+
+
+            const tarjeta =
+              document.createElement(
+                "article"
+              );
+
+
+            tarjeta.className =
+              "class-card-home" +
+              (ok ? " available" : "");
+
+
+            const numero =
+              String(c.n)
+                .padStart(2,"0");
+
+
+            tarjeta.innerHTML = `
+
+              <div class="class-card-top">
+
+                <div class="class-num-home">
+                  ${numero}
+                </div>
+
+                <div class="class-date-home">
+                  ${bonito(c.d)}
+                </div>
+
+              </div>
+
+
+              <h4>
+                ${c.t}
+              </h4>
+
+
+              <p>
+                ${c.desc}
+              </p>
+
+
+              <div
+                class="class-status-home
+                ${ok ? "available" : ""}"
+              >
+
+                ${
+                  ok
+
+                  ?
+
+                  `
+                    DISPONIBLE
+
+                    <br>
+
+                    <a
+                      class="class-open-home"
+                      href="clases/clase${numero}.html"
+                    >
+                      INGRESAR →
+                    </a>
+                  `
+
+                  :
+
+                  `
+                    🔒 PRÓXIMAMENTE
+                    · SE HABILITA EL
+                    ${bonito(c.d)}
+                  `
+                }
+
+              </div>
+
+            `;
+
+
+            contenedor.appendChild(
+              tarjeta
+            );
+
+          }
+        );
+
+    }
+  );
+
+}
+
+
+
+/* =====================================================
+   CLASE DESTACADA
+   ===================================================== */
+
+function generarClaseDestacada() {
+
+
+  const hoy =
+    new Date();
+
+
+  /*
+    Buscamos la última clase
+    que ya está habilitada.
+  */
+
+  const disponibles =
+    clases.filter(
+      c => disponible(c.d)
+    );
+
+
+  /*
+    Buscamos la próxima clase
+    que todavía no empezó.
+  */
+
+  const proximas =
+    clases.filter(
+      c => !disponible(c.d)
+    );
+
+
+  let destacada;
+  let modo;
+
+
+  if (
+    disponibles.length > 0
+  ) {
+
+    /*
+      Durante la cursada:
+      mostramos la última clase
+      habilitada.
+    */
+
+    destacada =
+      disponibles[
+        disponibles.length - 1
+      ];
+
+    modo =
+      "CLASE ACTUAL";
+
+  } else {
+
+    /*
+      Antes de comenzar:
+      mostramos la primera clase.
+    */
+
+    destacada =
+      proximas[0];
+
+    modo =
+      "PRÓXIMO ENCUENTRO";
+
+  }
+
+
+  if (!destacada) return;
+
+
+  const unidad =
+    destacada.u;
+
+
+  const nombreUnidad = {
+
+    1:
+      "Unidad 1 · Conceptos y enfoques sobre medios",
+
+    2:
+      "Unidad 2 · Cultura, crítica y tecnología educativa",
+
+    3:
+      "Unidad 3 · Inclusión y accesibilidad educativa"
+
+  };
+
+
+  document.getElementById(
+    "featured-kicker"
+  ).textContent =
+    modo;
+
+
+  document.getElementById(
+    "featured-title"
+  ).textContent =
+    `Clase ${String(destacada.n).padStart(2,"0")} · ${destacada.t}`;
+
+
+  document.getElementById(
+    "featured-unit"
+  ).textContent =
+    nombreUnidad[unidad];
+
+
+  document.getElementById(
+    "featured-desc"
+  ).textContent =
+    destacada.desc;
+
+
+  document.getElementById(
+    "featured-date"
+  ).textContent =
+    modo === "CLASE ACTUAL"
+
+    ?
+
+    `Disponible desde el ${bonito(destacada.d)}`
+
+    :
+
+    `Se habilita el ${bonito(destacada.d)}`;
+
+
+  const boton =
+    document.getElementById(
+      "featured-button"
+    );
+
+
+  if (
+    disponible(destacada.d)
+  ) {
+
+    boton.href =
+      `clases/clase${String(destacada.n).padStart(2,"0")}.html`;
+
+    boton.textContent =
+      "INGRESAR A LA CLASE →";
+
+  } else {
+
+    boton.href =
+      `clases/clase${String(destacada.n).padStart(2,"0")}.html`;
+
+    boton.textContent =
+      "VER PRÓXIMAMENTE →";
+
+  }
+
+}
+
+
+
+/* =====================================================
+   PROGRESO
+   ===================================================== */
+
+function actualizarProgreso() {
+
+
+  const cantidad =
+    clases.filter(
+      c => disponible(c.d)
+    ).length;
+
+
+  document.getElementById(
+    "progress-label"
+  ).textContent =
+    `${cantidad} de 12 clases disponibles`;
+
+
+  const porcentaje =
+    (cantidad / clases.length) * 100;
+
+
+  document.getElementById(
+    "progress-bar"
+  ).style.width =
+    `${porcentaje}%`;
+
+
+  if (
+    cantidad > 0
+  ) {
+
+    document.getElementById(
+      "progress-subtitle"
+    ).textContent =
+      `Vas por la Unidad ${
+        clases
+          .filter(c => disponible(c.d))
+          .slice(-1)[0]
+          .u
+      }`;
+
+  } else {
+
+    document.getElementById(
+      "progress-subtitle"
+    ).textContent =
+      "La cursada todavía no comenzó";
+
+  }
+
+}
+
+
+
+/* =====================================================
+   INICIO
+   ===================================================== */
+
+generarTarjetas();
+
+generarClaseDestacada();
+
+actualizarProgreso();
+
+
+
+/* =====================================================
+   ALTURA PARA MOODLE
+   ===================================================== */
+
 function enviarAlturaAMoodle() {
 
-  const altura = Math.max(
-    document.body.scrollHeight,
-    document.documentElement.scrollHeight
-  );
+  const altura =
+    Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight
+    );
+
 
   window.parent.postMessage(
+
     {
-      type: "recursos-medios-height",
-      height: altura
+      type:
+        "recursos-medios-height",
+
+      height:
+        altura
     },
+
     "https://campus.raspanti.website"
+
   );
+
 }
 
-window.addEventListener("load", enviarAlturaAMoodle);
 
-window.addEventListener("resize", enviarAlturaAMoodle);
+window.addEventListener(
+  "load",
+  enviarAlturaAMoodle
+);
 
-if (typeof ResizeObserver !== "undefined") {
 
-  const observer = new ResizeObserver(function() {
-    enviarAlturaAMoodle();
-  });
+window.addEventListener(
+  "resize",
+  enviarAlturaAMoodle
+);
 
-  observer.observe(document.body);
+
+if (
+  typeof ResizeObserver !==
+  "undefined"
+) {
+
+  const observer =
+    new ResizeObserver(
+      function() {
+
+        enviarAlturaAMoodle();
+
+      }
+    );
+
+
+  observer.observe(
+    document.body
+  );
+
 }
 
-setTimeout(enviarAlturaAMoodle, 300);
-setTimeout(enviarAlturaAMoodle, 1000);
-setTimeout(enviarAlturaAMoodle, 2000);
+
+setTimeout(
+  enviarAlturaAMoodle,
+  300
+);
+
+
+setTimeout(
+  enviarAlturaAMoodle,
+  1000
+);
+
+
+setTimeout(
+  enviarAlturaAMoodle,
+  2000
+);
+
 </script>
+
+
 </body>
+
 </html>
