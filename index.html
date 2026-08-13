@@ -4,29 +4,18 @@
 <head>
 
   <meta charset="utf-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>
-    Recursos y Medios Didácticos · Raspanti
-  </title>
+  <title>Recursos y Medios Didácticos · Raspanti</title>
 
-  <link
-    rel="stylesheet"
-    href="styles.css"
-  >
+  <link rel="stylesheet" href="styles.css">
 
-  <!-- =====================================================
-       AJUSTES ESPECÍFICOS DE LA NUEVA PORTADA
-       ===================================================== -->
 
   <style>
 
-    /* -----------------------------------------------------
-       BASE
-       ----------------------------------------------------- */
+    /* =====================================================
+       PORTADA · ESTILOS
+       ===================================================== */
 
     html,
     body {
@@ -41,74 +30,134 @@
       box-sizing:border-box;
     }
 
-
-    /* -----------------------------------------------------
-       PORTADA
-       ----------------------------------------------------- */
-
     .home-container {
       width:100%;
       max-width:1180px;
       margin:0 auto;
-      padding:30px 24px 60px;
+      padding:32px 24px 60px;
     }
 
 
-    /* -----------------------------------------------------
-       ACCESOS
-       ----------------------------------------------------- */
+    /* =====================================================
+       INFORMACIÓN DE LA MATERIA
+       ===================================================== */
 
-    .document-links {
+    .info-heading {
+      margin:0 0 12px;
+
+      color:#8f1010;
+
+      font-size:11px;
+      font-weight:900;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+    }
+
+
+    .info-links {
+      display:grid;
+      grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+      gap:12px;
+
+      margin-bottom:34px;
+    }
+
+
+    .info-link {
       display:flex;
-      justify-content:center;
       align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      margin:0 0 28px;
-    }
+      gap:14px;
 
-    .document-links a {
-      display:inline-flex;
-      align-items:center;
-      gap:7px;
+      min-height:76px;
 
-      padding:10px 17px;
+      padding:14px 18px;
 
-      border:1px solid #d29a1a;
-      border-radius:30px;
+      border:1px solid #ded2bd;
+      border-radius:16px;
 
       background:#fffdf8;
 
       color:#8f1010;
+
       text-decoration:none;
 
-      font-size:12px;
-      font-weight:800;
+      box-shadow:
+        0 4px 12px rgba(70,45,20,.04);
 
       transition:
         transform .2s ease,
+        box-shadow .2s ease,
         background .2s ease;
     }
 
-    .document-links a:hover {
-      background:#f7edda;
+
+    .info-link:hover {
       transform:translateY(-2px);
+
+      background:#fffaf0;
+
+      box-shadow:
+        0 8px 20px rgba(70,45,20,.08);
     }
 
 
-    /* -----------------------------------------------------
-       DESTACADO · CLASE ACTUAL
-       ----------------------------------------------------- */
+    .info-icon {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      flex:0 0 42px;
+
+      width:42px;
+      height:42px;
+
+      border-radius:12px;
+
+      background:#f2e7d0;
+
+      font-size:20px;
+    }
+
+
+    .info-link strong {
+      display:block;
+
+      margin-bottom:3px;
+
+      font-size:12px;
+      font-weight:900;
+    }
+
+
+    .info-link span {
+      display:block;
+
+      color:#777064;
+
+      font-size:10px;
+      line-height:1.3;
+    }
+
+
+    /* =====================================================
+       CLASE DESTACADA
+       ===================================================== */
 
     .featured-class {
-      position:relative;
 
       display:grid;
-      grid-template-columns:1fr auto;
+
+      grid-template-columns:
+        1fr auto;
+
       gap:30px;
+
       align-items:center;
 
-      margin-bottom:32px;
+      margin-bottom:20px;
+
       padding:30px 34px;
 
       border-radius:22px;
@@ -125,78 +174,92 @@
 
 
     .featured-kicker {
+
       margin-bottom:8px;
 
       color:#c98d12;
 
       font-size:11px;
       font-weight:900;
+
       letter-spacing:1.5px;
+
       text-transform:uppercase;
     }
 
 
     .featured-class h2 {
-      margin:0 0 7px;
+
+      margin:0 0 8px;
 
       color:#8f1010;
 
-      font-size:30px;
-      line-height:1.1;
+      font-size:29px;
+
+      line-height:1.12;
     }
 
 
-    .featured-class .featured-unit {
-      margin:0 0 13px;
+    .featured-unit {
+
+      margin:0 0 12px;
 
       color:#247d7b;
 
       font-size:13px;
+
       font-weight:800;
     }
 
 
-    .featured-class .featured-desc {
-      max-width:760px;
+    .featured-desc {
+
+      max-width:780px;
 
       margin:0;
 
       color:#5e584f;
 
       font-size:14px;
+
       line-height:1.55;
     }
 
 
     .featured-date {
+
       margin-top:12px;
 
       color:#777064;
 
       font-size:12px;
+
       font-weight:700;
     }
 
 
     .featured-button {
+
       display:inline-flex;
+
       align-items:center;
       justify-content:center;
 
-      min-width:190px;
+      min-width:200px;
 
       padding:14px 22px;
 
       border-radius:30px;
 
       background:#8f1010;
+
       color:#fff;
 
       text-decoration:none;
 
       font-size:12px;
+
       font-weight:900;
-      letter-spacing:.2px;
 
       transition:
         transform .2s ease,
@@ -205,46 +268,55 @@
 
 
     .featured-button:hover {
+
       background:#751010;
+
       transform:translateY(-2px);
     }
 
 
-    /* -----------------------------------------------------
+    /* =====================================================
        PROGRESO
-       ----------------------------------------------------- */
+       ===================================================== */
 
     .progress-mini {
+
       display:flex;
+
       align-items:center;
+
       gap:15px;
 
-      margin-bottom:34px;
+      margin-bottom:36px;
 
-      padding:16px 20px;
+      padding:14px 20px;
 
-      border-radius:15px;
+      border-radius:14px;
 
       background:#f4eee2;
     }
 
 
     .progress-info {
-      min-width:145px;
+
+      min-width:180px;
     }
 
 
     .progress-info strong {
+
       display:block;
 
       color:#8f1010;
 
       font-size:12px;
+
       font-weight:900;
     }
 
 
     .progress-info span {
+
       display:block;
 
       margin-top:3px;
@@ -256,9 +328,10 @@
 
 
     .progress-track-home {
+
       flex:1;
 
-      height:9px;
+      height:8px;
 
       overflow:hidden;
 
@@ -269,7 +342,9 @@
 
 
     .progress-fill-home {
+
       width:0;
+
       height:100%;
 
       border-radius:20px;
@@ -280,28 +355,34 @@
     }
 
 
-    /* -----------------------------------------------------
-       TÍTULO DE RECORRIDO
-       ----------------------------------------------------- */
+    /* =====================================================
+       RECORRIDO
+       ===================================================== */
 
     .route-heading {
-      margin:0 0 18px;
+
+      margin-bottom:18px;
     }
 
 
     .route-heading .kicker {
+
       margin-bottom:5px;
 
       color:#c98d12;
 
       font-size:11px;
+
       font-weight:900;
+
       letter-spacing:1.5px;
+
       text-transform:uppercase;
     }
 
 
     .route-heading h2 {
+
       margin:0;
 
       color:#8f1010;
@@ -311,6 +392,7 @@
 
 
     .route-heading p {
+
       margin:6px 0 0;
 
       color:#6e675c;
@@ -319,48 +401,49 @@
     }
 
 
-    /* -----------------------------------------------------
-       UNIDADES DESPLEGABLES
-       ----------------------------------------------------- */
+    /* =====================================================
+       UNIDADES
+       ===================================================== */
 
     .units-list {
+
       display:flex;
+
       flex-direction:column;
+
       gap:14px;
     }
 
 
     .unit-dropdown {
+
       overflow:hidden;
 
       border:1px solid #ded2bd;
+
       border-radius:18px;
 
       background:#fffdf8;
 
       box-shadow:
         0 5px 15px rgba(70,45,20,.04);
-
-      transition:
-        box-shadow .2s ease;
-    }
-
-
-    .unit-dropdown[open] {
-      box-shadow:
-        0 10px 25px rgba(70,45,20,.08);
     }
 
 
     .unit-summary {
+
       display:grid;
-      grid-template-columns:80px 1fr auto;
+
+      grid-template-columns:
+        72px 1fr auto;
+
       gap:18px;
+
       align-items:center;
 
-      min-height:90px;
+      min-height:88px;
 
-      padding:17px 22px;
+      padding:16px 22px;
 
       cursor:pointer;
 
@@ -379,19 +462,25 @@
 
 
     .unit-number {
+
       display:flex;
+
       align-items:center;
+
       justify-content:center;
 
-      width:58px;
-      height:58px;
+      width:56px;
+
+      height:56px;
 
       border-radius:14px;
 
       color:#fff;
 
-      font-size:12px;
+      font-size:11px;
+
       font-weight:900;
+
       text-align:center;
     }
 
@@ -412,11 +501,13 @@
 
 
     .unit-summary h3 {
+
       margin:0 0 4px;
 
       color:#8f1010;
 
       font-size:19px;
+
       line-height:1.15;
     }
 
@@ -432,6 +523,7 @@
 
 
     .unit-summary p {
+
       margin:0;
 
       color:#777064;
@@ -441,59 +533,70 @@
 
 
     .unit-toggle {
+
       display:flex;
+
       align-items:center;
+
       gap:7px;
 
       color:#8f1010;
 
-      font-size:11px;
+      font-size:10px;
+
       font-weight:900;
+
       white-space:nowrap;
     }
 
 
     .unit-toggle::after {
+
       content:"+";
 
       display:flex;
+
       align-items:center;
+
       justify-content:center;
 
-      width:27px;
-      height:27px;
+      width:28px;
+
+      height:28px;
 
       border-radius:50%;
 
       background:#f2eadb;
 
       font-size:18px;
-      line-height:1;
     }
 
 
     .unit-dropdown[open]
     .unit-toggle::after {
+
       content:"−";
     }
 
 
-    /* -----------------------------------------------------
-       CONTENIDO DE LA UNIDAD
-       ----------------------------------------------------- */
-
     .unit-content {
+
       padding:0 20px 20px;
 
       border-top:1px solid #eadfce;
     }
 
 
+    /* =====================================================
+       TARJETAS DE CLASE
+       ===================================================== */
+
     .class-grid-home {
+
       display:grid;
 
       grid-template-columns:
-        repeat(3, minmax(0, 1fr));
+        repeat(3,minmax(0,1fr));
 
       gap:12px;
 
@@ -502,15 +605,19 @@
 
 
     .class-card-home {
+
       display:flex;
+
       flex-direction:column;
 
       min-width:0;
+
       min-height:180px;
 
       padding:17px;
 
       border:1px solid #ded5c7;
+
       border-top:4px solid #c98d12;
 
       border-radius:13px;
@@ -520,13 +627,17 @@
 
 
     .class-card-home.available {
+
       border-top-color:#247d7b;
     }
 
 
     .class-card-top {
+
       display:flex;
+
       justify-content:space-between;
+
       align-items:center;
 
       margin-bottom:13px;
@@ -534,117 +645,141 @@
 
 
     .class-num-home {
+
       display:flex;
+
       align-items:center;
+
       justify-content:center;
 
       width:34px;
+
       height:34px;
 
       border-radius:50%;
 
       background:#a91414;
+
       color:#fff;
 
       font-size:11px;
+
       font-weight:900;
     }
 
 
     .class-date-home {
+
       color:#777064;
 
       font-size:10px;
+
       font-weight:800;
     }
 
 
     .class-card-home h4 {
+
       margin:0 0 7px;
 
       color:#8f1010;
 
       font-size:15px;
+
       line-height:1.2;
     }
 
 
     .class-card-home p {
+
       margin:0;
 
       color:#666056;
 
       font-size:11px;
+
       line-height:1.45;
     }
 
 
     .class-status-home {
+
       margin-top:auto;
+
       padding-top:15px;
 
       color:#9a8d78;
 
       font-size:9px;
+
       font-weight:900;
+
       letter-spacing:.3px;
+
       text-transform:uppercase;
     }
 
 
     .class-status-home.available {
+
       color:#247d7b;
     }
 
 
     .class-open-home {
+
       display:inline-flex;
 
       margin-top:7px;
+
       padding:8px 13px;
 
       border-radius:20px;
 
       background:#8f1010;
+
       color:#fff;
 
       text-decoration:none;
 
       font-size:9px;
+
       font-weight:900;
     }
 
 
-    .class-open-home:hover {
-      background:#751010;
-    }
-
-
-    /* -----------------------------------------------------
+    /* =====================================================
        CIERRE
-       ----------------------------------------------------- */
+       ===================================================== */
 
     .closing-home {
+
       margin-top:28px;
+
       padding:25px 28px;
 
       border-radius:18px;
 
       background:#454545;
+
       color:#fff;
     }
 
 
     .closing-home .kicker {
+
       color:#e0ad45;
 
       font-size:10px;
+
       font-weight:900;
+
       letter-spacing:1.5px;
     }
 
 
     .closing-home h2 {
+
       margin:7px 0;
 
       font-size:21px;
@@ -652,6 +787,7 @@
 
 
     .closing-home p {
+
       margin:0;
 
       color:#e9e9e9;
@@ -660,23 +796,34 @@
     }
 
 
-    /* -----------------------------------------------------
+    /* =====================================================
        RESPONSIVE
-       ----------------------------------------------------- */
+       ===================================================== */
 
     @media (max-width:850px) {
 
-      .featured-class {
+      .info-links {
+
         grid-template-columns:1fr;
       }
 
+
+      .featured-class {
+
+        grid-template-columns:1fr;
+      }
+
+
       .featured-button {
+
         width:100%;
       }
 
+
       .class-grid-home {
+
         grid-template-columns:
-          repeat(2, minmax(0, 1fr));
+          repeat(2,minmax(0,1fr));
       }
 
     }
@@ -685,46 +832,68 @@
     @media (max-width:600px) {
 
       .home-container {
+
         padding:20px 14px 40px;
       }
 
+
       .featured-class {
+
         padding:23px 20px;
       }
 
+
       .featured-class h2 {
-        font-size:25px;
+
+        font-size:24px;
       }
 
+
       .progress-mini {
+
         display:block;
       }
 
+
       .progress-info {
+
         margin-bottom:10px;
       }
 
+
       .unit-summary {
-        grid-template-columns:55px 1fr auto;
+
+        grid-template-columns:
+          55px 1fr auto;
+
         gap:12px;
 
         padding:14px;
       }
 
+
       .unit-number {
+
         width:48px;
+
         height:48px;
       }
 
+
       .unit-summary h3 {
+
         font-size:16px;
       }
 
+
       .unit-toggle {
+
         font-size:0;
       }
 
+
       .class-grid-home {
+
         grid-template-columns:1fr;
       }
 
@@ -778,7 +947,113 @@
 
 
 <!-- =====================================================
-     CLASE ACTUAL / PRÓXIMO ENCUENTRO
+     INFORMACIÓN DE LA MATERIA
+     ===================================================== -->
+
+<section>
+
+  <div class="info-heading">
+    ANTES DE EMPEZAR
+  </div>
+
+
+  <div class="info-links">
+
+
+    <!-- PROGRAMA -->
+
+    <a
+      class="info-link"
+      href="https://drive.google.com/file/d/1s00GdR8cFIS2H24pEitCUTgNoga5lstx/view?usp=drive_link"
+      target="_blank"
+      rel="noopener"
+    >
+
+      <div class="info-icon">
+        📄
+      </div>
+
+      <div>
+
+        <strong>
+          Programa 2026
+        </strong>
+
+        <span>
+          ¿Qué vamos a trabajar?
+        </span>
+
+      </div>
+
+    </a>
+
+
+
+    <!-- HOJA DE RUTA -->
+
+    <a
+      class="info-link"
+      href="https://drive.google.com/file/d/1PelyBl8CNLrdGFQwOp_hoNlwDBGnm1yR/view?usp=drive_link"
+      target="_blank"
+      rel="noopener"
+    >
+
+      <div class="info-icon">
+        🧭
+      </div>
+
+      <div>
+
+        <strong>
+          Hoja de ruta 2026
+        </strong>
+
+        <span>
+          ¿Cómo se organiza la cursada?
+        </span>
+
+      </div>
+
+    </a>
+
+
+
+    <!-- PRESENTACIÓN DOCENTE -->
+
+    <a
+      class="info-link"
+      href="https://drive.google.com/file/d/1s00GdR8cFIS2H24pEitCUTgNoga5lstx/view?usp=sharing"
+      target="_blank"
+      rel="noopener"
+    >
+
+      <div class="info-icon">
+        👩‍🏫
+      </div>
+
+      <div>
+
+        <strong>
+          Presentación docente
+        </strong>
+
+        <span>
+          ¿Quién te acompaña en este recorrido?
+        </span>
+
+      </div>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CLASE DESTACADA
      ===================================================== -->
 
 <section
@@ -795,9 +1070,11 @@
       PRÓXIMO ENCUENTRO
     </div>
 
+
     <h2 id="featured-title">
       Cargando...
     </h2>
+
 
     <p
       id="featured-unit"
@@ -805,11 +1082,13 @@
     >
     </p>
 
+
     <p
       id="featured-desc"
       class="featured-desc"
     >
     </p>
+
 
     <div
       id="featured-date"
@@ -870,34 +1149,7 @@
 
 
 <!-- =====================================================
-     DOCUMENTOS
-     ===================================================== -->
-
-<nav class="document-links">
-
-  <a
-    href="https://drive.google.com/file/d/1s00GdR8cFIS2H24pEitCUTgNoga5lstx/view?usp=drive_link"
-    target="_blank"
-    rel="noopener"
-  >
-    📄 PROGRAMA 2026
-  </a>
-
-
-  <a
-    href="https://drive.google.com/file/d/1PelyBl8CNLrdGFQwOp_hoNlwDBGnm1yR/view?usp=drive_link"
-    target="_blank"
-    rel="noopener"
-  >
-    🧭 HOJA DE RUTA 2026
-  </a>
-
-</nav>
-
-
-
-<!-- =====================================================
-     TÍTULO DEL RECORRIDO
+     RECORRIDO
      ===================================================== -->
 
 <section class="route-heading">
@@ -911,16 +1163,13 @@
   </h2>
 
   <p>
-    Abrí cada unidad para ver sus clases.
+    Cada unidad reúne sus clases y materiales.
+    Abrila para conocer el recorrido.
   </p>
 
 </section>
 
 
-
-<!-- =====================================================
-     UNIDADES
-     ===================================================== -->
 
 <div
   id="units-list"
@@ -928,7 +1177,9 @@
 >
 
 
-<!-- UNIDAD 1 -->
+<!-- =====================================================
+     UNIDAD 1
+     ===================================================== -->
 
 <details
   class="unit-dropdown unit-1"
@@ -939,6 +1190,7 @@
     <div class="unit-number">
       UNIDAD<br>1
     </div>
+
 
     <div>
 
@@ -951,6 +1203,7 @@
       </p>
 
     </div>
+
 
     <div class="unit-toggle">
       VER CLASES
@@ -973,7 +1226,9 @@
 
 
 
-<!-- UNIDAD 2 -->
+<!-- =====================================================
+     UNIDAD 2
+     ===================================================== -->
 
 <details
   class="unit-dropdown unit-2"
@@ -984,6 +1239,7 @@
     <div class="unit-number">
       UNIDAD<br>2
     </div>
+
 
     <div>
 
@@ -996,6 +1252,7 @@
       </p>
 
     </div>
+
 
     <div class="unit-toggle">
       VER CLASES
@@ -1018,7 +1275,9 @@
 
 
 
-<!-- UNIDAD 3 -->
+<!-- =====================================================
+     UNIDAD 3
+     ===================================================== -->
 
 <details
   class="unit-dropdown unit-3"
@@ -1029,6 +1288,7 @@
     <div class="unit-number">
       UNIDAD<br>3
     </div>
+
 
     <div>
 
@@ -1041,6 +1301,7 @@
       </p>
 
     </div>
+
 
     <div class="unit-toggle">
       VER CLASES
@@ -1136,22 +1397,23 @@ const clases = [
 
   {
     n:2,
-    d:"2026-09-01",
+    d:"2026-08-31",
     t:"Paradigmas de la utilización de medios",
     u:1,
     desc:"Paradigmas técnico, práctico y estratégico."
   },
 
   {
-  n:3,
-  d:"2026-09-07",
-  t:"Concepción de medios",
-  u:1,
-  desc:"Medios impresos, audiovisuales, manipulativos e informáticos."
-},
+    n:3,
+    d:"2026-09-07",
+    t:"Concepción de medios",
+    u:1,
+    desc:"Medios impresos, audiovisuales, manipulativos e informáticos."
+  },
+
   {
     n:4,
-    d:"2026-09-07",
+    d:"2026-09-14",
     t:"Concepciones de enseñanza",
     u:2,
     desc:"Concepciones de enseñanza."
@@ -1159,7 +1421,7 @@ const clases = [
 
   {
     n:5,
-    d:"2026-09-14",
+    d:"2026-09-21",
     t:"Cultura escolar vs. cultura mediática",
     u:2,
     desc:"Desbordes y conflictos entre la cultura escolar y la cultura mediática."
@@ -1167,7 +1429,7 @@ const clases = [
 
   {
     n:6,
-    d:"2026-09-21",
+    d:"2026-09-28",
     t:"Mirada crítica sobre la educación",
     u:2,
     desc:"Tecnologías en y para la educación. Rol e identidad docente en la era digital."
@@ -1175,7 +1437,7 @@ const clases = [
 
   {
     n:7,
-    d:"2026-09-28",
+    d:"2026-10-05",
     t:"Tecnología educativa y gamificación",
     u:2,
     desc:"Tecnología educativa en sentido didáctico. Gamificación."
@@ -1183,7 +1445,7 @@ const clases = [
 
   {
     n:8,
-    d:"2026-10-05",
+    d:"2026-10-12",
     t:"¿De qué hablamos cuando hablamos de discapacidad?",
     u:3,
     desc:"Aproximación al concepto de discapacidad."
@@ -1265,6 +1527,7 @@ function generarTarjetas() {
         );
 
       if (!contenedor) return;
+
 
       contenedor.innerHTML = "";
 
@@ -1378,26 +1641,11 @@ function generarTarjetas() {
 
 function generarClaseDestacada() {
 
-
-  const hoy =
-    new Date();
-
-
-  /*
-    Buscamos la última clase
-    que ya está habilitada.
-  */
-
   const disponibles =
     clases.filter(
       c => disponible(c.d)
     );
 
-
-  /*
-    Buscamos la próxima clase
-    que todavía no empezó.
-  */
 
   const proximas =
     clases.filter(
@@ -1413,26 +1661,15 @@ function generarClaseDestacada() {
     disponibles.length > 0
   ) {
 
-    /*
-      Durante la cursada:
-      mostramos la última clase
-      habilitada.
-    */
-
     destacada =
       disponibles[
         disponibles.length - 1
       ];
 
     modo =
-      "CLASE ACTUAL";
+      "ESTÁS ACÁ";
 
   } else {
-
-    /*
-      Antes de comenzar:
-      mostramos la primera clase.
-    */
 
     destacada =
       proximas[0];
@@ -1444,10 +1681,6 @@ function generarClaseDestacada() {
 
 
   if (!destacada) return;
-
-
-  const unidad =
-    destacada.u;
 
 
   const nombreUnidad = {
@@ -1479,7 +1712,9 @@ function generarClaseDestacada() {
   document.getElementById(
     "featured-unit"
   ).textContent =
-    nombreUnidad[unidad];
+    nombreUnidad[
+      destacada.u
+    ];
 
 
   document.getElementById(
@@ -1491,7 +1726,7 @@ function generarClaseDestacada() {
   document.getElementById(
     "featured-date"
   ).textContent =
-    modo === "CLASE ACTUAL"
+    modo === "ESTÁS ACÁ"
 
     ?
 
@@ -1509,11 +1744,15 @@ function generarClaseDestacada() {
 
 
   if (
-    disponible(destacada.d)
+    disponible(
+      destacada.d
+    )
   ) {
 
     boton.href =
-      `clases/clase${String(destacada.n).padStart(2,"0")}.html`;
+      `clases/clase${String(
+        destacada.n
+      ).padStart(2,"0")}.html`;
 
     boton.textContent =
       "INGRESAR A LA CLASE →";
@@ -1521,7 +1760,9 @@ function generarClaseDestacada() {
   } else {
 
     boton.href =
-      `clases/clase${String(destacada.n).padStart(2,"0")}.html`;
+      `clases/clase${String(
+        destacada.n
+      ).padStart(2,"0")}.html`;
 
     boton.textContent =
       "VER PRÓXIMAMENTE →";
@@ -1537,7 +1778,6 @@ function generarClaseDestacada() {
    ===================================================== */
 
 function actualizarProgreso() {
-
 
   const cantidad =
     clases.filter(
@@ -1561,19 +1801,20 @@ function actualizarProgreso() {
     `${porcentaje}%`;
 
 
-  if (
-    cantidad > 0
-  ) {
+  if (cantidad > 0) {
+
+    const ultima =
+      clases
+        .filter(
+          c => disponible(c.d)
+        )
+        .slice(-1)[0];
+
 
     document.getElementById(
       "progress-subtitle"
     ).textContent =
-      `Vas por la Unidad ${
-        clases
-          .filter(c => disponible(c.d))
-          .slice(-1)[0]
-          .u
-      }`;
+      `Vas por la Unidad ${ultima.u}`;
 
   } else {
 
