@@ -1,0 +1,1500 @@
+<div id="sincronia-viva"
+style="width:100%;max-width:100%;margin:0;padding:0 0 60px;background:#fdfdfd;color:#4d4d4d;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;box-sizing:border-box;">
+
+  <!-- =====================================================
+       CABECERA
+       ===================================================== -->
+
+  <section style="background:linear-gradient(135deg,#7a0019 0%,#a32035 100%);color:white;padding:65px 6%;text-align:center;">
+
+    <div style="font-size:11px;font-weight:800;letter-spacing:2px;opacity:.8;margin-bottom:15px;">
+      EJE 4 · EL CUERPO EN LA PANTALLA
+    </div>
+
+    <h1 style="margin:0;font-size:clamp(30px,4vw,48px);line-height:1.1;letter-spacing:-1px;">
+      El cuerpo en la pantalla:
+      <br>
+      estrategias para una sincronía viva
+    </h1>
+
+    <p style="max-width:800px;margin:22px auto 0;font-size:18px;line-height:1.6;opacity:.92;">
+      La presencia en una clase virtual no se mide por una cámara encendida:
+      se construye con participación, movimiento, interacción y encuentro.
+    </p>
+
+  </section>
+
+
+  <!-- =====================================================
+       CONTENEDOR
+       ===================================================== -->
+
+  <div style="width:100%;max-width:1050px;margin:-35px auto 0;padding:0 20px;box-sizing:border-box;">
+
+
+    <!-- =================================================
+         INTRODUCCIÓN
+         ================================================= -->
+
+    <section style="background:white;padding:38px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);margin-bottom:30px;">
+
+      <div style="color:#7a0019;font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">
+        PARA EMPEZAR
+      </div>
+
+      <h2 style="color:#7a0019;margin:0 0 15px;font-size:28px;">
+        ¿Qué pasa cuando la pantalla se queda en silencio?
+      </h2>
+
+      <p style="font-size:16px;line-height:1.75;margin:0 0 15px;">
+        Seguramente alguna vez te pasó: comienza una videollamada,
+        aparecen los cuadraditos en la pantalla y, de repente,
+        el silencio se vuelve protagonista.
+      </p>
+
+      <p style="font-size:16px;line-height:1.75;margin:0;">
+        Pero antes de pedir que se enciendan las cámaras,
+        esta clase nos propone hacernos otra pregunta:
+        <strong>¿qué entendemos realmente por presencia?</strong>
+      </p>
+
+      <div style="margin-top:25px;padding:20px 24px;background:#fdf2e9;border-left:5px solid #c89b4b;border-radius:8px;color:#765d35;font-style:italic;line-height:1.6;">
+        “La cámara encendida puede ser el simulacro perfecto de la atención.”
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         INSTRUCCIONES + AVANCE
+         ================================================= -->
+
+    <section style="background:white;padding:25px 30px;border-radius:18px;box-shadow:0 5px 18px rgba(0,0,0,.06);margin-bottom:30px;">
+
+      <!-- CARTEL DE INSTRUCCIONES -->
+
+      <div
+        style="background:#7a0019;color:white;padding:25px 30px;border-radius:15px;margin-bottom:30px;text-align:center;box-shadow:0 4px 12px rgba(122,0,25,0.15);">
+
+        <h3 style="margin:0;font-size:1.5em;letter-spacing:-0.5px;">
+          📌 ¿Qué tengo que hacer en este encuentro?
+        </h3>
+
+        <p style="margin:10px 0 0;font-size:1.05em;opacity:.95;">
+          Recorré las cinco estaciones en orden:
+          <strong>escuchá, explorá, profundizá, construí y cerrá.</strong>
+          A medida que avances, tu recorrido se va a ir acumulando.
+        </p>
+
+      </div>
+
+
+      <!-- AVANCE -->
+
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;margin-bottom:12px;">
+
+        <div>
+
+          <div style="color:#7a0019;font-size:11px;font-weight:900;letter-spacing:1.5px;">
+            TU RECORRIDO
+          </div>
+
+          <strong id="avance-sincronia-texto"
+          style="display:block;margin-top:4px;font-size:17px;color:#444;">
+            0 de 5 estaciones exploradas
+          </strong>
+
+        </div>
+
+        <div id="avance-sincronia-porcentaje"
+        style="color:#7a0019;font-size:13px;font-weight:900;">
+          0%
+        </div>
+
+      </div>
+
+
+      <div style="width:100%;height:10px;background:#eee5d6;border-radius:20px;overflow:hidden;">
+
+        <div id="barra-sincronia"
+        style="width:0%;height:100%;background:linear-gradient(90deg,#7a0019,#c89b4b);border-radius:20px;transition:width .4s ease;">
+        </div>
+
+      </div>
+
+
+      <!-- PASOS VISUALES -->
+
+      <div style="display:flex;justify-content:space-between;gap:8px;margin-top:20px;">
+
+        <div class="sincronia-paso" data-paso="1">
+          <span>01</span>
+          <small>Escuchá</small>
+        </div>
+
+        <div class="sincronia-linea"></div>
+
+        <div class="sincronia-paso" data-paso="2">
+          <span>02</span>
+          <small>Explorá</small>
+        </div>
+
+        <div class="sincronia-linea"></div>
+
+        <div class="sincronia-paso" data-paso="3">
+          <span>03</span>
+          <small>Profundizá</small>
+        </div>
+
+        <div class="sincronia-linea"></div>
+
+        <div class="sincronia-paso" data-paso="4">
+          <span>04</span>
+          <small>Construí</small>
+        </div>
+
+        <div class="sincronia-linea"></div>
+
+        <div class="sincronia-paso" data-paso="5">
+          <span>05</span>
+          <small>Cerrá</small>
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         LAS ESTACIONES
+         ================================================= -->
+
+    <div style="margin-bottom:12px;color:#7a0019;font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;">
+      LAS ESTACIONES
+    </div>
+
+
+
+    <!-- =================================================
+         ESTACIÓN 1 · ESCUCHÁ
+         ================================================= -->
+
+    <details class="estacion-sincronia" data-estacion="1">
+
+      <summary>
+
+        <div class="sincronia-numero">
+          01
+        </div>
+
+        <div class="sincronia-info">
+
+          <strong>
+            🖥️ Los cuadraditos negros
+          </strong>
+
+          <span>
+            Escuchá el problema antes de buscar soluciones
+          </span>
+
+        </div>
+
+        <div class="sincronia-estado">
+          ABRIR +
+        </div>
+
+      </summary>
+
+
+      <div class="sincronia-contenido">
+
+        <p>
+          Para comenzar, recuperemos una escena conocida:
+          una videollamada llena de pequeños rectángulos,
+          algunos con rostros, otros completamente negros.
+        </p>
+
+        <p>
+          La primera reacción puede ser pedir que se enciendan
+          las cámaras. Pero la clase nos invita a detenernos
+          y cuestionar esa asociación entre <strong>cámara encendida,
+          atención y presencia</strong>.
+        </p>
+
+        <div class="pregunta-sincronia">
+
+          <strong>
+            👀 Pausa diagnóstica
+          </strong>
+
+          <p>
+            Pensá en tu último encuentro sincrónico:
+            ¿qué señales utilizaste para saber si tus estudiantes
+            estaban realmente participando?
+          </p>
+
+        </div>
+
+
+        <div class="material-sincronia">
+
+          <strong>
+            📖 CLASE ESCRITA
+          </strong>
+
+          <p>
+            Leé la clase completa para conocer el problema
+            de los “cuadraditos negros” y el concepto de
+            presencia en los entornos virtuales.
+          </p>
+
+          <a
+            href="https://drive.google.com/file/d/1tAEpoHw_favD8WtiwfNLuLZgWcWkpQl_/view?usp=drive_link"
+            target="_blank"
+            rel="noopener"
+            class="boton-sincronia">
+            LEER LA CLASE →
+          </a>
+
+        </div>
+
+      </div>
+
+    </details>
+
+
+
+    <!-- =================================================
+         ESTACIÓN 2 · EXPLORÁ
+         ================================================= -->
+
+    <details class="estacion-sincronia" data-estacion="2">
+
+      <summary>
+
+        <div class="sincronia-numero">
+          02
+        </div>
+
+        <div class="sincronia-info">
+
+          <strong>
+            🌐 Habitar la sincronía
+          </strong>
+
+          <span>
+            De una clase lineal a un acontecimiento vivo
+          </span>
+
+        </div>
+
+        <div class="sincronia-estado">
+          ABRIR +
+        </div>
+
+      </summary>
+
+
+      <div class="sincronia-contenido">
+
+        <p>
+          La videollamada no es simplemente un aula material
+          trasladada a una pantalla. Es un entorno híbrido,
+          donde se mezclan la casa, el trabajo, los ruidos,
+          los vínculos y las condiciones particulares de cada persona.
+        </p>
+
+        <p>
+          Por eso, una clase sincrónica no debería limitarse
+          a reproducir una exposición magistral durante una hora.
+          La propuesta es construir una <strong>Sincronía Dinámica</strong>:
+          un espacio donde la acción y la participación permitan
+          sostener la atención.
+        </p>
+
+
+        <div class="momentos-grid">
+
+          <div class="momento-card">
+            <strong>01</strong>
+            <span>Aterrizaje</span>
+          </div>
+
+          <div class="momento-card">
+            <strong>02</strong>
+            <span>Termómetro cognitivo</span>
+          </div>
+
+          <div class="momento-card">
+            <strong>03</strong>
+            <span>Clínica de puntos ciegos</span>
+          </div>
+
+          <div class="momento-card">
+            <strong>04</strong>
+            <span>Laboratorio colectivo</span>
+          </div>
+
+          <div class="momento-card">
+            <strong>05</strong>
+            <span>Huella del encuentro</span>
+          </div>
+
+        </div>
+
+
+        <div class="pregunta-sincronia">
+
+          <strong>
+            ⚡ Para pensar
+          </strong>
+
+          <p>
+            Si el encuentro sincrónico no fuera una clase magistral
+            frente a una pantalla, ¿qué podría suceder en él que
+            difícilmente podría suceder de manera asincrónica?
+          </p>
+
+        </div>
+
+
+        <div class="material-sincronia">
+
+          <strong>
+            📚 BIBLIOGRAFÍA
+          </strong>
+
+          <p>
+            Accedé al material bibliográfico propuesto para
+            profundizar las ideas trabajadas en este eje.
+          </p>
+
+          <a
+            href="https://drive.google.com/file/d/1OFbO2bOPvUevd_bzdo_dj_nJeiPavhla/view?usp=drive_link"
+            target="_blank"
+            rel="noopener"
+            class="boton-sincronia">
+            VER BIBLIOGRAFÍA →
+          </a>
+
+        </div>
+
+      </div>
+
+    </details>
+
+
+
+    <!-- =================================================
+         ESTACIÓN 3 · PROFUNDIZÁ
+         ================================================= -->
+
+    <details class="estacion-sincronia" data-estacion="3">
+
+      <summary>
+
+        <div class="sincronia-numero">
+          03
+        </div>
+
+        <div class="sincronia-info">
+
+          <strong>
+            🕺 Poner el cuerpo en la pantalla
+          </strong>
+
+          <span>
+            Dinámicas para participar sin exponer la intimidad
+          </span>
+
+        </div>
+
+        <div class="sincronia-estado">
+          ABRIR +
+        </div>
+
+      </summary>
+
+
+      <div class="sincronia-contenido">
+
+        <p>
+          Poner el cuerpo en una videollamada no significa
+          necesariamente mostrar el rostro durante toda la clase.
+          Podemos construir presencia mediante el movimiento,
+          los gestos, las palabras, las imágenes y la interacción.
+        </p>
+
+
+        <div class="dinamicas-grid">
+
+          <div class="dinamica-card">
+
+            <strong>
+              🚪 Debate de las Puertas
+            </strong>
+
+            <p>
+              Una afirmación polémica y dos posiciones corporales:
+              acercarse a la cámara si estamos de acuerdo;
+              alejarse si estamos en desacuerdo o tenemos dudas.
+            </p>
+
+          </div>
+
+
+          <div class="dinamica-card">
+
+            <strong>
+              🧩 Mural de los Signos
+            </strong>
+
+            <p>
+              Cada participante busca una imagen, palabra o titular
+              y lo incorpora a un mural colectivo para representar
+              una configuración de apoyo o una solución pedagógica.
+            </p>
+
+          </div>
+
+
+          <div class="dinamica-card">
+
+            <strong>
+              🎭 Trivias Gestuales
+            </strong>
+
+            <p>
+              Una trivia en la que las respuestas se expresan
+              mediante gestos corporales frente a la cámara.
+            </p>
+
+          </div>
+
+
+          <div class="dinamica-card">
+
+            <strong>
+              📝 Lienzo de la Cuadrícula
+            </strong>
+
+            <p>
+              Cada participante escribe una palabra o dibuja
+              un símbolo y, a la cuenta de tres, lo acerca a la cámara
+              para construir un mosaico colectivo.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="pregunta-sincronia">
+
+          <strong>
+            🫶 Para profundizar
+          </strong>
+
+          <p>
+            ¿Cuál de estas estrategias permitiría que tus estudiantes
+            participen activamente sin que la cámara se convierta
+            en una obligación o una forma de control?
+          </p>
+
+        </div>
+
+      </div>
+
+    </details>
+
+
+
+    <!-- =================================================
+         ESTACIÓN 4 · CONSTRUÍ
+         ================================================= -->
+
+    <details class="estacion-sincronia" data-estacion="4">
+
+      <summary>
+
+        <div class="sincronia-numero">
+          04
+        </div>
+
+        <div class="sincronia-info">
+
+          <strong>
+            🎬 El Guion del Acontecimiento
+          </strong>
+
+          <span>
+            Diseñá tu próximo encuentro sincrónico
+          </span>
+
+        </div>
+
+        <div class="sincronia-estado">
+          ABRIR +
+        </div>
+
+      </summary>
+
+
+      <div class="sincronia-contenido">
+
+        <p>
+          Ahora es momento de pasar de las ideas al diseño.
+          Recuperá la misma unidad temática o contenido que elegiste
+          para tu secuencia bimodal anterior.
+        </p>
+
+        <p>
+          Vas a diseñar el <strong>guion de un encuentro sincrónico
+          de 60 minutos</strong>, pensando qué va a suceder
+          antes, durante y después del encuentro.
+        </p>
+
+
+        <div class="guion-grid">
+
+          <div class="guion-card">
+
+            <strong>
+              01 · Aterrizaje
+            </strong>
+
+            <span>
+              ¿Qué actividad breve vas a utilizar para recuperar
+              lo trabajado y conocer el “termómetro cognitivo”
+              del grupo?
+            </span>
+
+          </div>
+
+
+          <div class="guion-card">
+
+            <strong>
+              02 · Dinámica
+            </strong>
+
+            <span>
+              ¿Qué propuesta vas a utilizar para que el grupo
+              participe activamente y “ponga el cuerpo”?
+            </span>
+
+          </div>
+
+
+          <div class="guion-card">
+
+            <strong>
+              03 · Consigna
+            </strong>
+
+            <span>
+              ¿Qué indicación concreta vas a dar a tus estudiantes
+              para que sepan qué hacer?
+            </span>
+
+          </div>
+
+
+          <div class="guion-card">
+
+            <strong>
+              04 · Huella
+            </strong>
+
+            <span>
+              ¿Qué producción, síntesis o registro va a quedar
+              en el campus después del encuentro?
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="pregunta-sincronia">
+
+          <strong>
+            🎬 Tu desafío
+          </strong>
+
+          <p>
+            Diseñá una experiencia en la que el estudiante
+            no sea solamente espectador. Pensá qué va a hacer,
+            decidir, producir, mover, compartir o construir
+            durante esos 60 minutos.
+          </p>
+
+        </div>
+
+
+        <div class="material-sincronia">
+
+          <strong>
+            💬 FORO DE PRODUCCIÓN
+          </strong>
+
+          <p>
+            Compartí allí tu guion sincrónico. Después,
+            leé el de un/a compañero/a y realizá una co-evaluación:
+            analizá si la dinámica es clara, si evita complicaciones
+            técnicas y si logra romper la pasividad del estudiante.
+          </p>
+
+          <a
+            href="URL_DEL_FORO"
+            target="_blank"
+            rel="noopener"
+            class="boton-sincronia">
+            IR AL FORO →
+          </a>
+
+        </div>
+
+      </div>
+
+    </details>
+
+
+
+    <!-- =================================================
+         ESTACIÓN 5 · CERRÁ
+         ================================================= -->
+
+    <details class="estacion-sincronia" data-estacion="5">
+
+      <summary>
+
+        <div class="sincronia-numero">
+          05
+        </div>
+
+        <div class="sincronia-info">
+
+          <strong>
+            🎫 Ticket de salida
+          </strong>
+
+          <span>
+            Una última pregunta antes de apagar la pantalla
+          </span>
+
+        </div>
+
+        <div class="sincronia-estado">
+          ABRIR +
+        </div>
+
+      </summary>
+
+
+      <div class="sincronia-contenido">
+
+        <div class="ticket-sincronia">
+
+          <div style="font-size:38px;margin-bottom:10px;">
+            🎫
+          </div>
+
+          <h3>
+            ¿Cuál encaja con vos?
+          </h3>
+
+          <p>
+            De las dinámicas gestuales o visuales que vimos,
+            ¿cuál te imaginás aplicando primero en tu materia
+            y por qué sentís que encajaría con tu estilo docente?
+          </p>
+
+
+          <a
+            href="URL_DEL_BUZON"
+            target="_blank"
+            rel="noopener"
+            class="boton-ticket">
+            RESPONDER →
+          </a>
+
+        </div>
+
+      </div>
+
+    </details>
+
+
+
+    <!-- =================================================
+         CIERRE
+         ================================================= -->
+
+    <section style="margin-top:35px;padding:30px;background:#fdf2e9;border-radius:18px;border:1px solid #ead8bc;text-align:center;">
+
+      <div style="color:#7a0019;font-size:11px;font-weight:900;letter-spacing:1.5px;">
+        FIN DEL RECORRIDO
+      </div>
+
+      <h2 style="margin:8px 0;color:#7a0019;">
+        Presencia · Participación · Movimiento · Encuentro
+      </h2>
+
+      <p style="max-width:680px;margin:auto;line-height:1.6;color:#665b4b;">
+        Una pantalla no tiene por qué ser una barrera.
+        Cuando diseñamos propuestas que invitan a participar,
+        la sincronía puede convertirse en un verdadero acontecimiento pedagógico.
+      </p>
+
+    </section>
+
+
+  </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ESTILOS
+     ===================================================== -->
+
+<style>
+
+#sincronia-viva *,
+#sincronia-viva *::before,
+#sincronia-viva *::after {
+  box-sizing:border-box;
+}
+
+
+#sincronia-viva .estacion-sincronia {
+
+  margin-bottom:14px;
+
+  background:white;
+
+  border:1px solid #e2d8ca;
+
+  border-radius:17px;
+
+  overflow:hidden;
+
+  box-shadow:0 4px 14px rgba(0,0,0,.04);
+
+}
+
+
+#sincronia-viva .estacion-sincronia[open] {
+
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+
+#sincronia-viva .estacion-sincronia summary {
+
+  display:grid;
+
+  grid-template-columns:58px 1fr auto;
+
+  align-items:center;
+
+  gap:16px;
+
+  padding:18px 20px;
+
+  cursor:pointer;
+
+  list-style:none;
+
+}
+
+
+#sincronia-viva .estacion-sincronia summary::-webkit-details-marker {
+  display:none;
+}
+
+
+#sincronia-viva .sincronia-numero {
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  width:50px;
+
+  height:50px;
+
+  border-radius:50%;
+
+  background:#7a0019;
+
+  color:white;
+
+  font-size:13px;
+
+  font-weight:900;
+}
+
+
+#sincronia-viva .estacion-sincronia:nth-of-type(even)
+.sincronia-numero {
+
+  background:#c89b4b;
+}
+
+
+#sincronia-viva .sincronia-info strong {
+
+  display:block;
+
+  color:#7a0019;
+
+  font-size:18px;
+
+  margin-bottom:3px;
+}
+
+
+#sincronia-viva .sincronia-info span {
+
+  color:#777;
+
+  font-size:12px;
+}
+
+
+#sincronia-viva .sincronia-estado {
+
+  color:#8a6d3b;
+
+  font-size:10px;
+
+  font-weight:900;
+
+  white-space:nowrap;
+}
+
+
+#sincronia-viva .estacion-sincronia[open]
+.sincronia-estado {
+
+  font-size:0;
+
+  color:#7a0019;
+}
+
+
+#sincronia-viva .estacion-sincronia[open]
+.sincronia-estado::after {
+
+  content:"CERRAR −";
+
+  font-size:10px;
+}
+
+
+#sincronia-viva .sincronia-contenido {
+
+  padding:8px 28px 30px;
+
+  border-top:1px solid #eee4d7;
+
+  font-size:15px;
+
+  line-height:1.7;
+}
+
+
+#sincronia-viva .pregunta-sincronia {
+
+  margin:25px 0;
+
+  padding:20px 22px;
+
+  background:#fdf2e9;
+
+  border-left:5px solid #c89b4b;
+
+  border-radius:8px;
+
+  color:#66563d;
+}
+
+
+#sincronia-viva .pregunta-sincronia p {
+
+  margin:7px 0 0;
+}
+
+
+#sincronia-viva .momentos-grid {
+
+  display:grid;
+
+  grid-template-columns:repeat(5,1fr);
+
+  gap:10px;
+
+  margin:25px 0;
+}
+
+
+#sincronia-viva .momento-card {
+
+  padding:18px 10px;
+
+  border-radius:12px;
+
+  background:#f8f4ed;
+
+  text-align:center;
+
+  border:1px solid #eadfce;
+}
+
+
+#sincronia-viva .momento-card strong {
+
+  display:block;
+
+  color:#7a0019;
+
+  font-size:22px;
+
+  margin-bottom:5px;
+}
+
+
+#sincronia-viva .momento-card span {
+
+  display:block;
+
+  color:#665b4b;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  line-height:1.3;
+}
+
+
+#sincronia-viva .dinamicas-grid {
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:12px;
+
+  margin:25px 0;
+}
+
+
+#sincronia-viva .dinamica-card {
+
+  padding:20px;
+
+  border-radius:13px;
+
+  background:#f8f4ed;
+
+  border:1px solid #eadfce;
+}
+
+
+#sincronia-viva .dinamica-card strong {
+
+  display:block;
+
+  color:#7a0019;
+
+  font-size:15px;
+
+  margin-bottom:7px;
+}
+
+
+#sincronia-viva .dinamica-card p {
+
+  margin:0;
+
+  color:#665b4b;
+
+  font-size:13px;
+
+  line-height:1.55;
+}
+
+
+#sincronia-viva .guion-grid {
+
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:12px;
+
+  margin:25px 0;
+}
+
+
+#sincronia-viva .guion-card {
+
+  padding:20px;
+
+  background:#faf7f0;
+
+  border:1px solid #e4d5bb;
+
+  border-radius:13px;
+}
+
+
+#sincronia-viva .guion-card strong {
+
+  display:block;
+
+  color:#7a0019;
+
+  font-size:13px;
+
+  margin-bottom:7px;
+}
+
+
+#sincronia-viva .guion-card span {
+
+  display:block;
+
+  color:#665b4b;
+
+  font-size:13px;
+
+  line-height:1.55;
+}
+
+
+#sincronia-viva .material-sincronia {
+
+  margin-top:25px;
+
+  padding:25px;
+
+  background:#faf7f0;
+
+  border:1px solid #e4d5bb;
+
+  border-radius:12px;
+
+  text-align:center;
+}
+
+
+#sincronia-viva .material-sincronia strong {
+
+  color:#7a0019;
+
+  font-size:12px;
+
+  letter-spacing:1px;
+}
+
+
+#sincronia-viva .material-sincronia p {
+
+  color:#777;
+
+  font-size:13px;
+}
+
+
+#sincronia-viva .boton-sincronia {
+
+  display:inline-block;
+
+  padding:11px 22px;
+
+  background:#c89b4b;
+
+  color:white;
+
+  text-decoration:none;
+
+  border-radius:8px;
+
+  font-weight:800;
+
+  font-size:12px;
+
+  transition:all .2s ease;
+}
+
+
+#sincronia-viva .boton-sincronia:hover {
+
+  transform:translateY(-2px);
+
+  opacity:.9;
+}
+
+
+#sincronia-viva .ticket-sincronia {
+
+  margin-top:10px;
+
+  padding:32px;
+
+  border-radius:18px;
+
+  background:linear-gradient(135deg,#7a0019,#a32035);
+
+  color:white;
+
+  text-align:center;
+}
+
+
+#sincronia-viva .ticket-sincronia h3 {
+
+  color:white;
+
+  margin:0 0 12px;
+
+  font-size:25px;
+}
+
+
+#sincronia-viva .ticket-sincronia p {
+
+  max-width:650px;
+
+  margin:0 auto 25px;
+
+  font-size:17px;
+
+  line-height:1.55;
+}
+
+
+#sincronia-viva .boton-ticket {
+
+  display:inline-block;
+
+  background:white;
+
+  color:#7a0019;
+
+  padding:13px 28px;
+
+  border-radius:50px;
+
+  text-decoration:none;
+
+  font-weight:900;
+
+  font-size:12px;
+}
+
+
+#sincronia-viva .sincronia-paso {
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
+  gap:5px;
+
+  min-width:45px;
+}
+
+
+#sincronia-viva .sincronia-paso span {
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  width:34px;
+
+  height:34px;
+
+  border-radius:50%;
+
+  background:#eee5d6;
+
+  color:#777;
+
+  font-size:10px;
+
+  font-weight:900;
+
+  transition:all .3s ease;
+}
+
+
+#sincronia-viva .sincronia-paso small {
+
+  color:#777;
+
+  font-size:8px;
+
+  font-weight:700;
+
+  text-align:center;
+}
+
+
+#sincronia-viva .sincronia-paso.explorado span {
+
+  background:#7a0019;
+
+  color:white;
+}
+
+
+#sincronia-viva .sincronia-paso.explorado small {
+
+  color:#7a0019;
+}
+
+
+#sincronia-viva .sincronia-linea {
+
+  flex:1;
+
+  height:2px;
+
+  margin-top:16px;
+
+  background:#e2d8ca;
+}
+
+
+@media(max-width:700px) {
+
+  #sincronia-viva .estacion-sincronia summary {
+
+    grid-template-columns:48px 1fr auto;
+
+    gap:11px;
+
+    padding:15px;
+  }
+
+
+  #sincronia-viva .sincronia-numero {
+
+    width:43px;
+
+    height:43px;
+  }
+
+
+  #sincronia-viva .sincronia-info strong {
+
+    font-size:16px;
+  }
+
+
+  #sincronia-viva .sincronia-info span {
+
+    font-size:11px;
+  }
+
+
+  #sincronia-viva .sincronia-estado {
+
+    font-size:0;
+  }
+
+
+  #sincronia-viva .sincronia-estado::after {
+
+    content:"+";
+
+    font-size:20px;
+  }
+
+
+  #sincronia-viva .sincronia-contenido {
+
+    padding:8px 18px 25px;
+  }
+
+
+  #sincronia-viva .momentos-grid {
+
+    grid-template-columns:1fr 1fr;
+  }
+
+
+  #sincronia-viva .dinamicas-grid {
+
+    grid-template-columns:1fr;
+  }
+
+
+  #sincronia-viva .guion-grid {
+
+    grid-template-columns:1fr;
+  }
+
+
+  #sincronia-viva .sincronia-paso small {
+
+    display:none;
+  }
+
+}
+
+</style>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT · AVANCE
+     ===================================================== -->
+
+<script>
+
+(function() {
+
+  const estaciones =
+    document.querySelectorAll(
+      "#sincronia-viva .estacion-sincronia"
+    );
+
+
+  const exploradas =
+    new Set();
+
+
+  function actualizarAvance() {
+
+    const cantidad =
+      exploradas.size;
+
+
+    const porcentaje =
+      (cantidad / 5) * 100;
+
+
+    const texto =
+      document.getElementById(
+        "avance-sincronia-texto"
+      );
+
+
+    const porcentajeTexto =
+      document.getElementById(
+        "avance-sincronia-porcentaje"
+      );
+
+
+    const barra =
+      document.getElementById(
+        "barra-sincronia"
+      );
+
+
+    if (texto) {
+
+      texto.textContent =
+        `${cantidad} de 5 estaciones exploradas`;
+
+    }
+
+
+    if (porcentajeTexto) {
+
+      porcentajeTexto.textContent =
+        `${Math.round(porcentaje)}%`;
+
+    }
+
+
+    if (barra) {
+
+      barra.style.width =
+        `${porcentaje}%`;
+
+    }
+
+
+    document
+      .querySelectorAll(
+        "#sincronia-viva .sincronia-paso"
+      )
+      .forEach(
+        function(paso) {
+
+          const numero =
+            Number(
+              paso.dataset.paso
+            );
+
+
+          if (
+            exploradas.has(numero)
+          ) {
+
+            paso.classList.add(
+              "explorado"
+            );
+
+          }
+
+        }
+      );
+
+  }
+
+
+  estaciones.forEach(
+    function(estacion) {
+
+      estacion.addEventListener(
+        "toggle",
+        function() {
+
+          if (estacion.open) {
+
+            const numero =
+              Number(
+                estacion.dataset.estacion
+              );
+
+
+            exploradas.add(
+              numero
+            );
+
+
+            actualizarAvance();
+
+          }
+
+        }
+      );
+
+    }
+  );
+
+
+  actualizarAvance();
+
+})();
+
+</script>
