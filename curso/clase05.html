@@ -2967,286 +2967,172 @@
 
 }
 
-</style>
+
 
 /* =====================================================
-   TRIVIA · ZONA DE DESAFÍO
+   TRIVIA · ZONA DE DESAFÍO ACTIVA
+   Se agrega al final para modificar solo la apariencia
+   del juego, sin tocar su funcionamiento.
    ===================================================== */
 
-/* Cuando la trivia está activa, la separamos visualmente */
 #eje5-juego #eje5-trivia-juego {
-
-  margin-top:25px;
-  padding:28px;
+  margin-top:25px !important;
+  padding:28px !important;
 
   background:
     linear-gradient(
       145deg,
-      #3b1820 0%,
+      #35151d 0%,
       #5a202d 55%,
-      #32151c 100%
-    );
+      #32131a 100%
+    ) !important;
 
-  border-radius:20px;
-
-  border:3px solid #c89b4b;
+  border:3px solid #c89b4b !important;
+  border-radius:20px !important;
 
   box-shadow:
-    0 12px 30px rgba(0,0,0,.18);
+    0 12px 30px rgba(0,0,0,.20) !important;
 
   position:relative;
-
   overflow:hidden;
 }
 
-
-/* Etiqueta superior */
-
+/* Etiqueta que marca claramente que empezó el juego */
 #eje5-juego #eje5-trivia-juego::before {
-
   content:"🎲  DESAFÍO EN JUEGO";
 
   display:block;
-
   width:max-content;
 
   margin:-10px auto 22px;
-
-  padding:7px 14px;
+  padding:7px 15px;
 
   background:#c89b4b;
-
   color:white;
 
   border-radius:30px;
 
   font-size:10px;
-
   font-weight:900;
-
   letter-spacing:1.5px;
-
 }
 
+/* Encabezado de la trivia */
+#eje5-juego #eje5-trivia-juego .eje5-trivia-header {
+  margin:0 0 20px !important;
+  padding:15px 18px !important;
 
-/* Cabecera de la trivia */
+  background:rgba(255,255,255,.10) !important;
+  border:1px solid rgba(255,255,255,.20) !important;
+  border-radius:12px !important;
 
-#eje5-juego #eje5-trivia-juego
-.eje5-trivia-header {
-
-  margin:0 0 20px;
-
-  padding:15px 18px;
-
-  background:rgba(255,255,255,.10);
-
-  border:1px solid rgba(255,255,255,.20);
-
-  border-radius:12px;
-
-  color:white;
-
+  color:white !important;
 }
 
-
-/* Textos de la cabecera */
-
-#eje5-juego #eje5-trivia-juego
-.eje5-trivia-header span {
-
-  color:#e4c98e;
-
+#eje5-juego #eje5-trivia-juego .eje5-trivia-header span {
+  color:#e4c98e !important;
 }
 
-
-#eje5-juego #eje5-trivia-juego
-.eje5-trivia-header strong {
-
-  color:white;
-
+#eje5-juego #eje5-trivia-juego .eje5-trivia-header strong {
+  color:white !important;
 }
 
-
-/* Puntaje */
-
-#eje5-juego #eje5-trivia-juego
-#eje5-trivia-puntaje {
-
-  color:#f2d99e;
-
+#eje5-juego #eje5-trivia-juego #eje5-trivia-puntaje {
+  color:#f2d99e !important;
 }
 
+/* Tarjeta blanca de cada pregunta */
+#eje5-juego #eje5-trivia-juego .eje5-trivia-pregunta {
+  padding:28px !important;
 
-/* Tarjeta de la pregunta */
-
-#eje5-juego #eje5-trivia-juego
-.eje5-trivia-pregunta {
-
-  padding:28px;
-
-  background:#fffdf9;
-
-  border:0;
-
-  border-radius:16px;
+  background:#fffdf9 !important;
+  border:0 !important;
+  border-radius:16px !important;
 
   box-shadow:
-    0 5px 18px rgba(0,0,0,.12);
-
+    0 5px 18px rgba(0,0,0,.13);
 }
 
-
-/* Pregunta */
-
-#eje5-juego #eje5-trivia-juego
-.eje5-trivia-pregunta h3 {
-
-  color:#5a202d;
-
-  font-size:22px;
-
-  line-height:1.45;
-
+#eje5-juego #eje5-trivia-juego .eje5-trivia-pregunta h3 {
+  color:#5a202d !important;
 }
 
-
-/* Opciones */
-
-#eje5-juego #eje5-trivia-juego
-.eje5-trivia-opcion {
-
-  background:#f7f1e8;
-
-  border:2px solid #e5d8c5;
-
-  transition:
-    all .2s ease;
-
+/* Respuestas */
+#eje5-juego #eje5-trivia-juego .eje5-trivia-opcion {
+  background:#f7f1e8 !important;
+  border:2px solid #e5d8c5 !important;
 }
 
-
-/* Hover */
-
-#eje5-juego #eje5-trivia-juego
-.eje5-trivia-opcion:hover {
-
-  background:#fdf2e9;
-
-  border-color:#c89b4b;
-
-  transform:
-    translateX(5px);
-
+#eje5-juego #eje5-trivia-juego .eje5-trivia-opcion:hover {
+  background:#fdf2e9 !important;
+  border-color:#c89b4b !important;
+  transform:translateX(5px);
 }
 
-
-/* Feedback */
-
-#eje5-juego #eje5-trivia-juego
-.eje5-trivia-feedback {
-
-  background:white !important;
-
+/* Retroalimentación */
+#eje5-juego #eje5-trivia-juego .eje5-trivia-feedback {
+  background:#fffdf9 !important;
   border:2px solid #c89b4b !important;
-
-  color:#5a5046;
-
+  color:#5a5046 !important;
 }
 
+#eje5-juego #eje5-trivia-juego .eje5-trivia-feedback h4 {
+  color:#7a0019 !important;
+}
 
 /* Botón siguiente */
+#eje5-juego #eje5-trivia-juego .eje5-boton-siguiente {
+  background:#c89b4b !important;
+  color:white !important;
 
-#eje5-juego #eje5-trivia-juego
-.eje5-boton-siguiente {
-
-  background:#c89b4b;
-
-  color:white;
-
-  padding:13px 25px;
-
-  border-radius:30px;
+  padding:13px 25px !important;
+  border-radius:30px !important;
 
   box-shadow:
     0 4px 10px rgba(0,0,0,.15);
-
 }
 
-
-#eje5-juego #eje5-trivia-juego
-.eje5-boton-siguiente:hover {
-
+#eje5-juego #eje5-trivia-juego .eje5-boton-siguiente:hover {
   transform:translateY(-2px);
-
 }
 
-
-/* =====================================================
-   INTRO DE LA TRIVIA
-   ===================================================== */
-
-#eje5-juego .eje5-trivia-intro {
-
-  position:relative;
-
-  overflow:hidden;
-
-  border:
-    3px solid #c89b4b;
-
-  box-shadow:
-    0 10px 25px rgba(122,0,25,.15);
-
-}
-
-
-/* Pequeño detalle decorativo */
-
-#eje5-juego .eje5-trivia-intro::after {
-
-  content:"✦";
-
-  position:absolute;
-
-  right:30px;
-
-  top:18px;
-
-  font-size:55px;
-
-  color:rgba(255,255,255,.12);
-
-  transform:rotate(15deg);
-
-}
-
-
-/* =====================================================
-   FINAL DE LA TRIVIA
-   ===================================================== */
-
+/* Resultado final */
 #eje5-juego #eje5-trivia-final {
-
-  margin-top:25px;
-
-  padding:35px;
+  margin-top:25px !important;
+  padding:35px !important;
 
   background:
     linear-gradient(
       145deg,
       #fdf2e9,
       #fffaf3
-    );
+    ) !important;
 
-  border:
-    3px solid #c89b4b;
-
-  border-radius:20px;
+  border:3px solid #c89b4b !important;
+  border-radius:20px !important;
 
   box-shadow:
     0 8px 25px rgba(0,0,0,.10);
-
 }
+
+/* Ajuste para celular */
+@media(max-width:700px) {
+  #eje5-juego #eje5-trivia-juego {
+    padding:20px 15px !important;
+  }
+
+  #eje5-juego #eje5-trivia-juego .eje5-trivia-pregunta {
+    padding:22px 17px !important;
+  }
+
+  #eje5-juego #eje5-trivia-juego::before {
+    font-size:9px;
+  }
+}
+
+</style>
+
+
 
 <!-- =====================================================
      JAVASCRIPT · AVANCE + TRIVIA
