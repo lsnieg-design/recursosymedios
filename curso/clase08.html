@@ -1,0 +1,515 @@
+<div id="vinculo-feedback"
+  style="width:100%;max-width:100%;margin:0;padding:0 0 60px;background:#fdfdfd;color:#4d4d4d;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;box-sizing:border-box;">
+
+  <!-- CABECERA -->
+  <section style="background:linear-gradient(135deg,#7a0019 0%,#a32035 100%);color:white;padding:65px 6%;text-align:center;">
+    <div style="font-size:11px;font-weight:800;letter-spacing:2px;opacity:.8;margin-bottom:15px;">
+      EJE 8 · VÍNCULO, FEEDBACK Y CUIDADO
+    </div>
+    <h1 style="margin:0;font-size:clamp(30px,4vw,48px);line-height:1.1;letter-spacing:-1px;">
+      Vínculo, feedback narrativo<br>
+      y el cuidado de las trayectorias
+    </h1>
+    <p style="max-width:820px;margin:22px auto 0;font-size:18px;line-height:1.6;opacity:.92;">
+      ¿Cómo cerrar un ciclo sin clausurar el vínculo y sin dejar a nadie solo/a
+      en el último tramo del camino?
+    </p>
+  </section>
+
+  <div style="width:100%;max-width:1050px;margin:-35px auto 0;padding:0 20px;box-sizing:border-box;">
+
+    <!-- INTRODUCCIÓN -->
+    <section style="background:white;padding:38px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);margin-bottom:30px;">
+      <div style="color:#7a0019;font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">
+        PARA EMPEZAR
+      </div>
+
+      <h2 style="color:#7a0019;margin:0 0 15px;font-size:28px;">
+        El cansancio del cierre y la tentación del abandono
+      </h2>
+
+      <p style="font-size:16px;line-height:1.75;margin:0 0 15px;">
+        Cuando termina un cuatrimestre en modalidad combinada, el cierre puede reducirse a
+        subir las notas al campus, enviar un mensaje genérico y cerrar la pestaña.
+        El problema es que el aprendizaje no termina con la acreditación: el cierre también
+        necesita <strong>cobijo, palabra y sentido</strong>.
+      </p>
+
+      <p style="font-size:16px;line-height:1.75;margin:0;">
+        Este eje propone recuperar el vínculo como parte de la enseñanza y pensar el último
+        tramo de la trayectoria como un momento de cuidado, especialmente cuando aparecen
+        cansancio, silencios digitales o dificultades para sostener el ritmo.
+      </p>
+
+      <div style="margin-top:25px;padding:20px 24px;background:#fdf2e9;border-left:5px solid #c89b4b;border-radius:8px;color:#765d35;font-style:italic;line-height:1.6;">
+        Cerrar no es desaparecer: es <strong>tejer el último nudo de la red</strong>.
+      </div>
+    </section>
+
+    <!-- AVANCE -->
+    <section style="background:white;padding:25px 30px;border-radius:18px;box-shadow:0 5px 18px rgba(0,0,0,.06);margin-bottom:30px;">
+      <div style="background:#7a0019;color:white;padding:25px 30px;border-radius:15px;margin-bottom:30px;text-align:center;box-shadow:0 4px 12px rgba(122,0,25,.15);">
+        <h3 style="margin:0;font-size:1.5em;letter-spacing:-.5px;">📌 ¿Qué tengo que hacer en este recorrido?</h3>
+        <p style="margin:10px 0 0;font-size:1.05em;opacity:.95;">
+          Recorré las cinco estaciones en orden: escuchá, explorá, profundizá, construí y cerrá.
+        </p>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;margin-bottom:12px;">
+        <div>
+          <div style="color:#7a0019;font-size:11px;font-weight:900;letter-spacing:1.5px;">TU RECORRIDO</div>
+          <strong id="avance-vinculo-texto" style="display:block;margin-top:4px;font-size:17px;color:#444;">0 de 5 estaciones exploradas</strong>
+        </div>
+        <div id="avance-vinculo-porcentaje" style="color:#7a0019;font-size:13px;font-weight:900;">0%</div>
+      </div>
+
+      <div style="width:100%;height:10px;background:#eee5d6;border-radius:20px;overflow:hidden;">
+        <div id="barra-vinculo" style="width:0%;height:100%;background:linear-gradient(90deg,#7a0019,#c89b4b);border-radius:20px;transition:width .4s ease;"></div>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;gap:8px;margin-top:20px;">
+        <div class="vinculo-paso" data-paso="1"><span>01</span><small>Escuchar</small></div>
+        <div class="vinculo-linea"></div>
+        <div class="vinculo-paso" data-paso="2"><span>02</span><small>Explorar</small></div>
+        <div class="vinculo-linea"></div>
+        <div class="vinculo-paso" data-paso="3"><span>03</span><small>Profundizar</small></div>
+        <div class="vinculo-linea"></div>
+        <div class="vinculo-paso" data-paso="4"><span>04</span><small>Construir</small></div>
+        <div class="vinculo-linea"></div>
+        <div class="vinculo-paso" data-paso="5"><span>05</span><small>Cerrar</small></div>
+      </div>
+    </section>
+
+    <!-- ESTACIONES -->
+    <section class="ruta-aprendizaje" aria-labelledby="ruta-titulo-vinculo">
+      <div class="ruta-intro">
+        <div class="ruta-kicker">LAS ESTACIONES</div>
+        <h2 id="ruta-titulo-vinculo">Un recorrido para cuidar las trayectorias</h2>
+        <p>Cada estación abre una puerta diferente para sostener la presencia, acompañar el aprendizaje y construir un cierre con sentido.</p>
+      </div>
+
+      <div class="ruta-camino">
+        <div class="ruta-estaciones" role="tablist" aria-label="Estaciones del recorrido">
+
+          <button class="ruta-estacion activa" type="button" role="tab" aria-selected="true" aria-controls="ruta-contenido-vinculo" data-estacion="1">
+            <span class="ruta-icono">01</span>
+            <span class="ruta-nombre">Escuchar</span>
+            <span class="ruta-subtitulo">Reconocer el cansancio del cierre y el riesgo del silencio</span>
+            <span class="ruta-estado">Entrar →</span>
+          </button>
+
+          <div class="ruta-conector" aria-hidden="true"></div>
+
+          <button class="ruta-estacion" type="button" role="tab" aria-selected="false" aria-controls="ruta-contenido-vinculo" data-estacion="2">
+            <span class="ruta-icono">02</span>
+            <span class="ruta-nombre">Explorar</span>
+            <span class="ruta-subtitulo">Descubrir qué es un feedback que aloja y reorienta</span>
+            <span class="ruta-estado">Entrar →</span>
+          </button>
+
+          <div class="ruta-conector" aria-hidden="true"></div>
+
+          <button class="ruta-estacion" type="button" role="tab" aria-selected="false" aria-controls="ruta-contenido-vinculo" data-estacion="3">
+            <span class="ruta-icono">03</span>
+            <span class="ruta-nombre">Profundizar</span>
+            <span class="ruta-subtitulo">Intersticios, seguimiento sensible y cuidado</span>
+            <span class="ruta-estado">Entrar →</span>
+          </button>
+
+          <div class="ruta-conector" aria-hidden="true"></div>
+
+          <button class="ruta-estacion" type="button" role="tab" aria-selected="false" aria-controls="ruta-contenido-vinculo" data-estacion="4">
+            <span class="ruta-icono">04</span>
+            <span class="ruta-nombre">Construir</span>
+            <span class="ruta-subtitulo">Diseñar el Guion del Feedback Narrativo</span>
+            <span class="ruta-estado">Entrar →</span>
+          </button>
+
+          <div class="ruta-conector" aria-hidden="true"></div>
+
+          <button class="ruta-estacion" type="button" role="tab" aria-selected="false" aria-controls="ruta-contenido-vinculo" data-estacion="5">
+            <span class="ruta-icono">05</span>
+            <span class="ruta-nombre">Cerrar</span>
+            <span class="ruta-subtitulo">Recuperar la transformación y la bandera a sostener</span>
+            <span class="ruta-estado">Entrar →</span>
+          </button>
+
+        </div>
+
+        <section class="ruta-contenido" id="ruta-contenido-vinculo" role="tabpanel" tabindex="0">
+          <div class="ruta-cabecera">
+            <div>
+              <div class="ruta-cabecera-kicker" id="ruta-kicker-vinculo">ESTACIÓN 01</div>
+              <h3 id="ruta-titulo-estacion-vinculo">Escuchar</h3>
+            </div>
+            <div class="ruta-contador" id="ruta-contador-vinculo">1 de 5</div>
+          </div>
+
+          <div class="ruta-frase" id="ruta-frase-vinculo"></div>
+          <div class="ruta-material" id="ruta-material-vinculo"></div>
+
+          <div class="ruta-navegacion">
+            <button type="button" id="ruta-anterior-vinculo" class="ruta-btn-secundario">← Anterior</button>
+            <button type="button" id="ruta-siguiente-vinculo" class="ruta-btn-principal">Siguiente estación →</button>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section style="margin-top:35px;padding:30px;background:#fdf2e9;border-radius:18px;border:1px solid #ead8bc;text-align:center;">
+      <div style="color:#7a0019;font-size:11px;font-weight:900;letter-spacing:1.5px;">FIN DEL RECORRIDO</div>
+      <h2 style="margin:8px 0;color:#7a0019;">Escuchar · Explorar · Profundizar · Construir · Cerrar</h2>
+      <p style="max-width:720px;margin:auto;line-height:1.6;color:#665b4b;">
+        Cuidar las trayectorias también es pensar cómo acompañamos el último tramo:
+        no dejar que el cierre burocrático borre la historia compartida.
+      </p>
+    </section>
+
+  </div>
+</div>
+
+<style>
+#vinculo-feedback *,#vinculo-feedback *::before,#vinculo-feedback *::after{box-sizing:border-box}
+#vinculo-feedback{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+#vinculo-feedback .ruta-aprendizaje{margin-top:36px}
+#vinculo-feedback .ruta-intro{margin-bottom:20px}
+#vinculo-feedback .ruta-kicker{color:#7a0019;font-size:11px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:7px}
+#vinculo-feedback .ruta-intro h2{margin:0;color:#7a0019;font-size:28px;line-height:1.2}
+#vinculo-feedback .ruta-intro p{margin:8px 0 0;color:#665b4b;font-size:15px;line-height:1.55}
+#vinculo-feedback .ruta-camino{background:#fff;border:1px solid #e5dacb;border-radius:24px;padding:22px;box-shadow:0 8px 28px rgba(0,0,0,.055)}
+#vinculo-feedback .ruta-estaciones{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr;align-items:stretch;gap:7px;margin-bottom:22px}
+#vinculo-feedback .ruta-estacion{appearance:none;min-width:0;border:1px solid #e5dacb;background:#fffaf5;color:#4d4d4d;border-radius:15px;padding:12px 10px;text-align:center;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:5px;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease}
+#vinculo-feedback .ruta-estacion:hover{transform:translateY(-2px);border-color:#c89b4b;box-shadow:0 6px 16px rgba(0,0,0,.06)}
+#vinculo-feedback .ruta-estacion.activa{background:#7a0019;border-color:#7a0019;box-shadow:0 8px 20px rgba(122,0,25,.17)}
+#vinculo-feedback .ruta-icono{width:39px;height:39px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#eee5d6;color:#7a0019;font-size:10px;font-weight:900}
+#vinculo-feedback .ruta-estacion.activa .ruta-icono{background:#c89b4b;color:white}
+#vinculo-feedback .ruta-nombre{color:#7a0019;font-size:14px;font-weight:900;line-height:1.1}
+#vinculo-feedback .ruta-estacion.activa .ruta-nombre{color:#fff}
+#vinculo-feedback .ruta-subtitulo{color:#777;font-size:9px;line-height:1.3;min-height:30px}
+#vinculo-feedback .ruta-estacion.activa .ruta-subtitulo{color:rgba(255,255,255,.78)}
+#vinculo-feedback .ruta-estado{color:#8a6d3b;font-size:9px;font-weight:900;margin-top:auto}
+#vinculo-feedback .ruta-estacion.activa .ruta-estado{color:#f6e7c8}
+#vinculo-feedback .ruta-conector{align-self:center;width:15px;height:2px;background:#dccfbf;position:relative}
+#vinculo-feedback .ruta-conector::after{content:'';position:absolute;right:-1px;top:-3px;border-left:5px solid #c89b4b;border-top:4px solid transparent;border-bottom:4px solid transparent}
+#vinculo-feedback .ruta-contenido{border-top:1px solid #eee4d7;padding-top:22px;outline:none}
+#vinculo-feedback .ruta-cabecera{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}
+#vinculo-feedback .ruta-cabecera-kicker{color:#c89b4b;font-size:10px;font-weight:900;letter-spacing:1.5px}
+#vinculo-feedback .ruta-cabecera h3{margin:4px 0 0;color:#7a0019;font-size:29px;line-height:1.1}
+#vinculo-feedback .ruta-contador{color:#8a6d3b;font-size:11px;font-weight:900;white-space:nowrap;padding-top:5px}
+#vinculo-feedback .ruta-frase{margin:13px 0 3px;padding:12px 15px;background:#fdf2e9;border-left:4px solid #c89b4b;border-radius:7px;color:#66563d;font-size:13px;line-height:1.5;font-style:italic}
+#vinculo-feedback .ruta-material{padding-top:4px;font-size:15px;line-height:1.7}
+#vinculo-feedback .ruta-material h3{color:#7a0019;margin-top:24px}
+#vinculo-feedback .tarjetas{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:20px 0}
+#vinculo-feedback .tarjeta{padding:20px;background:#faf7f0;border:1px solid #e5dacb;border-radius:14px}
+#vinculo-feedback .tarjeta strong{display:block;color:#7a0019;font-size:12px;letter-spacing:.5px;margin-bottom:7px}
+#vinculo-feedback .tarjeta p{margin:0}
+#vinculo-feedback .intersticios{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}
+#vinculo-feedback .intersticio{padding:20px;background:#faf7f0;border:1px solid #e5dacb;border-radius:14px}
+#vinculo-feedback .intersticio .icono{font-size:28px;margin-bottom:7px}
+#vinculo-feedback .intersticio strong{display:block;color:#7a0019;font-size:12px;letter-spacing:.5px;margin-bottom:7px}
+#vinculo-feedback .intersticio p{margin:0}
+#vinculo-feedback .material-recurso{margin:20px 0;padding:6px;background:#fff;border:1px solid #e6dccf;border-radius:14px;box-shadow:0 5px 18px rgba(0,0,0,.05);overflow:hidden}
+#vinculo-feedback .material-recurso iframe{display:block;width:100%;height:620px;border:0;border-radius:10px;background:#f8f5ef}
+#vinculo-feedback .podcast-placeholder{margin:20px 0;padding:30px;border:2px dashed #d8c7aa;border-radius:14px;background:#faf7f0;text-align:center;color:#8a6d3b}
+#vinculo-feedback .podcast-placeholder .icono{font-size:34px;margin-bottom:8px}
+#vinculo-feedback .podcast-placeholder strong{display:block;color:#7a0019;font-size:13px;letter-spacing:.8px}
+#vinculo-feedback .podcast-placeholder span{display:block;margin-top:7px;font-size:12px;line-height:1.5}
+#vinculo-feedback .pregunta{margin:22px 0;padding:20px 22px;background:#fdf2e9;border-left:5px solid #c89b4b;border-radius:8px;color:#66563d}
+#vinculo-feedback .pregunta strong{display:block;color:#7a0019;margin-bottom:6px}
+#vinculo-feedback .produccion{margin:18px 0;padding:22px;background:#faf7f0;border:1px solid #e5dacb;border-radius:14px}
+#vinculo-feedback .produccion strong{display:block;color:#7a0019;font-size:12px;letter-spacing:.6px;margin:14px 0 5px}
+#vinculo-feedback .produccion strong:first-child{margin-top:0}
+#vinculo-feedback .produccion ul{margin:8px 0 10px 20px;padding:0}
+#vinculo-feedback .ticket{margin-top:10px;padding:30px;border-radius:18px;background:linear-gradient(135deg,#7a0019,#a32035);color:white;text-align:center}
+#vinculo-feedback .ticket h3{color:white;margin:0 0 12px;font-size:25px}
+#vinculo-feedback .ticket p{max-width:680px;margin:0 auto 22px;font-size:17px;line-height:1.55}
+#vinculo-feedback .ticket-pregunta{max-width:800px;margin:0 auto 22px;padding:20px 22px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);border-radius:12px;font-size:17px;line-height:1.55}
+#vinculo-feedback .ticket-recurso{background:white;border-radius:12px;padding:6px;text-align:left;overflow:hidden}
+#vinculo-feedback .boton-recurso{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:11px 16px;border-radius:10px;background:#7a0019;color:white!important;text-decoration:none;font-weight:800;font-size:12px}
+#vinculo-feedback .vinculo-paso{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:45px}
+#vinculo-feedback .vinculo-paso span{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#eee5d6;color:#777;font-size:10px;font-weight:900;transition:all .3s ease}
+#vinculo-feedback .vinculo-paso small{color:#777;font-size:8px;font-weight:700;text-align:center}
+#vinculo-feedback .vinculo-paso.explorado span{background:#7a0019;color:white}
+#vinculo-feedback .vinculo-paso.explorado small{color:#7a0019}
+#vinculo-feedback .vinculo-linea{flex:1;height:2px;margin-top:16px;background:#e2d8ca}
+#vinculo-feedback .ruta-navegacion{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:24px;padding-top:15px;border-top:1px solid #eee4d7}
+#vinculo-feedback .ruta-navegacion button{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:900;cursor:pointer;border-radius:9px;min-height:42px;padding:10px 15px}
+#vinculo-feedback .ruta-btn-secundario{border:0;background:transparent;color:#7a0019}
+#vinculo-feedback .ruta-btn-principal{border:1px solid #7a0019;background:#7a0019;color:#fff}
+#vinculo-feedback .ruta-navegacion button:focus-visible,#vinculo-feedback .ruta-estacion:focus-visible{outline:3px solid rgba(200,155,75,.75);outline-offset:3px}
+
+@media(max-width:900px){
+  #vinculo-feedback .ruta-estaciones{grid-template-columns:1fr 1fr;gap:9px}
+  #vinculo-feedback .ruta-conector{display:none}
+  #vinculo-feedback .intersticios{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  #vinculo-feedback .tarjetas,#vinculo-feedback .intersticios{grid-template-columns:1fr}
+  #vinculo-feedback .material-recurso iframe{height:520px}
+}
+@media(max-width:560px){
+  #vinculo-feedback .ruta-camino{padding:14px;border-radius:18px}
+  #vinculo-feedback .ruta-estaciones{grid-template-columns:1fr}
+  #vinculo-feedback .ruta-estacion{display:grid;grid-template-columns:43px 1fr auto;grid-template-rows:auto auto;text-align:left;align-items:center;column-gap:10px;padding:11px}
+  #vinculo-feedback .ruta-icono{grid-row:1 / 3}
+  #vinculo-feedback .ruta-nombre{align-self:end}
+  #vinculo-feedback .ruta-subtitulo{min-height:0;align-self:start}
+  #vinculo-feedback .ruta-estado{grid-column:3;grid-row:1 / 3;align-self:center}
+  #vinculo-feedback .ruta-cabecera h3{font-size:25px}
+  #vinculo-feedback .ruta-frase{font-size:12px}
+  #vinculo-feedback .ruta-navegacion{flex-wrap:wrap}
+  #vinculo-feedback .ruta-navegacion button{flex:1}
+  #vinculo-feedback .ticket{padding:20px}
+}
+</style>
+
+<script>
+(function(){
+  const root = document.getElementById('vinculo-feedback');
+  if(!root) return;
+
+  const datos = {
+    1:{
+      titulo:'Escuchar',
+      frase:'Reconocer el cansancio del cierre y el riesgo de que un número frío corte el vínculo.',
+      contenido:`<p>Esta última clase comienza en un territorio marcado por la <strong>fatiga del fin de cuatrimestre</strong>: planillas acumuladas, cierres administrativos y la prisa por cerrar actas.</p>
+
+      <p>En la modalidad combinada, ese cansancio puede terminar en una escena conocida: publicar las notas, enviar un “Felices vacaciones” y cerrar la pestaña. Del otro lado queda un/a estudiante recibiendo un número y un silencio.</p>
+
+      <p>El eje invita a detenernos en ese <strong>intersticio del cierre</strong>. El aprendizaje no termina con la acreditación; necesita que podamos cobijar, narrar y dotar de sentido político y afectivo al trayecto recorrido.</p>
+
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <strong>🧵 EL ÚLTIMO NUDO</strong>
+          <p>Sostener el vínculo en el cierre no es un detalle técnico ni un adorno protocolar: es una estrategia de cuidado para acompañar la permanencia y la terminalidad.</p>
+        </div>
+        <div class="tarjeta">
+          <strong>🌱 CONTINUUM DE PRESENCIA</strong>
+          <p>Frente a la atomización y la inmediatez, la enseñanza puede recuperar una presencia que no desaparezca justo cuando termina la acreditación.</p>
+        </div>
+      </div>
+
+      <div class="pregunta">
+        <strong>💭 Para escuchar</strong>
+        <p>¿Qué suele pasar en tus aulas durante las últimas semanas? ¿Qué parte del acompañamiento sentís que corre riesgo de perderse cuando aparece la urgencia por cerrar?</p>
+      </div>`
+    },
+
+    2:{
+      titulo:'Explorar',
+      frase:'Descubrir cómo una devolución puede alojar al estudiante, mostrarle el camino y abrir otra oportunidad para aprender.',
+      contenido:`<p>La retroalimentación narrativa aparece como alternativa a la lógica del número frío o del “error conceptual”. No es solamente señalar qué está mal: es <strong>dialogar con la producción</strong> y mostrar cómo continuar.</p>
+
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <strong>📝 ESCRITURA HOSPEDADORA</strong>
+          <p>Una devolución narrativa reconoce caminos que fueron bien recorridos, señala qué nudos conceptuales necesitan trabajo y propone estrategias específicas para reconstruir el saber.</p>
+        </div>
+        <div class="tarjeta">
+          <strong>🎧 DEVOLUCIÓN MULTIMODAL</strong>
+          <p>Audios o videotutoriales personalizados pueden humanizar la distancia y transformar el error punitivo en un puente hacia la mejora continua.</p>
+        </div>
+        <div class="tarjeta">
+          <strong>🧠 BITÁCORAS DE ERRORES</strong>
+          <p>Los errores comunes pueden curarse colectivamente, publicarse de manera anónima y convertirse en materiales de trabajo para revisar y aprender.</p>
+        </div>
+        <div class="tarjeta">
+          <strong>🔎 MIRAR EL PROCESO</strong>
+          <p>La retroalimentación puede ayudar a visibilizar cómo está pensando el otro, y no reducir la evaluación a una foto aislada del resultado.</p>
+        </div>
+      </div>
+
+      <div class="pregunta">
+        <strong>🔎 Para explorar</strong>
+        <p>Tomá una devolución que hayas escrito recientemente. ¿Está ayudando a comprender qué pasó y qué hacer después, o solamente está nombrando el error?</p>
+      </div>`
+    },
+
+    3:{
+      titulo:'Profundizar',
+      frase:'Entrar en esos pequeños espacios donde el vínculo puede sostener una trayectoria que empieza a perder el ritmo.',
+      contenido:`<p>La clase recupera una categoría central: <strong>los intersticios</strong>. Son esos espacios porosos que suelen quedar fuera de las métricas del campus, pero donde pueden ocurrir transformaciones pedagógicas profundas.</p>
+
+      <div class="intersticios">
+        <div class="intersticio">
+          <div class="icono">💬</div>
+          <strong>LA CONSULTA INFORMAL</strong>
+          <p>Un mensaje que permite destrabar una dificultad antes de que se convierta en abandono.</p>
+        </div>
+        <div class="intersticio">
+          <div class="icono">🤝</div>
+          <strong>LA PALABRA DE ALIENTO</strong>
+          <p>Una palabra después del encuentro sincrónico que vuelve a hacer sentir que alguien está ahí.</p>
+        </div>
+        <div class="intersticio">
+          <div class="icono">✉️</div>
+          <strong>EL MAIL DETALLADO</strong>
+          <p>Una devolución situada para un/a estudiante que empieza a perder el ritmo de las entregas.</p>
+        </div>
+      </div>
+
+      <p>La propuesta no es vigilar más. Es usar los datos del campus como una oportunidad para desencadenar <strong>acciones humanas de cercanía</strong>. Un descenso en los ingresos o una entrega que no aparece puede ser el comienzo de una intervención cuidadosa, no simplemente un dato de una métrica.</p>
+
+      <h3>📖 Clase escrita</h3>
+      <div class="material-recurso">
+        <iframe src="https://drive.google.com/file/d/1EgEGHgnDn6vADN3YRUrul9iy7FgqQQs4/preview"
+          title="Clase escrita Eje 8" loading="lazy"></iframe>
+      </div>
+      <a class="boton-recurso" href="https://drive.google.com/file/d/1EgEGHgnDn6vADN3YRUrul9iy7FgqQQs4/view?usp=drive_link"
+         target="_blank" rel="noopener">↗ Abrir la clase escrita</a>
+
+      <div class="pregunta">
+        <strong>💡 Para profundizar</strong>
+        <p>¿Qué señal te permitiría detectar que una persona está perdiendo el ritmo antes de que llegue a desaparecer del aula? ¿Qué acción humana concreta podrías realizar?</p>
+      </div>
+
+      <div class="tarjeta">
+        <strong>❤️ ÉTICA DEL CUIDADO</strong>
+        <p>El campus puede ser un ambiente hospitalario y habitable. Acompañar las trayectorias implica un seguimiento nominalizado y sensible, especialmente en el tramo final.</p>
+      </div>`
+    },
+
+    4:{
+      titulo:'Construir',
+      frase:'Diseñar un cierre que combine feedback narrativo, vínculo y una dinámica que ayude a sostener la trayectoria.',
+      contenido:`<p>Llegó la última producción cooperativa del trayecto: diseñar el dispositivo de cierre para nuestra propia aula desde la sensibilidad del <strong>profesor artesano</strong>.</p>
+
+      <div class="produccion">
+        <strong>01 · EL DISEÑO DE LA DEVOLUCIÓN</strong>
+        <p>Tomá como referencia la rúbrica y la secuencia didáctica que venís estructurando a lo largo del curso.</p>
+
+        <strong>02 · LA REDACCIÓN DE LA NARRATIVA</strong>
+        <p>Diseñá el guion de tu estrategia de cierre y feedback narrativo para tu materia.</p>
+
+        <strong>EL DISPOSITIVO DE FEEDBACK MULTIMODAL</strong>
+        <p>Explicá cómo vas a realizar la devolución cualitativa a quienes tengan dificultades: audio, bitácoras de errores inteligentes, devoluciones escritas comentadas u otra estrategia situada.</p>
+
+        <strong>LA DINÁMICA DE CIERRE VINCULAR</strong>
+        <p>Elegí una de las propuestas del eje —<strong>Captura del Sentido, Muro de los Legados o Coloquio de las Parejas Pedagógicas</strong>— o inventá una propia. Redactá la consigna exacta que dejarías en el campus.</p>
+
+        <strong>03 · EL ÚLTIMO LAZO</strong>
+        <p>Leé la propuesta de un compañero/a y analizá si logra conmover, sostener la motivación en el intersticio final y cuidar las trayectorias para evitar el abandono.</p>
+      </div>
+
+      <h3>🧩 Propuesta de Cierre Artesanal · El Guion del Feedback Narrativo</h3>
+      <div class="material-recurso">
+        <iframe src="https://padlet.com/luciasnieg/submission-request/oO6VvPdAdmm8vrwD?section=385671792"
+          title="Actividad Eje 8 - El Guion del Feedback Narrativo" loading="lazy"></iframe>
+      </div>
+      <a class="boton-recurso" href="https://padlet.com/luciasnieg/submission-request/oO6VvPdAdmm8vrwD?section=385671792"
+         target="_blank" rel="noopener">↗ Abrir la actividad</a>
+
+      <div class="pregunta">
+        <strong>🧵 Para construir</strong>
+        <p>¿Qué tendría que quedar vivo en tu aula después del cierre de la acreditación: una nota, una memoria compartida, una nueva pregunta o una señal clara de que el vínculo puede continuar?</p>
+      </div>`
+    },
+
+    5:{
+      titulo:'Cerrar',
+      frase:'Mirar hacia atrás, reconocer la transformación y elegir qué bandera nos comprometemos a sostener en nuestras futuras aulas.',
+      contenido:`<p>El cierre del trayecto no propone simplemente apagar la pantalla. Nos invita a mirar hacia atrás y reconocer aquello que se transformó en nuestra propia mirada como <strong>profesores artesanos bimodales</strong>.</p>
+
+      <p>La última palabra del eje vuelve a ser una palabra de continuidad: lo que aprendimos necesita convertirse en una decisión para nuestras prácticas futuras.</p>
+
+      <div class="ticket">
+        <div style="font-size:38px;margin-bottom:10px;">🧵</div>
+        <h3>Ticket de salida final · Buzón metacognitivo</h3>
+        <p>Dejá tu última palabra del trayecto.</p>
+
+        <div class="ticket-pregunta">
+          <strong>Al mirar hacia atrás todo el recorrido de estas ocho clases, ¿cuál es la principal transformación que sentís que ha operado en tu mirada como profesor/a artesano/a bimodal y qué bandera te comprometés a sostener en tus futuras aulas?</strong>
+        </div>
+
+        <div class="ticket-recurso">
+          <iframe src="https://padlet.com/luciasnieg/card-breakout-room/jBNJvMOmb370AY9b-page:bi7_38noaTNeHUpEH2cDK"
+            title="Ticket de salida final Eje 8" loading="lazy"
+            style="display:block;width:100%;height:620px;border:0;"></iframe>
+        </div>
+        <a class="boton-recurso" style="background:white;color:#7a0019!important;"
+           href="https://padlet.com/luciasnieg/card-breakout-room/jBNJvMOmb370AY9b-page:bi7_38noaTNeHUpEH2cDK"
+           target="_blank" rel="noopener">↗ Abrir el ticket de salida</a>
+      </div>
+
+      <div class="pregunta">
+        <strong>❤️ Para llevarte</strong>
+        <p>El aprendizaje no termina con la acreditación. El desafío es que el cierre pueda cuidar la trayectoria, hacer memoria de lo compartido y abrir posibilidades para lo que sigue.</p>
+      </div>`
+    }
+  };
+
+  const botones = root.querySelectorAll('.ruta-estacion');
+  const material = root.querySelector('#ruta-material-vinculo');
+  const titulo = root.querySelector('#ruta-titulo-estacion-vinculo');
+  const kicker = root.querySelector('#ruta-kicker-vinculo');
+  const frase = root.querySelector('#ruta-frase-vinculo');
+  const contador = root.querySelector('#ruta-contador-vinculo');
+  const anterior = root.querySelector('#ruta-anterior-vinculo');
+  const siguiente = root.querySelector('#ruta-siguiente-vinculo');
+
+  let actual = 1;
+  const exploradas = new Set();
+
+  function actualizarAvance(){
+    const cantidad = exploradas.size;
+    const porcentaje = (cantidad / 5) * 100;
+    const texto = root.querySelector('#avance-vinculo-texto');
+    const porcentajeTexto = root.querySelector('#avance-vinculo-porcentaje');
+    const barra = root.querySelector('#barra-vinculo');
+
+    if(texto) texto.textContent = `${cantidad} de 5 estaciones exploradas`;
+    if(porcentajeTexto) porcentajeTexto.textContent = `${Math.round(porcentaje)}%`;
+    if(barra) barra.style.width = `${porcentaje}%`;
+
+    root.querySelectorAll('.vinculo-paso').forEach(paso=>{
+      const n = Number(paso.dataset.paso);
+      paso.classList.toggle('explorado', exploradas.has(n));
+    });
+  }
+
+  function mostrar(n, enfocar){
+    actual = n;
+    const d = datos[n];
+
+    titulo.textContent = d.titulo;
+    kicker.textContent = 'ESTACIÓN ' + String(n).padStart(2,'0');
+    frase.textContent = d.frase;
+    contador.textContent = `${n} de 5`;
+    material.innerHTML = d.contenido;
+
+    botones.forEach(btn=>{
+      const activa = Number(btn.dataset.estacion) === n;
+      btn.classList.toggle('activa', activa);
+      btn.setAttribute('aria-selected', activa ? 'true' : 'false');
+    });
+
+    exploradas.add(n);
+    actualizarAvance();
+
+    anterior.disabled = n === 1;
+    anterior.style.opacity = n === 1 ? '.35' : '1';
+    anterior.style.cursor = n === 1 ? 'default' : 'pointer';
+    siguiente.textContent = n === 5 ? 'Volver a comenzar ↺' : 'Siguiente estación →';
+
+    if(enfocar){
+      root.querySelector('#ruta-contenido-vinculo').focus({preventScroll:true});
+      root.querySelector('#ruta-contenido-vinculo').scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  }
+
+  botones.forEach(btn=>{
+    btn.addEventListener('click',()=>mostrar(Number(btn.dataset.estacion),true));
+  });
+
+  anterior.addEventListener('click',()=>{
+    if(actual > 1) mostrar(actual - 1,true);
+  });
+
+  siguiente.addEventListener('click',()=>{
+    mostrar(actual === 5 ? 1 : actual + 1,true);
+  });
+
+  mostrar(1,false);
+})();
+</script>
