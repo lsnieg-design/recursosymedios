@@ -299,6 +299,29 @@
   border-left:5px solid #c89b4b;border-radius:8px;color:#66563d
 }
 #ecologia-tiempo .ruta-material .pregunta-tiempo p{margin:7px 0 0}
+
+#ecologia-tiempo .ruta-material .dos-tiempos{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0
+}
+#ecologia-tiempo .ruta-material .tiempo-bloque{
+  padding:20px;background:#faf7f0;border:1px solid #e5dacb;border-radius:14px
+}
+#ecologia-tiempo .ruta-material .tiempo-bloque strong{
+  display:block;color:#7a0019;font-size:12px;letter-spacing:.5px;margin-bottom:8px
+}
+#ecologia-tiempo .ruta-material .tiempo-bloque p{margin:0}
+#ecologia-tiempo .ruta-material .consigna-tiempo{
+  margin:18px 0;padding:22px;background:#faf7f0;border:1px solid #e5dacb;border-radius:14px
+}
+#ecologia-tiempo .ruta-material .consigna-tiempo strong{
+  display:block;color:#7a0019;font-size:12px;letter-spacing:.6px;margin:14px 0 5px
+}
+#ecologia-tiempo .ruta-material .consigna-tiempo strong:first-child{margin-top:0}
+#ecologia-tiempo .ruta-material .consigna-tiempo ul{margin:8px 0 12px 20px;padding:0}
+@media(max-width:700px){
+  #ecologia-tiempo .ruta-material .dos-tiempos{grid-template-columns:1fr}
+}
+
 #ecologia-tiempo .ruta-material .material-placeholder{
   margin:20px 0;padding:28px;border:2px dashed #d8c7aa;
   border-radius:12px;background:#faf7f0;text-align:center;color:#8a6d3b
@@ -418,74 +441,102 @@
   const datos = {
     1:{
       titulo:'Escuchar',
-      frase:'Un momento para detenerte y escuchar qué relación construimos con el tiempo.',
-      contenido:`<p>Empezamos escuchando. Antes de buscar estrategias para organizar mejor el tiempo, te proponemos detenerte y reconocer qué aparece cuando sentís que “no llegás”.</p>
+      frase:'Detenernos ante esa sensación docente de que el tiempo nunca alcanza.',
+      contenido:`<p>Antes de pensar herramientas o estrategias, volvamos a una experiencia muy conocida: terminar una jornada con la sensación de que <strong>“no nos dio el tiempo”</strong>.</p>
 
-      <p>La tentación de nuestra matriz tradicional es “empaquetar” la clase de siempre. Pero planificar en bimodalidad es aprender a <strong>tejer una trama única</strong>.</p>
+      <p>“No llegué a dar todo el programa”, “me quedaron autores afuera”, “tuve que explicar corriendo los últimos conceptos porque tocaba el timbre”. En la bimodalidad, esa angustia puede incluso duplicarse.</p>
+
+      <p>La invitación de esta primera estación es a escuchar esa experiencia y preguntarnos qué hacemos con <strong>las agujas del reloj</strong> cuando planificamos.</p>
 
       <h3>🎧 Podcast</h3>
       <div class="podcast-placeholder">
         <div class="podcast-icon">🎙️</div>
         <strong>ACÁ VA EL PODCAST</strong>
-        <span>Este espacio queda reservado para incorporar el enlace del podcast cuando esté subido.</span>
+        <span>Este espacio queda preparado para incorporar el enlace del podcast.</span>
       </div>
 
       <div class="pregunta-tiempo">
         <strong>🕰️ Para escuchar</strong>
-        <p>¿Qué aparece en vos cuando sentís que “no llegás” con todo lo que querías enseñar? ¿Qué relación tenés con las agujas del reloj cuando planificás?</p>
+        <p>¿Cuántas veces terminás una jornada con la sensación de que “no llegaste”? ¿Qué pasa con esa sensación cuando enseñás en virtualidad o en un formato bimodal?</p>
       </div>`
     },
 
     2:{
       titulo:'Explorar',
-      frase:'Un momento para recuperar experiencias que ya pensaban la mediación y la presencia.',
-      contenido:`<p>En esta estación recuperamos una experiencia que antecede a muchas de las herramientas digitales que hoy utilizamos.</p>
+      frase:'Recuperar una experiencia que nos muestra que la presencia puede expandirse más allá del encuentro.',
+      contenido:`<p>Antes de meternos de lleno con las herramientas digitales actuales, hacemos una pequeña escala histórica. La educación a distancia en nuestro país y en Latinoamérica tiene una herencia rica y profundamente emancipadora.</p>
 
-      <p>Desde Mario Kaplún y el <strong>“Audioforo”</strong> podemos pensar cómo construir presencias expandidas sin depender necesariamente de la tecnología de punta.</p>
+      <p>En la década del 70, <strong>Mario Kaplún</strong> desarrolló el <em>Audioforo</em>: materiales sonoros que combinaban radioteatros, testimonios, música y preguntas para que las comunidades escucharan, debatieran y luego devolvieran sus propias voces.</p>
+
+      <p>El encuentro no se utilizaba para “dar el dato”: el contenido viajaba en el cassette. El encuentro vivo quedaba disponible para <strong>la palabra, el debate y el lazo social</strong>. Una experiencia que, mucho antes de que habláramos de Aula Invertida, ya pensaba otra distribución de los tiempos.</p>
 
       <h3>🧭 Infografía</h3>
       <div class="material-embed material-drive">
         <iframe src="https://drive.google.com/file/d/1KymNmXIp0oYFZtDmievrLW6VcMyCBh8p/view?usp=drive_link"
-          width="100%" height="650" frameborder="0"
-          allow="autoplay"></iframe>
+          width="100%" height="650" frameborder="0" allow="autoplay"></iframe>
       </div>
 
       <div class="pregunta-tiempo">
         <strong>📻 Para explorar</strong>
-        <p>¿Qué posibilidades pedagógicas aparecen cuando dejamos de pensar la tecnología como protagonista y empezamos a pensarla como mediadora?</p>
+        <p>¿Qué nos enseña la experiencia de Kaplún sobre la posibilidad de construir <strong>presencias expandidas</strong>? ¿Dónde aparece la intención pedagógica detrás del recurso tecnológico?</p>
       </div>`
     },
 
     3:{
       titulo:'Profundizar',
-      frase:'Un momento para pensar qué necesita cada tiempo de la enseñanza.',
-      contenido:`<p>Llegamos a una de las ideas centrales del eje: separar las aguas entre el espacio autónomo de la asincronía y el tiempo colectivo de la sincronía.</p>
+      frase:'Pensar qué pertenece al tiempo autónomo y qué necesita convertirse en acontecimiento colectivo.',
+      contenido:`<p>En esta estación desarmamos la idea de <strong>Aula Invertida</strong> como una simple receta: “el estudiante mira un video en casa y viene a hacer la tarea a clase”. La propuesta es pensarlo como una reconfiguración de los espacios de enseñanza.</p>
 
-      <p>No se trata de hacer “la misma clase” en dos formatos. Se trata de decidir <strong>qué necesita cada momento</strong> para que el encuentro tenga sentido.</p>
+      <div class="dos-tiempos">
+        <div class="tiempo-bloque">
+          <strong>EL ESPACIO AUTÓNOMO · ASINCRONÍA</strong>
+          <p>Es el tiempo de la intimidad, del silencio y de la escucha detenida. Allí el estudiante lee, explora materiales o mira una video-clase. Ese momento necesita andamiaje: el material se presenta y se acompaña.</p>
+        </div>
+        <div class="tiempo-bloque">
+          <strong>EL ESPACIO COLECTIVO · SINCRONÍA</strong>
+          <p>Es el tiempo del acontecimiento y del <strong>hacer con otros</strong>. El vivo debería ofrecer algo que sea difícil o imposible de lograr en soledad: recuperar voces, debatir, jugar, construir y producir colectivamente.</p>
+        </div>
+      </div>
+
+      <p>Cuando se separan estas aguas, el encuentro vivo deja de estar tomado por la urgencia de explicar la teoría y puede convertirse en una experiencia colectiva.</p>
+
+      <div class="pregunta-tiempo">
+        <strong>⏱️ Una pausa para conversar con vos mismo</strong>
+        <p>Pensá en tu próxima clase sincrónica o presencial: ¿qué porcentaje del tiempo vas a ocupar vos hablando y qué porcentaje tus estudiantes produciendo o debatiendo? Si la llamada se cortara a los 15 minutos, ¿qué se perderían que no pudieran encontrar mañana en un texto del campus?</p>
+      </div>
 
       <h3>📖 Clase escrita</h3>
       <div class="material-embed material-drive">
         <iframe src="https://drive.google.com/file/d/1w3vMQy2k-tYYKknayqJhGDdqV-RkqGbI/view?usp=drive_link"
-          width="100%" height="750" frameborder="0"
-          allow="autoplay"></iframe>
+          width="100%" height="750" frameborder="0" allow="autoplay"></iframe>
       </div>
 
       <div class="pregunta-tiempo">
-        <strong>🔄 Para profundizar</strong>
-        <p>¿Qué contenidos podrían trabajarse de manera asincrónica para liberar el encuentro presencial o sincrónico para aquello que necesita intercambio, discusión y construcción colectiva?</p>
+        <strong>🧵 Las Hojas de Ruta</strong>
+        <p>La clase propone pensar la <strong>Hoja de Ruta</strong> como un texto narrativo y hospedador que orienta el tiempo autónomo: dónde estamos, qué recursos explorar, cuánto esfuerzo dedicar y cuál es el puerto de llegada.</p>
       </div>`
     },
 
     4:{
       titulo:'Construir',
-      frase:'Un momento para pasar de la reflexión al diseño de una secuencia bimodal.',
-      contenido:`<p>Ahora la propuesta es pasar de la reflexión al diseño.</p>
+      frase:'Poner las manos en la masa y diseñar nuestro propio mapa de viaje bimodal.',
+      contenido:`<p>Llegó el momento de poner las manos en la masa artesanal. Vamos a <strong>modelizar lo aprendido</strong> diseñando nuestro propio mapa de viaje.</p>
 
-      <p>Vas a construir tu propia secuencia bimodal: ¿qué delegás a la asincronía y qué reservás para el encuentro vivo?</p>
+      <h3>🛠️ Propuesta de Producción Cooperativa</h3>
 
-      <div class="pregunta-tiempo">
-        <strong>🛠️ Tablero de la Ecología Temporal</strong>
-        <p>Diseñá tu propia secuencia bimodal teniendo en cuenta qué momentos requieren autonomía y cuáles necesitan la presencia del grupo.</p>
+      <div class="consigna-tiempo">
+        <strong>1 · LA SELECCIÓN</strong>
+        <p>Elegí una unidad temática corta o un contenido específico de una materia real que dictes —o imagines dictar— en el nivel terciario.</p>
+
+        <strong>2 · EL REDISEÑO COMBINADO</strong>
+        <p>En la pizarra colaborativa, estructurá una secuencia bimodal simple bajo los criterios de la ecología del tiempo:</p>
+        <ul>
+          <li><strong>¿Qué va a la asincronía?</strong> Detallá qué recurso multimedia vas a curar y qué recorte preciso de texto propondrás. Redactá una consigna breve que acompañe esa lectura.</li>
+          <li><strong>¿Qué va a la sincronía?</strong> Explicá cuál será el “acontecimiento” del encuentro vivo y qué harán con aquello que trabajaron previamente para salir de la pasividad.</li>
+        </ul>
+
+        <strong>3 · EL TEJIDO</strong>
+        <p>Leé la propuesta de al menos un compañero o compañera de otra disciplina. Dejá un comentario analizando si el hilo entre la asincronía y la sincronía quedó firme o si algún contenido podría “aligerarse” o potenciarse de un lado u otro.</p>
       </div>
 
       <div class="material-embed">
@@ -497,11 +548,15 @@
 
     5:{
       titulo:'Cerrar',
-      frase:'Un momento para recuperar una resistencia y convertirla en pregunta.',
-      contenido:`<div class="ticket-tiempo">
-        <div style="font-size:38px;margin-bottom:10px;">🚪</div>
-        <h3>Ticket de salida</h3>
-        <p>¿Cuál es tu mayor miedo o resistencia al soltar la teoría en la asincronía para liberar el encuentro vivo?</p>
+      frase:'Reconocer qué necesitamos soltar para liberar el encuentro vivo.',
+      contenido:`<p>Antes de apagar la pantalla, volvemos sobre una de las preguntas centrales de la clase: <strong>¿qué necesitamos soltar para animarnos a delegar la teoría a la asincronía?</strong></p>
+
+      <p>La ecología del tiempo no consiste en hacer más cosas en menos tiempo. Consiste en tomar decisiones pedagógicas sobre qué merece cada momento de la enseñanza y cómo construir una trama que no se deshilache.</p>
+
+      <div class="ticket-tiempo">
+        <div style="font-size:38px;margin-bottom:10px;">🧵</div>
+        <h3>Ticket de salida · Buzón metacognitivo</h3>
+        <p>Pensando en tus propias clases, ¿cuál es el mayor miedo o resistencia que sentís que tenés que soltar para animarte a delegar la teoría a la asincronía y liberar el vivo para la producción colectiva?</p>
 
         <div class="ticket-iframe">
           <iframe src="https://padlet.com/luciasnieg/card-breakout-room/jBNJvMOmb370AY9b-page:QNoGuRPHmSGyZSqedoai9"
