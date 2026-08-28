@@ -318,22 +318,134 @@
 <style>
 #habitar-pantalla *,#habitar-pantalla *::before,#habitar-pantalla *::after{box-sizing:border-box}
 #habitar-pantalla .estacion{margin-bottom:14px}
-#habitar-pantalla .estacion-tarjeta{display:grid;grid-template-columns:58px 1fr auto;align-items:center;gap:16px;padding:18px 20px;background:white;border:1px solid #e2d8ca;border-radius:17px;box-shadow:0 4px 14px rgba(0,0,0,.04);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
-#habitar-pantalla .estacion-tarjeta:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(0,0,0,.08);border-color:#c89b4b}
-#habitar-pantalla .estacion-numero{display:flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:50%;background:#7a0019;color:white;font-size:13px;font-weight:900}
-#habitar-pantalla .estacion[data-estacion="1"] .estacion-numero,#habitar-pantalla .estacion[data-estacion="3"] .estacion-numero,#habitar-pantalla .estacion[data-estacion="5"] .estacion-numero{background:#c89b4b}
-#habitar-pantalla .estacion-info strong{display:block;color:#7a0019;font-size:18px;margin-bottom:3px}
-#habitar-pantalla .estacion-info span{color:#777;font-size:12px}
-#habitar-pantalla .estacion-boton{border:2px solid #7a0019;background:white;color:#7a0019;border-radius:999px;padding:11px 16px;font:inherit;font-size:11px;font-weight:900;letter-spacing:.5px;cursor:pointer;white-space:nowrap;min-height:44px}
-#habitar-pantalla .estacion-boton:hover,#habitar-pantalla .estacion-boton:focus-visible{background:#7a0019;color:white;outline:3px solid rgba(200,155,75,.45);outline-offset:2px}
-#habitar-pantalla .estacion-boton span:last-child{font-size:17px;margin-left:5px}
-#habitar-pantalla .estacion-boton:focus-visible,#habitar-pantalla .estacion-cerrar:focus-visible,#habitar-pantalla .estacion-cerrar-footer:focus-visible{outline:3px solid rgba(200,155,75,.7);outline-offset:3px}
+#habitar-pantalla .estacion-tarjeta{
+  display:grid;
+  grid-template-columns:58px 1fr auto;
+  align-items:center;
+  gap:20px;
+  padding:20px 22px;
+  background:#fff;
+  border:1px solid #e7ddd0;
+  border-radius:20px;
+  box-shadow:0 4px 14px rgba(0,0,0,.035);
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+#habitar-pantalla .estacion-tarjeta:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 26px rgba(0,0,0,.07);
+  border-color:#c89b4b;
+}
+#habitar-pantalla .estacion-numero{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:52px;
+  height:52px;
+  border-radius:16px;
+  background:#7a0019;
+  color:white;
+  font-size:13px;
+  font-weight:900;
+  box-shadow:inset 0 -4px 0 rgba(0,0,0,.08);
+}
+#habitar-pantalla .estacion[data-estacion="1"] .estacion-numero,
+#habitar-pantalla .estacion[data-estacion="3"] .estacion-numero,
+#habitar-pantalla .estacion[data-estacion="5"] .estacion-numero{background:#c89b4b}
+#habitar-pantalla .estacion-info strong{
+  display:block;
+  color:#7a0019;
+  font-size:19px;
+  margin-bottom:4px;
+}
+#habitar-pantalla .estacion-info span{
+  display:block;
+  color:#777;
+  font-size:13px;
+  line-height:1.45;
+}
+#habitar-pantalla .estacion-boton{
+  appearance:none;
+  border:0;
+  background:transparent;
+  color:#7a0019;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:8px 4px 8px 12px;
+  font:inherit;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.9px;
+  cursor:pointer;
+  white-space:nowrap;
+}
+#habitar-pantalla .estacion-boton span:last-child{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fdf2e9;
+  color:#7a0019;
+  font-size:20px;
+  line-height:1;
+  transition:transform .2s ease,background .2s ease;
+}
+#habitar-pantalla .estacion-boton:hover span:last-child{
+  transform:translateX(3px);
+  background:#c89b4b;
+  color:#fff;
+}
+#habitar-pantalla .estacion-boton:focus-visible,
+#habitar-pantalla .estacion-cerrar:focus-visible,
+#habitar-pantalla .estacion-cerrar-footer:focus-visible{
+  outline:3px solid rgba(200,155,75,.7);
+  outline-offset:3px;
+  border-radius:10px;
+}
 
 /* EXPERIENCIA / MODAL */
-.estacion-modal{position:fixed!important;inset:0!important;z-index:999999!important;display:none;align-items:center!important;justify-content:center!important;padding:28px 24px!important}
+.estacion-modal{
+  position:fixed!important;
+  top:0!important;
+  left:0!important;
+  width:100vw!important;
+  height:100vh!important;
+  z-index:2147483000!important;
+  display:none;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:24px!important;
+}
 .estacion-modal.is-visible{display:flex!important}
-.estacion-modal-fondo{position:absolute!important;inset:0!important;background:rgba(47,29,29,.78);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
-.estacion-dialog{position:relative;z-index:1;width:min(940px,100%);height:min(90vh,860px);display:flex;flex-direction:column;background:#fffdf9;border:1px solid rgba(255,255,255,.5);border-radius:28px;box-shadow:0 28px 90px rgba(0,0,0,.38);overflow:hidden;animation:estacionEntrada .24s cubic-bezier(.2,.75,.25,1);transform-origin:center}
+.estacion-modal-fondo{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  width:100%!important;
+  height:100%!important;
+  background:rgba(47,29,29,.76);
+  backdrop-filter:blur(7px);
+  -webkit-backdrop-filter:blur(7px);
+}
+.estacion-dialog{
+  position:relative!important;
+  z-index:1!important;
+  width:min(920px,calc(100vw - 48px))!important;
+  height:min(84vh,800px)!important;
+  max-height:calc(100vh - 48px)!important;
+  margin:0!important;
+  display:flex;
+  flex-direction:column;
+  background:#fffdf9;
+  border:1px solid rgba(255,255,255,.6);
+  border-radius:28px;
+  box-shadow:0 28px 90px rgba(0,0,0,.38);
+  overflow:hidden;
+  animation:estacionEntrada .24s cubic-bezier(.2,.75,.25,1);
+  transform-origin:center;
+}
 @keyframes estacionEntrada{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
 .estacion-modal-header{position:relative;flex:0 0 auto;padding:25px 32px 0;background:#7a0019;color:white;overflow:hidden}
 .estacion-modal-decor{position:absolute;right:25px;top:18px;display:flex;gap:5px;opacity:.22}
@@ -363,7 +475,47 @@
 .estacion-cerrar-footer{border:0;background:transparent;color:#7a0019;font:inherit;font-size:10px;font-weight:900;cursor:pointer;padding:8px 4px}
 .estacion-cerrar-footer:hover{text-decoration:underline}
 body.estacion-modal-abierto{overflow:hidden}
-@media(max-width:700px){#habitar-pantalla .estacion-tarjeta{grid-template-columns:45px 1fr;gap:12px;padding:15px}#habitar-pantalla .estacion-numero{width:43px;height:43px}#habitar-pantalla .estacion-info strong{font-size:16px}#habitar-pantalla .estacion-info span{font-size:11px}#habitar-pantalla .estacion-boton{grid-column:1 / -1;width:100%;padding:10px 14px}.estacion-modal{padding:10px!important}.estacion-dialog{width:100%;height:min(94vh,900px);border-radius:22px}.estacion-modal-header{padding:19px 18px 0}.estacion-modal-topline{align-items:flex-start}.estacion-modal-identidad{gap:11px}.estacion-modal-numero{width:45px;height:45px;font-size:13px}.estacion-modal-kicker{font-size:9px}.estacion-modal-header h2{font-size:25px}.estacion-cerrar{width:44px;height:44px;padding:0;justify-content:center}.estacion-cerrar span:last-child{display:none}.estacion-modal-frase{margin:16px 0 15px;padding-left:56px;font-size:12px}.estacion-modal-frase:before{font-size:19px}.estacion-modal-progreso{margin:0 -18px}.estacion-modal-body{padding:24px 18px 30px}.estacion-modal-footer{padding:12px 18px}.estacion-cerrar-footer{font-size:9px}}
+@media(max-width:700px){
+  #habitar-pantalla .estacion-tarjeta{
+    grid-template-columns:45px 1fr;
+    gap:12px;
+    padding:15px;
+  }
+  #habitar-pantalla .estacion-numero{
+    width:43px;
+    height:43px;
+    border-radius:13px;
+  }
+  #habitar-pantalla .estacion-info strong{font-size:16px}
+  #habitar-pantalla .estacion-info span{font-size:11px}
+  #habitar-pantalla .estacion-boton{
+    grid-column:1 / -1;
+    justify-content:space-between;
+    width:100%;
+    padding:9px 2px 2px 4px;
+  }
+  .estacion-modal{padding:8px!important}
+  .estacion-dialog{
+    width:100%!important;
+    height:calc(100vh - 16px)!important;
+    max-height:calc(100vh - 16px)!important;
+    border-radius:22px;
+  }
+  .estacion-modal-header{padding:19px 18px 0}
+  .estacion-modal-topline{align-items:flex-start}
+  .estacion-modal-identidad{gap:11px}
+  .estacion-modal-numero{width:45px;height:45px;font-size:13px}
+  .estacion-modal-kicker{font-size:9px}
+  .estacion-modal-header h2{font-size:25px}
+  .estacion-cerrar{width:44px;height:44px;padding:0;justify-content:center}
+  .estacion-cerrar span:last-child{display:none}
+  .estacion-modal-frase{margin:16px 0 15px;padding-left:56px;font-size:12px}
+  .estacion-modal-frase:before{font-size:19px}
+  .estacion-modal-progreso{margin:0 -18px}
+  .estacion-modal-body{padding:24px 18px 30px}
+  .estacion-modal-footer{padding:12px 18px}
+  .estacion-cerrar-footer{font-size:9px}
+}
 @media(prefers-reduced-motion:reduce){.estacion-dialog{animation:none}.estacion-modal-body{scroll-behavior:auto}}
 </style>
 <!-- =====================================================
@@ -375,6 +527,10 @@ body.estacion-modal-abierto{overflow:hidden}
   const botones=document.querySelectorAll('#habitar-pantalla [data-abrir-estacion]'); const exploradas=new Set(); let ultimoBoton=null;
   const estaciones={"1": {"title": "Escuchar", "content": "\n<p>\n          Empezamos escuchando.\n          Antes de analizar conceptos, te proponemos\n          detenerte y escuchar una primera invitación\n          a pensar nuestra identidad docente.\n        </p>\n<h3>\n          🎧 Podcast introductorio\n        </h3>\n SOUNDCLOUD INCRUSTADO \n<div style=\"\n            width:100%;\n            border-radius:12px;\n            overflow:hidden;\n            margin:20px 0;\n          \">\n<iframe allow=\"autoplay\" frameborder=\"no\" height=\"300\" scrolling=\"no\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2353931009&amp;color=%2370120f&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true\" width=\"100%\">\n</iframe>\n</div>\n<div class=\"consigna\">\n<strong>\n            Para escuchar:\n          </strong>\n<p>\n            Mientras escuchás, pensá:\n            ¿qué experiencias de tu propia trayectoria\n            aparecen cuando pensás en enseñar?\n          </p>\n</div>\n"}, "2": {"title": "Explorar", "content": "\n<p>\n          Ahora vamos a explorar una idea central:\n          el docente ya no es necesariamente la única\n          fuente de información.\n        </p>\n<p>\n          La tarea docente también implica seleccionar,\n          organizar, contextualizar y ofrecer recorridos\n          posibles entre múltiples fuentes.\n        </p>\n<h3>\n          🖼️ Infografía\n        </h3>\n DRIVE INCRUSTADO \n<div class=\"material-embed\">\n<iframe allow=\"autoplay\" height=\"650\" src=\"https://drive.google.com/file/d/14kaF0CR0HZsnukrlfjXnD3I2P9RX7uHN/preview\" width=\"100%\">\n</iframe>\n</div>\n<div class=\"consigna\">\n<strong>\n            Para explorar:\n          </strong>\n<p>\n            Analizá la infografía y pensá:\n            ¿qué implica para nuestra tarea pasar de ser\n            “fuentes únicas” a ser docentes curadores?\n          </p>\n</div>\n"}, "3": {"title": "Profundizar", "content": "\n<p>\n          Llegamos al momento de profundizar.\n          La lectura nos permite poner palabras y conceptos\n          a algunas de las preguntas que aparecieron\n          durante las estaciones anteriores.\n        </p>\n<h3>\n          📖 Clase escrita\n        </h3>\n CLASE ESCRITA INCRUSTADA \n<div class=\"material-embed\">\n<iframe allow=\"autoplay\" height=\"700\" src=\"https://drive.google.com/file/d/1bteClkEd68zrtsOFpKE7gYDe5k2zR5Yc/preview\" width=\"100%\">\n</iframe>\n</div>\n<div class=\"consigna\">\n<strong>\n            Para profundizar:\n          </strong>\n<p>\n            Mientras leés, identificá alguna idea que\n            dialogue con tu propia experiencia como docente.\n          </p>\n</div>\n"}, "4": {"title": "Construir", "content": "\n<p>\n          Después de escuchar, explorar y profundizar,\n          llega el momento de construir.\n        </p>\n<p>\n          La propuesta es recuperar una imagen u objeto\n          que represente alguna huella de nuestra matriz\n          docente tradicional.\n        </p>\n<div class=\"consigna\">\n<strong>\n            🤝 Mapeo teórico-vivencial\n          </strong>\n<p>\n            Compartí esa imagen u objeto y reflexioná\n            sobre qué representa para vos y qué relación\n            tiene con tu manera de enseñar.\n          </p>\n</div>\n PADLET INCRUSTADO \n<div class=\"material-embed\">\n<iframe allow=\"camera;microphone;geolocation\" frameborder=\"0\" height=\"700\" src=\"https://padlet.com/luciasnieg/submission-request/oO6VvPdAdmm8vrwD?section=385623224\" width=\"100%\">\n</iframe>\n</div>\n"}, "5": {"title": "Cerrar", "content": "\n<p>\n          Llegamos al final del recorrido.\n          Pero cerrar no significa terminar de pensar.\n        </p>\n<p>\n          Te proponemos recuperar algo de todo lo que\n          apareció durante este recorrido y ponerlo\n          nuevamente en palabras.\n        </p>\n<div style=\"\n            background:linear-gradient(\n              135deg,\n              #7a0019,\n              #a32035\n            );\n            color:white;\n            padding:35px;\n            border-radius:18px;\n            text-align:center;\n            margin-top:25px;\n          \">\n<div style=\"\n              font-size:35px;\n              margin-bottom:10px;\n            \">\n            🚪\n          </div>\n<h3 style=\"\n              margin:0 0 12px;\n              color:white;\n              font-size:24px;\n            \">\n            Ticket de salida\n          </h3>\n<p style=\"\n              font-size:17px;\n              line-height:1.5;\n              margin:0 auto 22px;\n              max-width:650px;\n            \">\n            ¿Qué concepto de esta clase hizo un\n            “ruido” o dejó una marca en tu identidad docente?\n          </p>\n<!-- PADLET / RESPUESTA -->\n<div style=\"\n              background:white;\n              border-radius:12px;\n              overflow:hidden;\n              margin-top:20px;\n              text-align:left;\n            \">\n<iframe allow=\"camera;microphone;geolocation\" frameborder=\"0\" height=\"600\" src=\"https://padlet.com/luciasnieg/ticket-salida-1-curso-ensenar-en-la-virtualidad-tvdgwv6qs06yv4lx\" width=\"100%\">\n</iframe>\n</div>\n</div>\n"}};
   function actualizarAvance(){const cantidad=exploradas.size, porcentaje=(cantidad/5)*100, texto=document.getElementById('avance-texto'), porcentajeTexto=document.getElementById('avance-porcentaje'), barra=document.getElementById('barra-avance'); if(texto)texto.textContent=`${cantidad} de 5 estaciones exploradas`; if(porcentajeTexto)porcentajeTexto.textContent=`${Math.round(porcentaje)}%`; if(barra)barra.style.width=`${porcentaje}%`; document.querySelectorAll('#habitar-pantalla .paso-indicador').forEach(i=>i.classList.toggle('explorado',exploradas.has(Number(i.dataset.paso))))}
+  // El modal se monta directamente en <body>. Esto evita que Moodle/LMS
+  // lo centre respecto de un contenedor interno en vez de la ventana visible.
+  if(modal.parentElement !== document.body){ document.body.appendChild(modal); }
+
   function abrirEstacion(numero,boton){const data=estaciones[String(numero)]; if(!data)return; ultimoBoton=boton; titulo.textContent=data.title; if(numeroEl)numeroEl.textContent=String(numero).padStart(2,'0'); if(pie)pie.textContent=`${String(numero).padStart(2,'0')} · 05`; if(barraModal)barraModal.style.width=`${(Number(numero)/5)*100}%`; if(frase)frase.textContent=(data.title==='Escuchar'?'Un momento para detenerte y escuchar tus propias huellas.':data.title==='Explorar'?'Un momento para mirar otras formas de enseñar y recorrer.':data.title==='Profundizar'?'Un momento para poner palabras a lo que venís pensando.':data.title==='Construir'?'Un momento para transformar una idea en una huella compartida.':'Un momento para recuperar lo vivido y dejar una nueva pregunta.'); body.innerHTML=data.content; modal.classList.add('is-visible'); modal.setAttribute('aria-hidden','false'); document.body.classList.add('estacion-modal-abierto'); exploradas.add(Number(numero)); actualizarAvance(); requestAnimationFrame(()=>{const close=modal.querySelector('.estacion-cerrar'); if(close)close.focus(); body.scrollTop=0})}
   function cerrarEstacion(){modal.classList.remove('is-visible'); modal.setAttribute('aria-hidden','true'); document.body.classList.remove('estacion-modal-abierto'); body.innerHTML=''; if(ultimoBoton)ultimoBoton.focus()}
   botones.forEach(b=>b.addEventListener('click',()=>abrirEstacion(b.dataset.abrirEstacion,b))); modal.addEventListener('click',e=>{if(e.target.closest('[data-cerrar-estacion]'))cerrarEstacion()}); document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-visible'))cerrarEstacion()}); actualizarAvance();
