@@ -1,0 +1,530 @@
+<div id="contrato-transparente"
+  style="width:100%;max-width:100%;margin:0;padding:0 0 60px;background:#fdfdfd;color:#4d4d4d;font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;box-sizing:border-box;">
+
+  <!-- CABECERA -->
+  <section style="background:linear-gradient(135deg,#7a0019 0%,#a32035 100%);color:white;padding:65px 6%;text-align:center;">
+    <div style="font-size:11px;font-weight:800;letter-spacing:2px;opacity:.8;margin-bottom:15px;">
+      EJE 7 · EL CONTRATO TRANSPARENTE
+    </div>
+    <h1 style="margin:0;font-size:clamp(30px,4vw,48px);line-height:1.1;letter-spacing:-1px;">
+      Rúbricas y evaluación auténtica<br>
+      en el nivel superior
+    </h1>
+    <p style="max-width:820px;margin:22px auto 0;font-size:18px;line-height:1.6;opacity:.92;">
+      ¿Cómo pasar de la “Libreta Celeste” a una evaluación más justa,
+      formativa y transparente?
+    </p>
+  </section>
+
+  <div style="width:100%;max-width:1050px;margin:-35px auto 0;padding:0 20px;box-sizing:border-box;">
+
+    <!-- INTRODUCCIÓN -->
+    <section style="background:white;padding:38px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);margin-bottom:30px;">
+      <div style="color:#7a0019;font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">
+        PARA EMPEZAR
+      </div>
+      <h2 style="color:#7a0019;margin:0 0 15px;font-size:28px;">
+        De la “Libreta Celeste” a desnaturalizar el control
+      </h2>
+      <p style="font-size:16px;line-height:1.75;margin:0 0 15px;">
+        La evaluación suele aparecer como una práctica “natural”: se cursa, se toman parciales,
+        se toma un final y llega una nota. Pero el eje nos invita a verla como una práctica
+        <strong>social, ética y política</strong>, atravesada por decisiones sobre qué miramos,
+        qué valoramos y qué entendemos por aprender.
+      </p>
+      <p style="font-size:16px;line-height:1.75;margin:0;">
+        Evaluar con sentido artesanal implica dejar de pensar el examen como una instancia
+        detectivesca destinada a “cazar el error” y diseñar situaciones donde el conocimiento
+        pueda ponerse en juego en escenarios reales o simulados.
+      </p>
+      <div style="margin-top:25px;padding:20px 24px;background:#fdf2e9;border-left:5px solid #c89b4b;border-radius:8px;color:#765d35;font-style:italic;line-height:1.6;">
+        Evaluar de forma auténtica transforma la acreditación en un espacio de aprendizaje
+        y, por qué no, en un momento de celebración del saber compartido.
+      </div>
+    </section>
+
+    <!-- AVANCE -->
+    <section style="background:white;padding:25px 30px;border-radius:18px;box-shadow:0 5px 18px rgba(0,0,0,.06);margin-bottom:30px;">
+      <div style="background:#7a0019;color:white;padding:25px 30px;border-radius:15px;margin-bottom:30px;text-align:center;box-shadow:0 4px 12px rgba(122,0,25,.15);">
+        <h3 style="margin:0;font-size:1.5em;letter-spacing:-.5px;">📌 ¿Qué tengo que hacer en este recorrido?</h3>
+        <p style="margin:10px 0 0;font-size:1.05em;opacity:.95;">
+          Recorré las cinco estaciones en orden: escuchá, explorá, profundizá, construí y cerrá.
+        </p>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;margin-bottom:12px;">
+        <div>
+          <div style="color:#7a0019;font-size:11px;font-weight:900;letter-spacing:1.5px;">TU RECORRIDO</div>
+          <strong id="avance-contrato-texto" style="display:block;margin-top:4px;font-size:17px;color:#444;">0 de 5 estaciones exploradas</strong>
+        </div>
+        <div id="avance-contrato-porcentaje" style="color:#7a0019;font-size:13px;font-weight:900;">0%</div>
+      </div>
+
+      <div style="width:100%;height:10px;background:#eee5d6;border-radius:20px;overflow:hidden;">
+        <div id="barra-contrato" style="width:0%;height:100%;background:linear-gradient(90deg,#7a0019,#c89b4b);border-radius:20px;transition:width .4s ease;"></div>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;gap:8px;margin-top:20px;">
+        <div class="contrato-paso" data-paso="1"><span>01</span><small>Escuchar</small></div>
+        <div class="contrato-linea"></div>
+        <div class="contrato-paso" data-paso="2"><span>02</span><small>Explorar</small></div>
+        <div class="contrato-linea"></div>
+        <div class="contrato-paso" data-paso="3"><span>03</span><small>Profundizar</small></div>
+        <div class="contrato-linea"></div>
+        <div class="contrato-paso" data-paso="4"><span>04</span><small>Construir</small></div>
+        <div class="contrato-linea"></div>
+        <div class="contrato-paso" data-paso="5"><span>05</span><small>Cerrar</small></div>
+      </div>
+    </section>
+
+    <!-- ESTACIONES -->
+    <section class="ruta-aprendizaje" aria-labelledby="ruta-titulo-contrato">
+      <div class="ruta-intro">
+        <div class="ruta-kicker">LAS ESTACIONES</div>
+        <h2 id="ruta-titulo-contrato">Un recorrido para transformar la evaluación</h2>
+        <p>Cada estación abre una puerta diferente para revisar, comprender y construir nuevas maneras de evaluar.</p>
+      </div>
+
+      <div class="ruta-camino">
+        <div class="ruta-estaciones" role="tablist" aria-label="Estaciones del recorrido">
+
+          <button class="ruta-estacion activa" type="button" role="tab" aria-selected="true" aria-controls="ruta-contenido-contrato" data-estacion="1">
+            <span class="ruta-icono">01</span>
+            <span class="ruta-nombre">Escuchar</span>
+            <span class="ruta-subtitulo">Mirar nuestras viejas formas de evaluar</span>
+            <span class="ruta-estado">Entrar →</span>
+          </button>
+
+          <div class="ruta-conector" aria-hidden="true"></div>
+
+          <button class="ruta-estacion" type="button" role="tab" aria-selected="false" aria-controls="ruta-contenido-contrato" data-estacion="2">
+            <span class="ruta-icono">02</span>
+            <span class="ruta-nombre">Explorar</span>
+            <span class="ruta-subtitulo">Conocer las bitácoras como evaluación</span>
+            <span class="ruta-estado">Entrar →</span>
+          </button>
+
+          <div class="ruta-conector" aria-hidden="true"></div>
+
+          <button class="ruta-estacion" type="button" role="tab" aria-selected="false" aria-controls="ruta-contenido-contrato" data-estacion="3">
+            <span class="ruta-icono">03</span>
+            <span class="ruta-nombre">Profundizar</span>
+            <span class="ruta-subtitulo">Feedback, rúbricas y justicia curricular</span>
+            <span class="ruta-estado">Entrar →</span>
+          </button>
+
+          <div class="ruta-conector" aria-hidden="true"></div>
+
+          <button class="ruta-estacion" type="button" role="tab" aria-selected="false" aria-controls="ruta-contenido-contrato" data-estacion="4">
+            <span class="ruta-icono">04</span>
+            <span class="ruta-nombre">Construir</span>
+            <span class="ruta-subtitulo">Diseñar nuestro Contrato Transparente</span>
+            <span class="ruta-estado">Entrar →</span>
+          </button>
+
+          <div class="ruta-conector" aria-hidden="true"></div>
+
+          <button class="ruta-estacion" type="button" role="tab" aria-selected="false" aria-controls="ruta-contenido-contrato" data-estacion="5">
+            <span class="ruta-icono">05</span>
+            <span class="ruta-nombre">Cerrar</span>
+            <span class="ruta-subtitulo">Derribar una vieja patología de la evaluación</span>
+            <span class="ruta-estado">Entrar →</span>
+          </button>
+
+        </div>
+
+        <section class="ruta-contenido" id="ruta-contenido-contrato" role="tabpanel" tabindex="0">
+          <div class="ruta-cabecera">
+            <div>
+              <div class="ruta-cabecera-kicker" id="ruta-kicker-contrato">ESTACIÓN 01</div>
+              <h3 id="ruta-titulo-estacion-contrato">Escuchar</h3>
+            </div>
+            <div class="ruta-contador" id="ruta-contador-contrato">1 de 5</div>
+          </div>
+
+          <div class="ruta-frase" id="ruta-frase-contrato"></div>
+          <div class="ruta-material" id="ruta-material-contrato"></div>
+
+          <div class="ruta-navegacion">
+            <button type="button" id="ruta-anterior-contrato" class="ruta-btn-secundario">← Anterior</button>
+            <button type="button" id="ruta-siguiente-contrato" class="ruta-btn-principal">Siguiente estación →</button>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section style="margin-top:35px;padding:30px;background:#fdf2e9;border-radius:18px;border:1px solid #ead8bc;text-align:center;">
+      <div style="color:#7a0019;font-size:11px;font-weight:900;letter-spacing:1.5px;">FIN DEL RECORRIDO</div>
+      <h2 style="margin:8px 0;color:#7a0019;">Escuchar · Explorar · Profundizar · Construir · Cerrar</h2>
+      <p style="max-width:700px;margin:auto;line-height:1.6;color:#665b4b;">
+        La evaluación transparente no elimina la exigencia:
+        hace visibles los criterios, acompaña el proceso y habilita una participación más activa
+        de quienes aprenden.
+      </p>
+    </section>
+
+  </div>
+</div>
+
+<style>
+#contrato-transparente *,#contrato-transparente *::before,#contrato-transparente *::after{box-sizing:border-box}
+#contrato-transparente{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+#contrato-transparente .ruta-aprendizaje{margin-top:36px}
+#contrato-transparente .ruta-intro{margin-bottom:20px}
+#contrato-transparente .ruta-kicker{color:#7a0019;font-size:11px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:7px}
+#contrato-transparente .ruta-intro h2{margin:0;color:#7a0019;font-size:28px;line-height:1.2}
+#contrato-transparente .ruta-intro p{margin:8px 0 0;color:#665b4b;font-size:15px;line-height:1.55}
+#contrato-transparente .ruta-camino{background:#fff;border:1px solid #e5dacb;border-radius:24px;padding:22px;box-shadow:0 8px 28px rgba(0,0,0,.055)}
+#contrato-transparente .ruta-estaciones{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr;align-items:stretch;gap:7px;margin-bottom:22px}
+#contrato-transparente .ruta-estacion{appearance:none;min-width:0;border:1px solid #e5dacb;background:#fffaf5;color:#4d4d4d;border-radius:15px;padding:12px 10px;text-align:center;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:5px;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease}
+#contrato-transparente .ruta-estacion:hover{transform:translateY(-2px);border-color:#c89b4b;box-shadow:0 6px 16px rgba(0,0,0,.06)}
+#contrato-transparente .ruta-estacion.activa{background:#7a0019;border-color:#7a0019;box-shadow:0 8px 20px rgba(122,0,25,.17)}
+#contrato-transparente .ruta-icono{width:39px;height:39px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#eee5d6;color:#7a0019;font-size:10px;font-weight:900}
+#contrato-transparente .ruta-estacion.activa .ruta-icono{background:#c89b4b;color:white}
+#contrato-transparente .ruta-nombre{color:#7a0019;font-size:14px;font-weight:900;line-height:1.1}
+#contrato-transparente .ruta-estacion.activa .ruta-nombre{color:#fff}
+#contrato-transparente .ruta-subtitulo{color:#777;font-size:9px;line-height:1.3;min-height:30px}
+#contrato-transparente .ruta-estacion.activa .ruta-subtitulo{color:rgba(255,255,255,.78)}
+#contrato-transparente .ruta-estado{color:#8a6d3b;font-size:9px;font-weight:900;margin-top:auto}
+#contrato-transparente .ruta-estacion.activa .ruta-estado{color:#f6e7c8}
+#contrato-transparente .ruta-conector{align-self:center;width:15px;height:2px;background:#dccfbf;position:relative}
+#contrato-transparente .ruta-conector::after{content:'';position:absolute;right:-1px;top:-3px;border-left:5px solid #c89b4b;border-top:4px solid transparent;border-bottom:4px solid transparent}
+#contrato-transparente .ruta-contenido{border-top:1px solid #eee4d7;padding-top:22px;outline:none}
+#contrato-transparente .ruta-cabecera{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}
+#contrato-transparente .ruta-cabecera-kicker{color:#c89b4b;font-size:10px;font-weight:900;letter-spacing:1.5px}
+#contrato-transparente .ruta-cabecera h3{margin:4px 0 0;color:#7a0019;font-size:29px;line-height:1.1}
+#contrato-transparente .ruta-contador{color:#8a6d3b;font-size:11px;font-weight:900;white-space:nowrap;padding-top:5px}
+#contrato-transparente .ruta-frase{margin:13px 0 3px;padding:12px 15px;background:#fdf2e9;border-left:4px solid #c89b4b;border-radius:7px;color:#66563d;font-size:13px;line-height:1.5;font-style:italic}
+#contrato-transparente .ruta-material{padding-top:4px;font-size:15px;line-height:1.7}
+#contrato-transparente .ruta-material h3{color:#7a0019;margin-top:24px}
+#contrato-transparente .ruta-material .tarjetas{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:20px 0}
+#contrato-transparente .ruta-material .tarjeta{padding:20px;background:#faf7f0;border:1px solid #e5dacb;border-radius:14px}
+#contrato-transparente .ruta-material .tarjeta strong{display:block;color:#7a0019;font-size:12px;letter-spacing:.5px;margin-bottom:7px}
+#contrato-transparente .ruta-material .tarjeta p{margin:0}
+#contrato-transparente .ruta-material .material-recurso{margin:20px 0;padding:6px;background:#fff;border:1px solid #e6dccf;border-radius:14px;box-shadow:0 5px 18px rgba(0,0,0,.05);overflow:hidden}
+#contrato-transparente .ruta-material .material-recurso iframe{display:block;width:100%;height:620px;border:0;border-radius:10px;background:#f8f5ef}
+#contrato-transparente .ruta-material .video-explicativo p{padding:0 10px}
+#contrato-transparente .ruta-material .podcast-placeholder{margin:20px 0;padding:30px;border:2px dashed #d8c7aa;border-radius:14px;background:#faf7f0;text-align:center;color:#8a6d3b}
+#contrato-transparente .ruta-material .podcast-placeholder .icono{font-size:34px;margin-bottom:8px}
+#contrato-transparente .ruta-material .podcast-placeholder strong{display:block;color:#7a0019;font-size:13px;letter-spacing:.8px}
+#contrato-transparente .ruta-material .podcast-placeholder span{display:block;margin-top:7px;font-size:12px;line-height:1.5}
+#contrato-transparente .ruta-material .pregunta{margin:22px 0;padding:20px 22px;background:#fdf2e9;border-left:5px solid #c89b4b;border-radius:8px;color:#66563d}
+#contrato-transparente .ruta-material .pregunta strong{display:block;color:#7a0019;margin-bottom:6px}
+#contrato-transparente .ruta-material .rubrica-partes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}
+#contrato-transparente .ruta-material .rubrica-parte{padding:20px;background:#faf7f0;border:1px solid #e5dacb;border-radius:14px}
+#contrato-transparente .ruta-material .rubrica-parte strong{display:block;color:#7a0019;font-size:12px;letter-spacing:.5px;margin-bottom:7px}
+#contrato-transparente .ruta-material .produccion{margin:18px 0;padding:22px;background:#faf7f0;border:1px solid #e5dacb;border-radius:14px}
+#contrato-transparente .ruta-material .produccion strong{display:block;color:#7a0019;font-size:12px;letter-spacing:.6px;margin:14px 0 5px}
+#contrato-transparente .ruta-material .produccion strong:first-child{margin-top:0}
+#contrato-transparente .ruta-material .produccion ul{margin:8px 0 10px 20px;padding:0}
+#contrato-transparente .ruta-material .ticket{margin-top:10px;padding:30px;border-radius:18px;background:linear-gradient(135deg,#7a0019,#a32035);color:white;text-align:center}
+#contrato-transparente .ruta-material .ticket h3{color:white;margin:0 0 12px;font-size:25px}
+#contrato-transparente .ruta-material .ticket p{max-width:680px;margin:0 auto 22px;font-size:17px;line-height:1.55}
+#contrato-transparente .ruta-material .ticket-pregunta{max-width:760px;margin:0 auto 22px;padding:20px 22px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);border-radius:12px;font-size:17px;line-height:1.55}
+#contrato-transparente .ruta-material .ticket-recurso{background:white;border-radius:12px;padding:6px;text-align:left;overflow:hidden}
+#contrato-transparente .boton-recurso{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:11px 16px;border-radius:10px;background:#7a0019;color:white!important;text-decoration:none;font-weight:800;font-size:12px}
+#contrato-transparente .contrato-paso{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:45px}
+#contrato-transparente .contrato-paso span{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#eee5d6;color:#777;font-size:10px;font-weight:900;transition:all .3s ease}
+#contrato-transparente .contrato-paso small{color:#777;font-size:8px;font-weight:700;text-align:center}
+#contrato-transparente .contrato-paso.explorado span{background:#7a0019;color:white}
+#contrato-transparente .contrato-paso.explorado small{color:#7a0019}
+#contrato-transparente .contrato-linea{flex:1;height:2px;margin-top:16px;background:#e2d8ca}
+#contrato-transparente .ruta-navegacion{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:24px;padding-top:15px;border-top:1px solid #eee4d7}
+#contrato-transparente .ruta-navegacion button{font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:11px;font-weight:900;cursor:pointer;border-radius:9px;min-height:42px;padding:10px 15px}
+#contrato-transparente .ruta-btn-secundario{border:0;background:transparent;color:#7a0019}
+#contrato-transparente .ruta-btn-principal{border:1px solid #7a0019;background:#7a0019;color:#fff}
+#contrato-transparente .ruta-navegacion button:focus-visible,#contrato-transparente .ruta-estacion:focus-visible{outline:3px solid rgba(200,155,75,.75);outline-offset:3px}
+
+@media(max-width:900px){
+  #contrato-transparente .ruta-estaciones{grid-template-columns:1fr 1fr;gap:9px}
+  #contrato-transparente .ruta-conector{display:none}
+  #contrato-transparente .ruta-material .rubrica-partes{grid-template-columns:1fr 1fr}
+}
+@media(max-width:700px){
+  #contrato-transparente .ruta-material .tarjetas,#contrato-transparente .ruta-material .rubrica-partes{grid-template-columns:1fr}
+  #contrato-transparente .ruta-material .material-recurso iframe{height:520px}
+}
+@media(max-width:560px){
+  #contrato-transparente .ruta-camino{padding:14px;border-radius:18px}
+  #contrato-transparente .ruta-estaciones{grid-template-columns:1fr}
+  #contrato-transparente .ruta-estacion{display:grid;grid-template-columns:43px 1fr auto;grid-template-rows:auto auto;text-align:left;align-items:center;column-gap:10px;padding:11px}
+  #contrato-transparente .ruta-icono{grid-row:1 / 3}
+  #contrato-transparente .ruta-nombre{align-self:end}
+  #contrato-transparente .ruta-subtitulo{min-height:0;align-self:start}
+  #contrato-transparente .ruta-estado{grid-column:3;grid-row:1 / 3;align-self:center}
+  #contrato-transparente .ruta-cabecera h3{font-size:25px}
+  #contrato-transparente .ruta-frase{font-size:12px}
+  #contrato-transparente .ruta-navegacion{flex-wrap:wrap}
+  #contrato-transparente .ruta-navegacion button{flex:1}
+  #contrato-transparente .ticket{padding:20px}
+}
+</style>
+
+<script>
+(function(){
+  const root = document.getElementById('contrato-transparente');
+  if(!root) return;
+
+  const datos = {
+    1:{
+      titulo:'Escuchar',
+      frase:'Mirar de frente esa “Libreta Celeste” que a veces sigue organizando nuestras decisiones de evaluación.',
+      contenido:`<p>El eje comienza con el relato de Alejandro Dolina recuperado por Jorge Steiman: la “Libreta Celeste” como metáfora de una evaluación que parece objetiva, pero puede terminar premiando o castigando mucho más que los aprendizajes reales.</p>
+
+      <p>Tradicionalmente, concebimos la evaluación como un proceso natural: se cursa, se toman parciales escritos, se toman finales orales y se aprueba o desaprueba. Así reducimos una práctica compleja a un <strong>arbitraje numérico</strong>.</p>
+
+      <p>La propuesta es desnaturalizar esa mirada y dejar de entender al examen final como una instancia destinada a “cazar el error”. Evaluar con sentido artesanal implica diseñar situaciones en las que el conocimiento pueda ponerse en juego en escenarios reales o simulados del campo profesional.</p>
+
+      <h3>🎧 Podcast del encuentro</h3>
+      <div class="podcast-placeholder">
+        <div class="icono">🎙️</div>
+        <strong>ACÁ VA EL PODCAST DEL EJE 7</strong>
+        <span>Espacio reservado para incorporar el enlace del podcast cuando esté disponible.</span>
+      </div>
+
+      <div class="pregunta">
+        <strong>💭 Para escuchar</strong>
+        <p>¿Qué parte de tus prácticas de evaluación se parece todavía a una “Libreta Celeste”? ¿Qué te gustaría que pudiera mostrar una evaluación que hoy tu examen no llega a mostrar?</p>
+      </div>`
+    },
+
+    2:{
+      titulo:'Explorar',
+      frase:'Conocer una forma de evaluar que permite mirar el proceso y no solamente el resultado final: la bitácora.',
+      contenido:`<p>Cuando ampliamos la mirada sobre la evaluación, aparecen herramientas que permiten documentar <strong>el proceso de aprendizaje</strong> y no solamente el producto final.</p>
+
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <strong>📓 ¿QUÉ ES UNA BITÁCORA?</strong>
+          <p>Es un registro del recorrido de aprendizaje: reúne producciones, decisiones, dudas, avances, dificultades y reflexiones que permiten reconstruir cómo se fue aprendiendo.</p>
+        </div>
+        <div class="tarjeta">
+          <strong>🔎 ¿POR QUÉ PUEDE SER ÚTIL?</strong>
+          <p>Porque hace visibles procesos que un examen puntual puede ocultar y ofrece evidencias para acompañar, retroalimentar y valorar el desarrollo de una producción.</p>
+        </div>
+      </div>
+
+      <p>La bitácora también puede favorecer una participación más activa del estudiante en su propio aprendizaje: mirar hacia atrás, reconocer qué hizo, qué cambió y qué necesita seguir trabajando.</p>
+
+      <h3>🎥 Ejemplos de bitácoras</h3>
+      <div class="material-recurso video-explicativo">
+        <iframe src="https://drive.google.com/file/d/1Tel47MWPIsDV9S6IYmEEYF_jN7LVm3iB/preview"
+          title="Video sobre ejemplos de bitácoras" loading="lazy"></iframe>
+        <p><strong>Mientras mirás:</strong> observá qué huellas del proceso quedan registradas y qué podría permitirle ver al docente una bitácora que no aparece en una producción final aislada.</p>
+      </div>
+      <a class="boton-recurso" href="https://drive.google.com/file/d/1Tel47MWPIsDV9S6IYmEEYF_jN7LVm3iB/view?usp=drive_link"
+         target="_blank" rel="noopener">↗ Abrir el video de ejemplos</a>
+
+      <h3>🖼️ Infografía</h3>
+      <div class="material-recurso">
+        <iframe src="https://drive.google.com/file/d/1lNQUBSjuutDOmK4dlujeupFrpB-sLKFz/preview"
+          title="Infografía Eje 7" loading="lazy"></iframe>
+      </div>
+      <a class="boton-recurso" href="https://drive.google.com/file/d/1lNQUBSjuutDOmK4dlujeupFrpB-sLKFz/view?usp=drive_link"
+         target="_blank" rel="noopener">↗ Abrir la infografía</a>
+
+      <div class="pregunta">
+        <strong>🔎 Para explorar</strong>
+        <p>¿Qué parte del aprendizaje de tus estudiantes te gustaría poder “ver” y acompañar antes de que llegue el momento de poner una nota?</p>
+      </div>`
+    },
+
+    3:{
+      titulo:'Profundizar',
+      frase:'Pasar de la nota como veredicto al feedback como diálogo y a la rúbrica como contrato pedagógico.',
+      contenido:`<p>En los entornos virtuales o combinados, publicar solamente un número puede agudizar la distancia. Por eso la evaluación debe volverse un <strong>continuum sostenido por la retroalimentación formativa</strong>.</p>
+
+      <div class="tarjetas">
+        <div class="tarjeta">
+          <strong>💬 FEEDBACK FORMATIVO</strong>
+          <p>No es una cruz roja ni “estudiá más”. Es una actitud dialógica que permite comprender cómo está pensando el otro, tratar el error con hospitalidad y orientar el próximo paso.</p>
+        </div>
+        <div class="tarjeta">
+          <strong>🎧 DEVOLUCIONES NARRATIVAS</strong>
+          <p>Un audio o micro-video personalizado puede humanizar la distancia y ofrecer una devolución cercana y precisa sobre el trabajo.</p>
+        </div>
+        <div class="tarjeta">
+          <strong>🧠 VISIBILIZACIÓN DEL PENSAMIENTO</strong>
+          <p>Mapas conceptuales digitales y rutinas compartidas permiten intervenir sobre el proceso antes de la entrega final.</p>
+        </div>
+        <div class="tarjeta">
+          <strong>📊 RÚBRICAS</strong>
+          <p>Una rúbrica reúne criterios y niveles cualitativos de cumplimiento y transforma la evaluación en un <strong>contrato pedagógico transparente</strong>.</p>
+        </div>
+      </div>
+
+      <p>Cuando los estudiantes conocen la rúbrica antes de realizar la tarea, pueden saber qué se espera, qué dimensiones serán observadas y qué camino necesitan recorrer. Además, la rúbrica habilita <strong>autoevaluación y coevaluación</strong>, fortaleciendo autonomía y metacognición.</p>
+
+      <h3>📖 Clase escrita</h3>
+      <div class="material-recurso">
+        <iframe src="https://drive.google.com/file/d/1q_pbmetjDswI0cCHdh0ik0rvi1wEzHzE/preview"
+          title="Clase escrita Eje 7" loading="lazy"></iframe>
+      </div>
+      <a class="boton-recurso" href="https://drive.google.com/file/d/1q_pbmetjDswI0cCHdh0ik0rvi1wEzHzE/view?usp=drive_link"
+         target="_blank" rel="noopener">↗ Abrir la clase escrita</a>
+
+      <h3>🧩 Tres formas de evaluar desde otros lugares</h3>
+      <div class="rubrica-partes">
+        <div class="rubrica-parte">
+          <strong>EL CONTRATO DE LA CUADRÍCULA</strong>
+          <p>Construir comunitariamente los niveles de calidad de un criterio antes de comenzar el trabajo.</p>
+        </div>
+        <div class="rubrica-parte">
+          <strong>LA ESTACIÓN DE COEVALUACIÓN</strong>
+          <p>Evaluar el trabajo de otros pares utilizando la rúbrica y argumentar la devolución desde los criterios.</p>
+        </div>
+        <div class="rubrica-parte">
+          <strong>EL ESPEJO DEL PORTAFOLIO</strong>
+          <p>Presentar un portafolio digital, completar la rúbrica y defender mediante audio o video el nivel alcanzado.</p>
+        </div>
+      </div>
+
+      <div class="pregunta">
+        <strong>💡 Para profundizar</strong>
+        <p>¿Qué cambiaría en una evaluación de tu materia si los criterios de calidad fueran conocidos, conversados y trabajados <strong>antes</strong> de producir?</p>
+      </div>`
+    },
+
+    4:{
+      titulo:'Construir',
+      frase:'Diseñar una rúbrica que convierta nuestras expectativas en un contrato visible, comprensible y compartido.',
+      contenido:`<p>Ahora vamos a diseñar nuestra propia matriz de <strong>evaluación auténtica</strong>, tomando el mismo contenido o la actividad lúdica/proyecto que venimos trabajando en los ejes anteriores.</p>
+
+      <div class="produccion">
+        <strong>01 · LA SELECCIÓN</strong>
+        <p>Elegí el mismo contenido o la actividad lúdica/proyecto con la que venís trabajando.</p>
+
+        <strong>02 · EL DISEÑO DE LA RÚBRICA</strong>
+        <p>Construí una rúbrica cualitativa simple incluyendo:</p>
+        <ul>
+          <li><strong>Criterios de acreditación:</strong> al menos dos criterios cualitativos específicos de tu disciplina.</li>
+          <li><strong>Niveles de desempeño:</strong> Desempeño Destacado, Desempeño Aceptable y Requiere Revisión.</li>
+          <li><strong>Estrategia de devolución:</strong> explicá cómo realizarás el feedback formativo: audio, rúbrica digital, coevaluación gestual u otra estrategia.</li>
+        </ul>
+
+        <strong>03 · EL LAZO DIDÁCTICO</strong>
+        <p>Leé la rúbrica de un compañero o compañera y dejale una devolución analizando si los criterios son transparentes, si evitan ambigüedades y si ayudan a comprender qué se espera del aprendizaje.</p>
+      </div>
+
+      <h3>🧩 Propuesta de Co-creación Artesanal · El Contrato Transparente</h3>
+      <div class="material-recurso">
+        <iframe src="https://padlet.com/luciasnieg/submission-request/oO6VvPdAdmm8vrwD?section=385671444"
+          title="Actividad Eje 7 - El Contrato Transparente" loading="lazy"></iframe>
+      </div>
+      <a class="boton-recurso" href="https://padlet.com/luciasnieg/submission-request/oO6VvPdAdmm8vrwD?section=385671444"
+         target="_blank" rel="noopener">↗ Abrir la actividad</a>
+
+      <div class="pregunta">
+        <strong>🪞 Para construir</strong>
+        <p>Una rúbrica no debería aparecer recién cuando llega la nota. Puede funcionar como un acuerdo previo que ayuda a orientar el trabajo mientras todavía está en construcción.</p>
+      </div>`
+    },
+
+    5:{
+      titulo:'Cerrar',
+      frase:'Nombrar qué vieja patología de la evaluación estamos dispuestos a derribar.',
+      contenido:`<p>El recorrido termina volviendo sobre una idea central: <strong>hacer explícitos los criterios</strong> puede transformar la evaluación en una práctica de justicia y transparencia pedagógica.</p>
+
+      <p>No se trata de dejar de evaluar ni de “bajar la vara”. Se trata de que el estudiante pueda comprender qué se espera, recibir orientación para mejorar y participar de manera más activa en la interpretación de su propio proceso.</p>
+
+      <div class="ticket">
+        <div style="font-size:38px;margin-bottom:10px;">⚖️</div>
+        <h3>Ticket de salida · Buzón metacognitivo</h3>
+        <p>Respondé en una sola frase:</p>
+
+        <div class="ticket-pregunta">
+          <strong>Al explicitar tus criterios a través de una rúbrica, ¿qué vieja patología o desvirtuación de la evaluación sentís que estás derribando en tu práctica docente?</strong>
+        </div>
+
+        <div class="ticket-recurso">
+          <iframe src="https://padlet.com/luciasnieg/card-breakout-room/jBNJvMOmb370AY9b-page:4y6zXFCIPP7zv69sRYG-J"
+            title="Ticket de salida Eje 7" loading="lazy"
+            style="display:block;width:100%;height:620px;border:0;"></iframe>
+        </div>
+        <a class="boton-recurso" style="background:white;color:#7a0019!important;"
+           href="https://padlet.com/luciasnieg/card-breakout-room/jBNJvMOmb370AY9b-page:4y6zXFCIPP7zv69sRYG-J"
+           target="_blank" rel="noopener">↗ Abrir el ticket de salida</a>
+      </div>
+
+      <div class="pregunta">
+        <strong>⚖️ Para llevarte</strong>
+        <p>La evaluación auténtica no consiste en hacer la acreditación más fácil. Consiste en hacerla más significativa, transparente y vinculada con los aprendizajes que realmente queremos valorar.</p>
+      </div>`
+    }
+  };
+
+  const botones = root.querySelectorAll('.ruta-estacion');
+  const material = root.querySelector('#ruta-material-contrato');
+  const titulo = root.querySelector('#ruta-titulo-estacion-contrato');
+  const kicker = root.querySelector('#ruta-kicker-contrato');
+  const frase = root.querySelector('#ruta-frase-contrato');
+  const contador = root.querySelector('#ruta-contador-contrato');
+  const anterior = root.querySelector('#ruta-anterior-contrato');
+  const siguiente = root.querySelector('#ruta-siguiente-contrato');
+
+  let actual = 1;
+  const exploradas = new Set();
+
+  function actualizarAvance(){
+    const cantidad = exploradas.size;
+    const porcentaje = (cantidad / 5) * 100;
+    const texto = root.querySelector('#avance-contrato-texto');
+    const porcentajeTexto = root.querySelector('#avance-contrato-porcentaje');
+    const barra = root.querySelector('#barra-contrato');
+
+    if(texto) texto.textContent = `${cantidad} de 5 estaciones exploradas`;
+    if(porcentajeTexto) porcentajeTexto.textContent = `${Math.round(porcentaje)}%`;
+    if(barra) barra.style.width = `${porcentaje}%`;
+
+    root.querySelectorAll('.contrato-paso').forEach(paso=>{
+      const n = Number(paso.dataset.paso);
+      paso.classList.toggle('explorado', exploradas.has(n));
+    });
+  }
+
+  function mostrar(n, enfocar){
+    actual = n;
+    const d = datos[n];
+
+    titulo.textContent = d.titulo;
+    kicker.textContent = 'ESTACIÓN ' + String(n).padStart(2,'0');
+    frase.textContent = d.frase;
+    contador.textContent = `${n} de 5`;
+    material.innerHTML = d.contenido;
+
+    botones.forEach(btn=>{
+      const activa = Number(btn.dataset.estacion) === n;
+      btn.classList.toggle('activa', activa);
+      btn.setAttribute('aria-selected', activa ? 'true' : 'false');
+    });
+
+    exploradas.add(n);
+    actualizarAvance();
+
+    anterior.disabled = n === 1;
+    anterior.style.opacity = n === 1 ? '.35' : '1';
+    anterior.style.cursor = n === 1 ? 'default' : 'pointer';
+    siguiente.textContent = n === 5 ? 'Volver a comenzar ↺' : 'Siguiente estación →';
+
+    if(enfocar){
+      root.querySelector('#ruta-contenido-contrato').focus({preventScroll:true});
+      root.querySelector('#ruta-contenido-contrato').scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  }
+
+  botones.forEach(btn=>{
+    btn.addEventListener('click',()=>mostrar(Number(btn.dataset.estacion),true));
+  });
+
+  anterior.addEventListener('click',()=>{
+    if(actual > 1) mostrar(actual - 1,true);
+  });
+
+  siguiente.addEventListener('click',()=>{
+    mostrar(actual === 5 ? 1 : actual + 1,true);
+  });
+
+  mostrar(1,false);
+})();
+</script>
