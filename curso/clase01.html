@@ -215,69 +215,97 @@
 </div>
 </div>
 </section>
+
 <!-- =================================================
-         ESTACIONES
-         ================================================= -->
-<div style="
-        margin-bottom:12px;
-        color:#7a0019;
-        font-size:11px;
-        font-weight:900;
-        letter-spacing:1.5px;
-        text-transform:uppercase;
-      ">
-      LAS ESTACIONES
+     ESTACIONES · NUEVO DISEÑO
+     ================================================= -->
+
+<section class="ruta-aprendizaje" aria-labelledby="ruta-titulo">
+  <div class="ruta-intro">
+    <div class="ruta-kicker">LAS ESTACIONES</div>
+    <h2 id="ruta-titulo">Un recorrido para habitar la pantalla</h2>
+    <p>Elegí una estación para comenzar. Cada una abre un espacio propio de trabajo.</p>
+  </div>
+
+  <div class="ruta-camino">
+
+    <div class="ruta-estaciones" role="tablist" aria-label="Estaciones del recorrido">
+
+      <button class="ruta-estacion activa" type="button" role="tab"
+              aria-selected="true" aria-controls="ruta-contenido" data-estacion="1">
+        <span class="ruta-icono">01</span>
+        <span class="ruta-nombre">Escuchar</span>
+        <span class="ruta-subtitulo">Reconocer nuestras huellas</span>
+        <span class="ruta-estado">Entrar →</span>
+      </button>
+
+      <div class="ruta-conector" aria-hidden="true"></div>
+
+      <button class="ruta-estacion" type="button" role="tab"
+              aria-selected="false" aria-controls="ruta-contenido" data-estacion="2">
+        <span class="ruta-icono">02</span>
+        <span class="ruta-nombre">Explorar</span>
+        <span class="ruta-subtitulo">Mirar otras formas de enseñar</span>
+        <span class="ruta-estado">Entrar →</span>
+      </button>
+
+      <div class="ruta-conector" aria-hidden="true"></div>
+
+      <button class="ruta-estacion" type="button" role="tab"
+              aria-selected="false" aria-controls="ruta-contenido" data-estacion="3">
+        <span class="ruta-icono">03</span>
+        <span class="ruta-nombre">Profundizar</span>
+        <span class="ruta-subtitulo">Poner palabras a lo pensado</span>
+        <span class="ruta-estado">Entrar →</span>
+      </button>
+
+      <div class="ruta-conector" aria-hidden="true"></div>
+
+      <button class="ruta-estacion" type="button" role="tab"
+              aria-selected="false" aria-controls="ruta-contenido" data-estacion="4">
+        <span class="ruta-icono">04</span>
+        <span class="ruta-nombre">Construir</span>
+        <span class="ruta-subtitulo">Dejar una huella compartida</span>
+        <span class="ruta-estado">Entrar →</span>
+      </button>
+
+      <div class="ruta-conector" aria-hidden="true"></div>
+
+      <button class="ruta-estacion" type="button" role="tab"
+              aria-selected="false" aria-controls="ruta-contenido" data-estacion="5">
+        <span class="ruta-icono">05</span>
+        <span class="ruta-nombre">Cerrar</span>
+        <span class="ruta-subtitulo">Recuperar lo vivido</span>
+        <span class="ruta-estado">Entrar →</span>
+      </button>
+
     </div>
-<!-- =================================================
-         ESTACIÓN 1
-         ================================================= -->
-<article class="estacion" data-estacion="1"><div class="estacion-tarjeta"><div class="estacion-numero">1</div><div class="estacion-info"><strong>Escuchar</strong><span>¿Quiénes somos cuando enseñamos en la virtualidad?</span></div><button aria-haspopup="dialog" class="estacion-boton" data-abrir-estacion="1" type="button"><span>COMENZAR</span><span aria-hidden="true">→</span></button></div></article>
-<!-- =================================================
-         ESTACIÓN 2
-         ================================================= -->
-<article class="estacion" data-estacion="2"><div class="estacion-tarjeta"><div class="estacion-numero">2</div><div class="estacion-info"><strong>Explorar</strong><span>De fuentes únicas a docentes curadores</span></div><button aria-haspopup="dialog" class="estacion-boton" data-abrir-estacion="2" type="button"><span>COMENZAR</span><span aria-hidden="true">→</span></button></div></article>
-<!-- =================================================
-         ESTACIÓN 3
-         ================================================= -->
-<article class="estacion" data-estacion="3"><div class="estacion-tarjeta"><div class="estacion-numero">3</div><div class="estacion-info"><strong>Profundizar</strong><span>Identidad, hospitalidad y soberanía digital</span></div><button aria-haspopup="dialog" class="estacion-boton" data-abrir-estacion="3" type="button"><span>COMENZAR</span><span aria-hidden="true">→</span></button></div></article>
-<!-- =================================================
-         ESTACIÓN 4
-         ================================================= -->
-<article class="estacion" data-estacion="4"><div class="estacion-tarjeta"><div class="estacion-numero">4</div><div class="estacion-info"><strong>Construir</strong><span>Mapeo teórico-vivencial</span></div><button aria-haspopup="dialog" class="estacion-boton" data-abrir-estacion="4" type="button"><span>COMENZAR</span><span aria-hidden="true">→</span></button></div></article>
-<!-- =================================================
-         ESTACIÓN 5
-         ================================================= -->
-<article class="estacion" data-estacion="5"><div class="estacion-tarjeta"><div class="estacion-numero">5</div><div class="estacion-info"><strong>Cerrar</strong><span>Ticket de salida</span></div><button aria-haspopup="dialog" class="estacion-boton" data-abrir-estacion="5" type="button"><span>COMENZAR</span><span aria-hidden="true">→</span></button></div></article>
-<!-- =================================================
-         CIERRE
-         ================================================= -->
-<div aria-hidden="true" class="estacion-modal" id="estacion-modal">
-  <div class="estacion-modal-fondo" data-cerrar-estacion=""></div>
-  <section aria-labelledby="estacion-modal-titulo" aria-modal="true" class="estacion-dialog" role="dialog">
-    <header class="estacion-modal-header">
-      <div class="estacion-modal-decor" aria-hidden="true"><span></span><span></span><span></span></div>
-      <div class="estacion-modal-topline">
-        <div class="estacion-modal-identidad">
-          <div class="estacion-modal-numero" id="estacion-modal-numero">01</div>
-          <div>
-            <div class="estacion-modal-kicker">ESTACIÓN DE APRENDIZAJE</div>
-            <h2 id="estacion-modal-titulo">Estación</h2>
-          </div>
+
+    <section class="ruta-contenido" id="ruta-contenido" role="tabpanel" tabindex="0">
+      <div class="ruta-cabecera">
+        <div>
+          <div class="ruta-cabecera-kicker" id="ruta-kicker">ESTACIÓN 01</div>
+          <h3 id="ruta-titulo-estacion">Escuchar</h3>
         </div>
-        <button aria-label="Cerrar estación y volver al recorrido" class="estacion-cerrar" data-cerrar-estacion="" type="button">
-          <span aria-hidden="true">×</span><span>Cerrar</span>
-        </button>
+        <div class="ruta-contador" id="ruta-contador">1 de 5</div>
       </div>
-      <div class="estacion-modal-frase" id="estacion-modal-frase">Un momento para detenerte, mirar y pensar.</div>
-      <div class="estacion-modal-progreso" aria-hidden="true"><span id="estacion-modal-progreso-barra"></span></div>
-    </header>
-    <div class="estacion-modal-body" id="estacion-modal-body"></div>
-    <footer class="estacion-modal-footer">
-      <span id="estacion-modal-pie">01 · 05</span>
-      <button class="estacion-cerrar-footer" data-cerrar-estacion="" type="button">← Volver al recorrido</button>
-    </footer>
-  </section>
-</div><section style="
+
+      <div class="ruta-frase" id="ruta-frase">
+        Un momento para detenerte y escuchar tus propias huellas.
+      </div>
+
+      <div class="ruta-material" id="ruta-material"></div>
+
+      <div class="ruta-navegacion">
+        <button type="button" id="ruta-anterior" class="ruta-btn-secundario">← Anterior</button>
+        <button type="button" id="ruta-siguiente" class="ruta-btn-principal">Siguiente estación →</button>
+      </div>
+    </section>
+
+  </div>
+</section>
+
+<section style="
         margin-top:35px;
         padding:30px;
         background:#fdf2e9;
@@ -316,223 +344,485 @@
      ESTILOS
      ===================================================== -->
 <style>
-#habitar-pantalla *,#habitar-pantalla *::before,#habitar-pantalla *::after{box-sizing:border-box}
-#habitar-pantalla .estacion{margin-bottom:14px}
-#habitar-pantalla .estacion-tarjeta{
-  display:grid;
-  grid-template-columns:58px 1fr auto;
-  align-items:center;
-  gap:20px;
-  padding:20px 22px;
+
+#habitar-pantalla *,
+#habitar-pantalla *::before,
+#habitar-pantalla *::after{box-sizing:border-box}
+
+#habitar-pantalla{
+  font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+
+/* ---------- RUTA ---------- */
+
+#habitar-pantalla .ruta-aprendizaje{
+  margin-top:36px;
+}
+
+#habitar-pantalla .ruta-intro{
+  margin-bottom:20px;
+}
+
+#habitar-pantalla .ruta-kicker{
+  color:#7a0019;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+  margin-bottom:7px;
+}
+
+#habitar-pantalla .ruta-intro h2{
+  margin:0;
+  color:#7a0019;
+  font-size:28px;
+  line-height:1.2;
+}
+
+#habitar-pantalla .ruta-intro p{
+  margin:8px 0 0;
+  color:#665b4b;
+  font-size:15px;
+  line-height:1.55;
+}
+
+/* Las estaciones ahora forman un camino, no una lista de botones. */
+#habitar-pantalla .ruta-camino{
   background:#fff;
-  border:1px solid #e7ddd0;
-  border-radius:20px;
-  box-shadow:0 4px 14px rgba(0,0,0,.035);
-  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+  border:1px solid #e5dacb;
+  border-radius:24px;
+  padding:22px;
+  box-shadow:0 8px 28px rgba(0,0,0,.055);
 }
-#habitar-pantalla .estacion-tarjeta:hover{
+
+#habitar-pantalla .ruta-estaciones{
+  display:grid;
+  grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr;
+  align-items:stretch;
+  gap:7px;
+  margin-bottom:22px;
+}
+
+#habitar-pantalla .ruta-estacion{
+  appearance:none;
+  min-width:0;
+  border:1px solid #e5dacb;
+  background:#fffaf5;
+  color:#4d4d4d;
+  border-radius:15px;
+  padding:12px 10px;
+  text-align:center;
+  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  gap:5px;
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease,background .18s ease;
+}
+
+#habitar-pantalla .ruta-estacion:hover{
   transform:translateY(-2px);
-  box-shadow:0 10px 26px rgba(0,0,0,.07);
   border-color:#c89b4b;
+  box-shadow:0 6px 16px rgba(0,0,0,.06);
 }
-#habitar-pantalla .estacion-numero{
+
+#habitar-pantalla .ruta-estacion.activa{
+  background:#7a0019;
+  border-color:#7a0019;
+  box-shadow:0 8px 20px rgba(122,0,25,.17);
+}
+
+#habitar-pantalla .ruta-icono{
+  width:39px;
+  height:39px;
   display:flex;
   align-items:center;
   justify-content:center;
-  width:52px;
-  height:52px;
-  border-radius:16px;
-  background:#7a0019;
-  color:white;
-  font-size:13px;
-  font-weight:900;
-  box-shadow:inset 0 -4px 0 rgba(0,0,0,.08);
-}
-#habitar-pantalla .estacion[data-estacion="1"] .estacion-numero,
-#habitar-pantalla .estacion[data-estacion="3"] .estacion-numero,
-#habitar-pantalla .estacion[data-estacion="5"] .estacion-numero{background:#c89b4b}
-#habitar-pantalla .estacion-info strong{
-  display:block;
+  border-radius:50%;
+  background:#eee5d6;
   color:#7a0019;
-  font-size:19px;
-  margin-bottom:4px;
+  font-size:10px;
+  font-weight:900;
 }
-#habitar-pantalla .estacion-info span{
-  display:block;
+
+#habitar-pantalla .ruta-estacion:nth-of-type(1) .ruta-icono,
+#habitar-pantalla .ruta-estacion:nth-of-type(5) .ruta-icono{
+  background:#c89b4b;
+  color:white;
+}
+
+#habitar-pantalla .ruta-estacion.activa .ruta-icono{
+  background:#c89b4b;
+  color:white;
+}
+
+#habitar-pantalla .ruta-nombre{
+  color:#7a0019;
+  font-size:14px;
+  font-weight:900;
+  line-height:1.1;
+}
+
+#habitar-pantalla .ruta-estacion.activa .ruta-nombre{
+  color:#fff;
+}
+
+#habitar-pantalla .ruta-subtitulo{
   color:#777;
-  font-size:13px;
-  line-height:1.45;
+  font-size:9px;
+  line-height:1.3;
+  min-height:24px;
 }
-#habitar-pantalla .estacion-boton{
-  appearance:none;
+
+#habitar-pantalla .ruta-estacion.activa .ruta-subtitulo{
+  color:rgba(255,255,255,.78);
+}
+
+#habitar-pantalla .ruta-estado{
+  color:#8a6d3b;
+  font-size:9px;
+  font-weight:900;
+  margin-top:auto;
+}
+
+#habitar-pantalla .ruta-estacion.activa .ruta-estado{
+  color:#f6e7c8;
+}
+
+#habitar-pantalla .ruta-conector{
+  align-self:center;
+  width:15px;
+  height:2px;
+  background:#dccfbf;
+  position:relative;
+}
+
+#habitar-pantalla .ruta-conector::after{
+  content:'';
+  position:absolute;
+  right:-1px;
+  top:-3px;
+  border-left:5px solid #c89b4b;
+  border-top:4px solid transparent;
+  border-bottom:4px solid transparent;
+}
+
+/* ---------- ESPACIO DE TRABAJO ---------- */
+
+#habitar-pantalla .ruta-contenido{
+  border-top:1px solid #eee4d7;
+  padding-top:22px;
+  outline:none;
+}
+
+#habitar-pantalla .ruta-cabecera{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:15px;
+}
+
+#habitar-pantalla .ruta-cabecera-kicker{
+  color:#c89b4b;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1.5px;
+}
+
+#habitar-pantalla .ruta-cabecera h3{
+  margin:4px 0 0;
+  color:#7a0019;
+  font-size:29px;
+  line-height:1.1;
+}
+
+#habitar-pantalla .ruta-contador{
+  color:#8a6d3b;
+  font-size:11px;
+  font-weight:900;
+  white-space:nowrap;
+  padding-top:5px;
+}
+
+#habitar-pantalla .ruta-frase{
+  margin:13px 0 3px;
+  padding:12px 15px;
+  background:#fdf2e9;
+  border-left:4px solid #c89b4b;
+  border-radius:7px;
+  color:#66563d;
+  font-size:13px;
+  line-height:1.5;
+  font-style:italic;
+}
+
+#habitar-pantalla .ruta-material{
+  padding-top:4px;
+  font-size:15px;
+  line-height:1.7;
+}
+
+#habitar-pantalla .ruta-material h3{
+  color:#7a0019;
+  margin-top:24px;
+}
+
+#habitar-pantalla .ruta-material .material-embed{
+  width:100%;
+  margin:20px 0;
+  border-radius:12px;
+  overflow:hidden;
+  background:#f5f1e9;
+}
+
+#habitar-pantalla .ruta-material .material-embed iframe{
+  display:block;
+  width:100%;
+  max-width:100%;
+  border:0;
+}
+
+#habitar-pantalla .ruta-material .consigna{
+  margin:25px 0;
+  padding:20px 22px;
+  background:#fdf2e9;
+  border-left:5px solid #c89b4b;
+  border-radius:8px;
+  color:#66563d;
+}
+
+#habitar-pantalla .ruta-material .consigna p{
+  margin:7px 0 0;
+}
+
+#habitar-pantalla .ruta-navegacion{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:24px;
+  padding-top:15px;
+  border-top:1px solid #eee4d7;
+}
+
+#habitar-pantalla .ruta-navegacion button{
+  font-family:'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:11px;
+  font-weight:900;
+  cursor:pointer;
+  border-radius:9px;
+  min-height:42px;
+  padding:10px 15px;
+}
+
+#habitar-pantalla .ruta-btn-secundario{
   border:0;
   background:transparent;
   color:#7a0019;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:8px 4px 8px 12px;
-  font:inherit;
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:.9px;
-  cursor:pointer;
-  white-space:nowrap;
-}
-#habitar-pantalla .estacion-boton span:last-child{
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#fdf2e9;
-  color:#7a0019;
-  font-size:20px;
-  line-height:1;
-  transition:transform .2s ease,background .2s ease;
-}
-#habitar-pantalla .estacion-boton:hover span:last-child{
-  transform:translateX(3px);
-  background:#c89b4b;
-  color:#fff;
-}
-#habitar-pantalla .estacion-boton:focus-visible,
-#habitar-pantalla .estacion-cerrar:focus-visible,
-#habitar-pantalla .estacion-cerrar-footer:focus-visible{
-  outline:3px solid rgba(200,155,75,.7);
-  outline-offset:3px;
-  border-radius:10px;
 }
 
-/* EXPERIENCIA / MODAL */
-.estacion-modal{
-  position:fixed!important;
-  top:0!important;
-  left:0!important;
-  width:100vw!important;
-  height:100vh!important;
-  z-index:2147483000!important;
-  display:none;
-  align-items:center!important;
-  justify-content:center!important;
-  padding:24px!important;
+#habitar-pantalla .ruta-btn-principal{
+  border:1px solid #7a0019;
+  background:#7a0019;
+  color:#fff;
 }
-.estacion-modal.is-visible{display:flex!important}
-.estacion-modal-fondo{
-  position:absolute!important;
-  top:0!important;
-  left:0!important;
-  width:100%!important;
-  height:100%!important;
-  background:rgba(47,29,29,.76);
-  backdrop-filter:blur(7px);
-  -webkit-backdrop-filter:blur(7px);
+
+#habitar-pantalla .ruta-navegacion button:focus-visible,
+#habitar-pantalla .ruta-estacion:focus-visible{
+  outline:3px solid rgba(200,155,75,.75);
+  outline-offset:3px;
 }
-.estacion-dialog{
-  position:relative!important;
-  z-index:1!important;
-  width:min(920px,calc(100vw - 48px))!important;
-  height:min(84vh,800px)!important;
-  max-height:calc(100vh - 48px)!important;
-  margin:0!important;
-  display:flex;
-  flex-direction:column;
-  background:#fffdf9;
-  border:1px solid rgba(255,255,255,.6);
-  border-radius:28px;
-  box-shadow:0 28px 90px rgba(0,0,0,.38);
-  overflow:hidden;
-  animation:estacionEntrada .24s cubic-bezier(.2,.75,.25,1);
-  transform-origin:center;
+
+@media(max-width:900px){
+  #habitar-pantalla .ruta-estaciones{
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+  }
+
+  #habitar-pantalla .ruta-conector{
+    display:none;
+  }
 }
-@keyframes estacionEntrada{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
-.estacion-modal-header{position:relative;flex:0 0 auto;padding:25px 32px 0;background:#7a0019;color:white;overflow:hidden}
-.estacion-modal-decor{position:absolute;right:25px;top:18px;display:flex;gap:5px;opacity:.22}
-.estacion-modal-decor span{display:block;width:7px;height:7px;border-radius:50%;background:#f6e7c8}
-.estacion-modal-topline{position:relative;display:flex;justify-content:space-between;align-items:center;gap:20px}
-.estacion-modal-identidad{display:flex;align-items:center;gap:16px}
-.estacion-modal-numero{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#c89b4b;color:white;font-size:15px;font-weight:900;flex:0 0 auto;box-shadow:0 4px 12px rgba(0,0,0,.12)}
-.estacion-modal-kicker{font-size:10px;font-weight:900;letter-spacing:1.7px;opacity:.78;margin-bottom:6px}
-.estacion-modal-header h2{margin:0;font-size:clamp(26px,3vw,36px);line-height:1.05;font-weight:800;letter-spacing:-.5px}
-.estacion-cerrar{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.09);color:white;border-radius:999px;padding:10px 15px;min-height:44px;font:inherit;font-size:11px;font-weight:900;cursor:pointer;white-space:nowrap}
-.estacion-cerrar:hover,.estacion-cerrar:focus-visible{background:white;color:#7a0019}
-.estacion-cerrar span:first-child{font-size:23px;line-height:.7}
-.estacion-modal-frase{position:relative;margin:20px 0 18px;padding-left:72px;color:rgba(255,255,255,.82);font-size:13px;line-height:1.5;font-style:italic}
-.estacion-modal-frase:before{content:'✦';position:absolute;left:0;top:-3px;color:#c89b4b;font-size:22px}
-.estacion-modal-progreso{height:6px;background:rgba(255,255,255,.16);margin:0 -32px;overflow:hidden}
-.estacion-modal-progreso span{display:block;height:100%;width:20%;background:#c89b4b;transition:width .3s ease}
-.estacion-modal-body{overflow:auto;padding:34px 42px 40px;line-height:1.7;font-size:15px;overscroll-behavior:contain;scroll-behavior:smooth;background:linear-gradient(180deg,#fffdf9 0%,#fff 100%)}
-.estacion-modal-body:before{content:'TU MOMENTO EN ESTA ESTACIÓN';display:block;width:max-content;margin:0 0 20px;padding:7px 12px;border-radius:999px;background:#fdf2e9;color:#7a0019;font-size:9px;font-weight:900;letter-spacing:1.2px}
-.estacion-modal-body h3{color:#7a0019;margin-top:28px;margin-bottom:12px;font-size:19px}
-.estacion-modal-body .material-embed{width:100%;margin:22px 0;border-radius:16px;overflow:hidden;background:#f5f1e9;box-shadow:0 5px 18px rgba(0,0,0,.06)}
-.estacion-modal-body .material-embed iframe{display:block;width:100%;max-width:100%;border:0}
-.estacion-modal-body .consigna{margin:28px 0;padding:22px 24px;background:#fdf2e9;border:1px solid #ead8bc;border-left:5px solid #c89b4b;border-radius:12px;color:#66563d}
-.estacion-modal-body .consigna strong{color:#7a0019}
-.estacion-modal-body .consigna p{margin:7px 0 0}
-.estacion-modal-body > p:first-child{margin-top:0}
-.estacion-modal-footer{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:15px;padding:14px 32px;border-top:1px solid #eadfd2;background:#fffaf5;color:#8a6d3b;font-size:10px;font-weight:900;letter-spacing:.5px}
-.estacion-cerrar-footer{border:0;background:transparent;color:#7a0019;font:inherit;font-size:10px;font-weight:900;cursor:pointer;padding:8px 4px}
-.estacion-cerrar-footer:hover{text-decoration:underline}
-body.estacion-modal-abierto{overflow:hidden}
-@media(max-width:700px){
-  #habitar-pantalla .estacion-tarjeta{
-    grid-template-columns:45px 1fr;
-    gap:12px;
-    padding:15px;
+
+@media(max-width:560px){
+  #habitar-pantalla .ruta-camino{
+    padding:14px;
+    border-radius:18px;
   }
-  #habitar-pantalla .estacion-numero{
-    width:43px;
-    height:43px;
-    border-radius:13px;
+
+  #habitar-pantalla .ruta-estaciones{
+    grid-template-columns:1fr;
   }
-  #habitar-pantalla .estacion-info strong{font-size:16px}
-  #habitar-pantalla .estacion-info span{font-size:11px}
-  #habitar-pantalla .estacion-boton{
-    grid-column:1 / -1;
-    justify-content:space-between;
-    width:100%;
-    padding:9px 2px 2px 4px;
+
+  #habitar-pantalla .ruta-estacion{
+    display:grid;
+    grid-template-columns:43px 1fr auto;
+    grid-template-rows:auto auto;
+    text-align:left;
+    align-items:center;
+    column-gap:10px;
+    padding:11px;
   }
-  .estacion-modal{padding:8px!important}
-  .estacion-dialog{
-    width:100%!important;
-    height:calc(100vh - 16px)!important;
-    max-height:calc(100vh - 16px)!important;
-    border-radius:22px;
+
+  #habitar-pantalla .ruta-icono{
+    grid-row:1 / 3;
   }
-  .estacion-modal-header{padding:19px 18px 0}
-  .estacion-modal-topline{align-items:flex-start}
-  .estacion-modal-identidad{gap:11px}
-  .estacion-modal-numero{width:45px;height:45px;font-size:13px}
-  .estacion-modal-kicker{font-size:9px}
-  .estacion-modal-header h2{font-size:25px}
-  .estacion-cerrar{width:44px;height:44px;padding:0;justify-content:center}
-  .estacion-cerrar span:last-child{display:none}
-  .estacion-modal-frase{margin:16px 0 15px;padding-left:56px;font-size:12px}
-  .estacion-modal-frase:before{font-size:19px}
-  .estacion-modal-progreso{margin:0 -18px}
-  .estacion-modal-body{padding:24px 18px 30px}
-  .estacion-modal-footer{padding:12px 18px}
-  .estacion-cerrar-footer{font-size:9px}
+
+  #habitar-pantalla .ruta-nombre{
+    align-self:end;
+  }
+
+  #habitar-pantalla .ruta-subtitulo{
+    min-height:0;
+    align-self:start;
+  }
+
+  #habitar-pantalla .ruta-estado{
+    grid-column:3;
+    grid-row:1 / 3;
+    align-self:center;
+  }
+
+  #habitar-pantalla .ruta-cabecera h3{
+    font-size:25px;
+  }
+
+  #habitar-pantalla .ruta-frase{
+    font-size:12px;
+  }
+
+  #habitar-pantalla .ruta-navegacion{
+    flex-wrap:wrap;
+  }
 }
-@media(prefers-reduced-motion:reduce){.estacion-dialog{animation:none}.estacion-modal-body{scroll-behavior:auto}}
 </style>
 <!-- =====================================================
      JAVASCRIPT · AVANCE
      ===================================================== -->
+
 <script>
 (function(){
-  const modal=document.getElementById('estacion-modal'), body=document.getElementById('estacion-modal-body'), titulo=document.getElementById('estacion-modal-titulo'), numeroEl=document.getElementById('estacion-modal-numero'), pie=document.getElementById('estacion-modal-pie'), barraModal=document.getElementById('estacion-modal-progreso-barra'), frase=document.getElementById('estacion-modal-frase');
-  const botones=document.querySelectorAll('#habitar-pantalla [data-abrir-estacion]'); const exploradas=new Set(); let ultimoBoton=null;
-  const estaciones={"1": {"title": "Escuchar", "content": "\n<p>\n          Empezamos escuchando.\n          Antes de analizar conceptos, te proponemos\n          detenerte y escuchar una primera invitación\n          a pensar nuestra identidad docente.\n        </p>\n<h3>\n          🎧 Podcast introductorio\n        </h3>\n SOUNDCLOUD INCRUSTADO \n<div style=\"\n            width:100%;\n            border-radius:12px;\n            overflow:hidden;\n            margin:20px 0;\n          \">\n<iframe allow=\"autoplay\" frameborder=\"no\" height=\"300\" scrolling=\"no\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2353931009&amp;color=%2370120f&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true\" width=\"100%\">\n</iframe>\n</div>\n<div class=\"consigna\">\n<strong>\n            Para escuchar:\n          </strong>\n<p>\n            Mientras escuchás, pensá:\n            ¿qué experiencias de tu propia trayectoria\n            aparecen cuando pensás en enseñar?\n          </p>\n</div>\n"}, "2": {"title": "Explorar", "content": "\n<p>\n          Ahora vamos a explorar una idea central:\n          el docente ya no es necesariamente la única\n          fuente de información.\n        </p>\n<p>\n          La tarea docente también implica seleccionar,\n          organizar, contextualizar y ofrecer recorridos\n          posibles entre múltiples fuentes.\n        </p>\n<h3>\n          🖼️ Infografía\n        </h3>\n DRIVE INCRUSTADO \n<div class=\"material-embed\">\n<iframe allow=\"autoplay\" height=\"650\" src=\"https://drive.google.com/file/d/14kaF0CR0HZsnukrlfjXnD3I2P9RX7uHN/preview\" width=\"100%\">\n</iframe>\n</div>\n<div class=\"consigna\">\n<strong>\n            Para explorar:\n          </strong>\n<p>\n            Analizá la infografía y pensá:\n            ¿qué implica para nuestra tarea pasar de ser\n            “fuentes únicas” a ser docentes curadores?\n          </p>\n</div>\n"}, "3": {"title": "Profundizar", "content": "\n<p>\n          Llegamos al momento de profundizar.\n          La lectura nos permite poner palabras y conceptos\n          a algunas de las preguntas que aparecieron\n          durante las estaciones anteriores.\n        </p>\n<h3>\n          📖 Clase escrita\n        </h3>\n CLASE ESCRITA INCRUSTADA \n<div class=\"material-embed\">\n<iframe allow=\"autoplay\" height=\"700\" src=\"https://drive.google.com/file/d/1bteClkEd68zrtsOFpKE7gYDe5k2zR5Yc/preview\" width=\"100%\">\n</iframe>\n</div>\n<div class=\"consigna\">\n<strong>\n            Para profundizar:\n          </strong>\n<p>\n            Mientras leés, identificá alguna idea que\n            dialogue con tu propia experiencia como docente.\n          </p>\n</div>\n"}, "4": {"title": "Construir", "content": "\n<p>\n          Después de escuchar, explorar y profundizar,\n          llega el momento de construir.\n        </p>\n<p>\n          La propuesta es recuperar una imagen u objeto\n          que represente alguna huella de nuestra matriz\n          docente tradicional.\n        </p>\n<div class=\"consigna\">\n<strong>\n            🤝 Mapeo teórico-vivencial\n          </strong>\n<p>\n            Compartí esa imagen u objeto y reflexioná\n            sobre qué representa para vos y qué relación\n            tiene con tu manera de enseñar.\n          </p>\n</div>\n PADLET INCRUSTADO \n<div class=\"material-embed\">\n<iframe allow=\"camera;microphone;geolocation\" frameborder=\"0\" height=\"700\" src=\"https://padlet.com/luciasnieg/submission-request/oO6VvPdAdmm8vrwD?section=385623224\" width=\"100%\">\n</iframe>\n</div>\n"}, "5": {"title": "Cerrar", "content": "\n<p>\n          Llegamos al final del recorrido.\n          Pero cerrar no significa terminar de pensar.\n        </p>\n<p>\n          Te proponemos recuperar algo de todo lo que\n          apareció durante este recorrido y ponerlo\n          nuevamente en palabras.\n        </p>\n<div style=\"\n            background:linear-gradient(\n              135deg,\n              #7a0019,\n              #a32035\n            );\n            color:white;\n            padding:35px;\n            border-radius:18px;\n            text-align:center;\n            margin-top:25px;\n          \">\n<div style=\"\n              font-size:35px;\n              margin-bottom:10px;\n            \">\n            🚪\n          </div>\n<h3 style=\"\n              margin:0 0 12px;\n              color:white;\n              font-size:24px;\n            \">\n            Ticket de salida\n          </h3>\n<p style=\"\n              font-size:17px;\n              line-height:1.5;\n              margin:0 auto 22px;\n              max-width:650px;\n            \">\n            ¿Qué concepto de esta clase hizo un\n            “ruido” o dejó una marca en tu identidad docente?\n          </p>\n<!-- PADLET / RESPUESTA -->\n<div style=\"\n              background:white;\n              border-radius:12px;\n              overflow:hidden;\n              margin-top:20px;\n              text-align:left;\n            \">\n<iframe allow=\"camera;microphone;geolocation\" frameborder=\"0\" height=\"600\" src=\"https://padlet.com/luciasnieg/ticket-salida-1-curso-ensenar-en-la-virtualidad-tvdgwv6qs06yv4lx\" width=\"100%\">\n</iframe>\n</div>\n</div>\n"}};
-  function actualizarAvance(){const cantidad=exploradas.size, porcentaje=(cantidad/5)*100, texto=document.getElementById('avance-texto'), porcentajeTexto=document.getElementById('avance-porcentaje'), barra=document.getElementById('barra-avance'); if(texto)texto.textContent=`${cantidad} de 5 estaciones exploradas`; if(porcentajeTexto)porcentajeTexto.textContent=`${Math.round(porcentaje)}%`; if(barra)barra.style.width=`${porcentaje}%`; document.querySelectorAll('#habitar-pantalla .paso-indicador').forEach(i=>i.classList.toggle('explorado',exploradas.has(Number(i.dataset.paso))))}
-  // El modal se monta directamente en <body>. Esto evita que Moodle/LMS
-  // lo centre respecto de un contenedor interno en vez de la ventana visible.
-  if(modal.parentElement !== document.body){ document.body.appendChild(modal); }
+  const root = document.getElementById('habitar-pantalla');
+  if(!root) return;
 
-  function abrirEstacion(numero,boton){const data=estaciones[String(numero)]; if(!data)return; ultimoBoton=boton; titulo.textContent=data.title; if(numeroEl)numeroEl.textContent=String(numero).padStart(2,'0'); if(pie)pie.textContent=`${String(numero).padStart(2,'0')} · 05`; if(barraModal)barraModal.style.width=`${(Number(numero)/5)*100}%`; if(frase)frase.textContent=(data.title==='Escuchar'?'Un momento para detenerte y escuchar tus propias huellas.':data.title==='Explorar'?'Un momento para mirar otras formas de enseñar y recorrer.':data.title==='Profundizar'?'Un momento para poner palabras a lo que venís pensando.':data.title==='Construir'?'Un momento para transformar una idea en una huella compartida.':'Un momento para recuperar lo vivido y dejar una nueva pregunta.'); body.innerHTML=data.content; modal.classList.add('is-visible'); modal.setAttribute('aria-hidden','false'); document.body.classList.add('estacion-modal-abierto'); exploradas.add(Number(numero)); actualizarAvance(); requestAnimationFrame(()=>{const close=modal.querySelector('.estacion-cerrar'); if(close)close.focus(); body.scrollTop=0})}
-  function cerrarEstacion(){modal.classList.remove('is-visible'); modal.setAttribute('aria-hidden','true'); document.body.classList.remove('estacion-modal-abierto'); body.innerHTML=''; if(ultimoBoton)ultimoBoton.focus()}
-  botones.forEach(b=>b.addEventListener('click',()=>abrirEstacion(b.dataset.abrirEstacion,b))); modal.addEventListener('click',e=>{if(e.target.closest('[data-cerrar-estacion]'))cerrarEstacion()}); document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-visible'))cerrarEstacion()}); actualizarAvance();
+  const datos = {
+    1:{
+      titulo:'Escuchar',
+      frase:'Un momento para detenerte y escuchar tus propias huellas.',
+      contenido:`<p>Empezamos escuchando. Antes de analizar conceptos, te proponemos detenerte y escuchar una primera invitación a pensar nuestra identidad docente.</p>
+      <h3>🎧 Podcast introductorio</h3>
+      <div style="width:100%;border-radius:12px;overflow:hidden;margin:20px 0;">
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2353931009&amp;color=%2370120f&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+      </div>
+      <div class="consigna"><strong>Para escuchar:</strong><p>Mientras escuchás, pensá: ¿qué experiencias de tu propia trayectoria aparecen cuando pensás en enseñar?</p></div>`
+    },
+    2:{
+      titulo:'Explorar',
+      frase:'Un momento para mirar otras formas de enseñar y recorrer.',
+      contenido:`<p>Ahora vamos a explorar una idea central: el docente ya no es necesariamente la única fuente de información.</p>
+      <p>La tarea docente también implica seleccionar, organizar, contextualizar y ofrecer recorridos posibles entre múltiples fuentes.</p>
+      <h3>🖼️ Infografía</h3>
+      <div class="material-embed"><iframe src="https://drive.google.com/file/d/14kaF0CR0HZsnukrlfjXnD3I2P9RX7uHN/preview" width="100%" height="650" allow="autoplay"></iframe></div>
+      <div class="consigna"><strong>Para explorar:</strong><p>Analizá la infografía y pensá: ¿qué implica para nuestra tarea pasar de ser “fuentes únicas” a ser docentes curadores?</p></div>`
+    },
+    3:{
+      titulo:'Profundizar',
+      frase:'Un momento para poner palabras a lo que venís pensando.',
+      contenido:`<p>Llegamos al momento de profundizar. La lectura nos permite poner palabras y conceptos a algunas de las preguntas que aparecieron durante las estaciones anteriores.</p>
+      <h3>📖 Clase escrita</h3>
+      <div class="material-embed"><iframe src="https://drive.google.com/file/d/1bteClkEd68zrtsOFpKE7gYDe5k2zR5Yc/preview" width="100%" height="700" allow="autoplay"></iframe></div>
+      <div class="consigna"><strong>Para profundizar:</strong><p>Mientras leés, identificá alguna idea que dialogue con tu propia experiencia como docente.</p></div>`
+    },
+    4:{
+      titulo:'Construir',
+      frase:'Un momento para transformar una idea en una huella compartida.',
+      contenido:`<p>Después de escuchar, explorar y profundizar, llega el momento de construir.</p>
+      <p>La propuesta es recuperar una imagen u objeto que represente alguna huella de nuestra matriz docente tradicional.</p>
+      <div class="consigna"><strong>🤝 Mapeo teórico-vivencial</strong><p>Compartí esa imagen u objeto y reflexioná sobre qué representa para vos y qué relación tiene con tu manera de enseñar.</p></div>
+      <div class="material-embed"><iframe src="https://padlet.com/luciasnieg/submission-request/oO6VvPdAdmm8vrwD?section=385623224" width="100%" height="700" frameborder="0" allow="camera;microphone;geolocation"></iframe></div>`
+    },
+    5:{
+      titulo:'Cerrar',
+      frase:'Un momento para recuperar lo vivido y dejar una nueva pregunta.',
+      contenido:`<p>Llegamos al final del recorrido. Pero cerrar no significa terminar de pensar.</p>
+      <p>Te proponemos recuperar algo de todo lo que apareció durante este recorrido y ponerlo nuevamente en palabras.</p>
+      <div style="background:linear-gradient(135deg,#7a0019,#a32035);color:white;padding:30px;border-radius:18px;text-align:center;margin-top:25px;">
+        <div style="font-size:32px;margin-bottom:8px;">🚪</div>
+        <h3 style="margin:0 0 12px;color:white;font-size:24px;">Ticket de salida</h3>
+        <p style="font-size:17px;line-height:1.5;margin:0 auto 20px;max-width:650px;">¿Qué concepto de esta clase hizo un “ruido” o dejó una marca en tu identidad docente?</p>
+        <div style="background:white;border-radius:12px;overflow:hidden;text-align:left;">
+          <iframe src="https://padlet.com/luciasnieg/ticket-salida-1-curso-ensenar-en-la-virtualidad-tvdgwv6qs06yv4lx" width="100%" height="600" frameborder="0" allow="camera;microphone;geolocation"></iframe>
+        </div>
+      </div>`
+    }
+  };
+
+  const botones = root.querySelectorAll('.ruta-estacion');
+  const material = root.querySelector('#ruta-material');
+  const titulo = root.querySelector('#ruta-titulo-estacion');
+  const kicker = root.querySelector('#ruta-kicker');
+  const frase = root.querySelector('#ruta-frase');
+  const contador = root.querySelector('#ruta-contador');
+  const anterior = root.querySelector('#ruta-anterior');
+  const siguiente = root.querySelector('#ruta-siguiente');
+
+  let actual = 1;
+
+  function actualizarAvance(){
+    const porcentaje = (actual / 5) * 100;
+    const texto = root.querySelector('#avance-texto');
+    const porcentajeTexto = root.querySelector('#avance-porcentaje');
+    const barra = root.querySelector('#barra-avance');
+    if(texto) texto.textContent = `${actual} de 5 estaciones exploradas`;
+    if(porcentajeTexto) porcentajeTexto.textContent = `${Math.round(porcentaje)}%`;
+    if(barra) barra.style.width = `${porcentaje}%`;
+    root.querySelectorAll('.paso-indicador').forEach(i=>{
+      i.classList.toggle('explorado', Number(i.dataset.paso) <= actual);
+    });
+  }
+
+  function mostrar(n, moverFoco){
+    actual = n;
+    const d = datos[n];
+
+    titulo.textContent = d.titulo;
+    kicker.textContent = 'ESTACIÓN ' + String(n).padStart(2,'0');
+    frase.textContent = d.frase;
+    contador.textContent = `${n} de 5`;
+    material.innerHTML = d.contenido;
+
+    botones.forEach(btn=>{
+      const activa = Number(btn.dataset.estacion) === n;
+      btn.classList.toggle('activa', activa);
+      btn.setAttribute('aria-selected', activa ? 'true' : 'false');
+    });
+
+    anterior.disabled = n === 1;
+    anterior.style.opacity = n === 1 ? '.35' : '1';
+    siguiente.textContent = n === 5 ? 'Volver a comenzar ↺' : 'Siguiente estación →';
+
+    actualizarAvance();
+
+    if(moverFoco){
+      root.querySelector('#ruta-contenido').focus({preventScroll:true});
+    }
+  }
+
+  botones.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      mostrar(Number(btn.dataset.estacion), true);
+    });
+  });
+
+  anterior.addEventListener('click', ()=>{
+    if(actual > 1) mostrar(actual - 1, true);
+  });
+
+  siguiente.addEventListener('click', ()=>{
+    mostrar(actual === 5 ? 1 : actual + 1, true);
+  });
+
+  mostrar(1, false);
 })();
 </script>
