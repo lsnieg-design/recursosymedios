@@ -29,28 +29,28 @@ const clases = [
   },
   {
     n: 5,
-    d: "2026-09-21",
+    d: "2026-09-28",
     t: "Cultura escolar vs. cultura mediática",
     u: 2,
     desc: "Desbordes y conflictos entre la cultura escolar y la cultura mediática."
   },
   {
     n: 6,
-    d: "2026-09-28",
+    d: "2026-10-05",
     t: "Mirada crítica sobre la educación",
     u: 2,
     desc: "Tecnologías en y para la educación. Rol e identidad docente en la era digital."
   },
   {
     n: 7,
-    d: "2026-10-05",
+    d: "2026-10-12",
     t: "Tecnología educativa y gamificación",
     u: 2,
     desc: "Tecnología educativa en sentido didáctico. Gamificación."
   },
   {
     n: 8,
-    d: "2026-10-12",
+    d: "2026-10-26",
     t: "¿De qué hablamos cuando hablamos de discapacidad?",
     u: 3,
     desc: "Aproximación al concepto de discapacidad."
