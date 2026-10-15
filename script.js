@@ -50,7 +50,7 @@ const clases = [
   },
   {
     n: 8,
-    d: "2026-10-26",
+    d: "2026-10-19",
     t: "¿De qué hablamos cuando hablamos de discapacidad?",
     u: 3,
     desc: "Aproximación al concepto de discapacidad."
