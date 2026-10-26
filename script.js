@@ -82,7 +82,16 @@ const clases = [
     t: "Encuentro de elaboración de trabajos finales",
     u: 3,
     desc: "Elaboración de trabajos finales. Entrega de borrador."
-  }
+  },
+  {
+  n: "TFI",
+  d: "2026-10-26",
+  t: "Trabajo Final Integrador",
+  u: 3,
+  desc: "Consigna, materiales de consulta y orientaciones para elaborar el trabajo final.",
+  url: "clases/TFI.html",
+  especial: true
+}
 ];
 
 
