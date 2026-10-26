@@ -5,18 +5,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Trabajo Final Integrador · Recursos y Medios Didácticos</title>
+  <title>Clase 0 · Medios y recursos para estudiantes con discapacidad auditiva y visual</title>
   <link rel="stylesheet" href="../styles.css">
 
   <style>
-    /* AJUSTES PARA CONSERVAR LA IDENTIDAD VISUAL Y USAR TODO EL ANCHO */
-
-    html {
-      width: 100%;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
-
+    html,
     body {
       width: 100%;
       max-width: none;
@@ -39,206 +32,150 @@
       box-sizing: border-box;
     }
 
-    .tfi-intro {
+    .unit3-callout {
+      background: #fbf1e5;
       border-left: 5px solid #c8a45d;
       border-radius: 10px;
       padding: clamp(18px, 3vw, 30px);
-      background: #fbf1e5;
-      line-height: 1.75;
-    }
-
-    .tfi-highlight {
-      background: #fffdf8;
-      border: 1px solid #e5d6bd;
-      border-radius: 12px;
-      padding: clamp(18px, 3vw, 28px);
-      margin: 18px 0;
-    }
-
-    .tfi-highlight h3 {
-      color: #8f1010;
-      margin-top: 0;
-    }
-
-    .tfi-step {
-      display: grid;
-      grid-template-columns: 52px minmax(0, 1fr);
-      gap: 16px;
-      align-items: start;
-      padding: 20px 0;
-      border-bottom: 1px solid #e8ddca;
-    }
-
-    .tfi-step:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .tfi-step-number {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      background: #8f1010;
-      color: #ffffff;
-      font-weight: 800;
-      font-size: 17px;
-      border: 2px solid #c8a45d;
-    }
-
-    .tfi-step h3 {
-      margin: 2px 0 8px;
-      color: #8f1010;
-    }
-
-    .tfi-step p {
-      margin: 0 0 10px;
-      line-height: 1.7;
-    }
-
-    .tfi-step p:last-child {
-      margin-bottom: 0;
-    }
-
-    .tfi-data {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-      margin: 18px 0;
-    }
-
-    .tfi-data-item {
-      padding: 20px;
-      border-radius: 10px;
-      background: #fbf1e5;
-      border-top: 4px solid #c8a45d;
-    }
-
-    .tfi-data-item strong {
-      display: block;
-      color: #8f1010;
-      margin-bottom: 8px;
-    }
-
-    .tfi-rubric {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 13px;
-      line-height: 1.6;
-      background: #fffdf8;
-    }
-
-    .tfi-rubric th {
-      background: #8f1010;
-      color: #ffffff;
-      padding: 14px;
-      text-align: left;
-      border: 1px solid #c8a45d;
-      vertical-align: top;
-    }
-
-    .tfi-rubric td {
-      padding: 14px;
-      border: 1px solid #e5d6bd;
-      vertical-align: top;
-    }
-
-    .tfi-rubric tbody tr:nth-child(even) {
-      background: #fbf1e5;
-    }
-
-    .tfi-rubric-scroll {
-      width: 100%;
-      overflow-x: auto;
-      border: 1px solid #e5d6bd;
-      border-radius: 8px;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .tfi-rubric {
-      min-width: 850px;
-    }
-
-    .tfi-link-box {
-      padding: clamp(20px, 3vw, 32px);
-      background: #8f1010;
-      color: #ffffff;
-      border-radius: 12px;
-      border-bottom: 5px solid #c8a45d;
-      text-align: center;
-    }
-
-    .tfi-link-box h3 {
-      color: #ffffff;
-      margin-top: 0;
-    }
-
-    .tfi-link-box p {
-      line-height: 1.7;
-    }
-
-    .tfi-link-button {
-      display: inline-block;
-      max-width: 100%;
-      margin-top: 12px;
-      padding: 13px 22px;
-      border-radius: 30px;
-      background: #f7e8c7;
-      color: #771010 !important;
-      font-weight: 800;
-      font-size: 13px;
-      text-decoration: none !important;
-      text-align: center;
-    }
-
-    .tfi-link-button:hover {
-      background: #ffffff;
-    }
-
-    .tfi-note {
-      padding: 16px 20px;
-      background: #fbf1e5;
-      border-left: 4px solid #c8a45d;
-      border-radius: 6px;
-      line-height: 1.7;
-    }
-
-    .tfi-reflection {
-      padding: clamp(20px, 3vw, 30px);
-      background: #fffdf8;
-      border: 1px solid #e5d6bd;
-      border-radius: 12px;
       line-height: 1.8;
     }
 
-    .tfi-reflection h3 {
+    .unit3-card {
+      background: #fffdf8;
+      border: 1px solid #e5d6bd;
+      border-radius: 14px;
+      padding: clamp(18px, 2.5vw, 28px);
+      margin-bottom: 20px;
+    }
+
+    .unit3-card h3 {
       color: #8f1010;
       margin-top: 0;
     }
 
-    @media (max-width: 650px) {
-      .tfi-data {
+    .unit3-card p,
+    .unit3-card li {
+      line-height: 1.75;
+    }
+
+    .unit3-resource {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid #e5d6bd;
+    }
+
+    .unit3-resource:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .unit3-resource:first-child {
+      padding-top: 0;
+    }
+
+    .unit3-resource-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .unit3-resource-content h3 {
+      margin: 0 0 8px;
+      color: #8f1010;
+    }
+
+    .unit3-resource-content p {
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    .unit3-button {
+      display: inline-block;
+      flex-shrink: 0;
+      padding: 12px 18px;
+      border-radius: 24px;
+      background: #8f1010;
+      color: #ffffff !important;
+      text-decoration: none !important;
+      font-size: 12px;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .unit3-button:hover {
+      background: #6f0c0c;
+    }
+
+    .unit3-quote {
+      padding: 20px 24px;
+      border-left: 4px solid #c8a45d;
+      background: #fbf1e5;
+      color: #5f5143;
+      border-radius: 8px;
+      line-height: 1.8;
+      font-size: 1.05em;
+    }
+
+    .unit3-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .unit3-topic {
+      padding: 22px;
+      border: 1px solid #e5d6bd;
+      border-top: 4px solid #c8a45d;
+      background: #fffdf8;
+      border-radius: 10px;
+    }
+
+    .unit3-topic h3 {
+      margin-top: 0;
+      color: #8f1010;
+    }
+
+    .unit3-topic p,
+    .unit3-topic li {
+      line-height: 1.7;
+    }
+
+    .unit3-note {
+      margin-top: 20px;
+      padding: 18px 22px;
+      background: #fbf1e5;
+      border-left: 4px solid #8f1010;
+      border-radius: 8px;
+      line-height: 1.75;
+    }
+
+    .unit3-final {
+      padding: clamp(22px, 3vw, 34px);
+      background: #8f1010;
+      border-bottom: 5px solid #c8a45d;
+      color: #ffffff;
+      border-radius: 14px;
+      line-height: 1.8;
+    }
+
+    .unit3-final h3 {
+      color: #ffffff;
+      margin-top: 0;
+    }
+
+    @media (max-width: 700px) {
+      .unit3-grid {
         grid-template-columns: 1fr;
       }
 
-      .tfi-step {
-        grid-template-columns: 40px minmax(0, 1fr);
-        gap: 12px;
+      .unit3-resource {
+        flex-direction: column;
+        gap: 14px;
       }
 
-      .tfi-step-number {
-        width: 38px;
-        height: 38px;
-        font-size: 15px;
-      }
-
-      .tfi-rubric {
-        font-size: 12px;
-      }
-
-      .tfi-link-button {
+      .unit3-button {
         width: 100%;
       }
     }
@@ -251,40 +188,46 @@
   <div class="hero-inner">
     <div class="brand">RASPANTI</div>
     <div class="eyebrow">
-      RECURSOS Y MEDIOS DIDÁCTICOS · CIERRE DE LA CURSADA
+      RECURSOS Y MEDIOS DIDÁCTICOS · UNIDAD 3
     </div>
-    <h1>TRABAJO FINAL INTEGRADOR</h1>
-    <p class="subtitle">Diseñar recursos para hacer posible el aprendizaje</p>
+    <h1>CLASE 0</h1>
+    <p class="subtitle">
+      Medios y recursos para estudiantes con discapacidad auditiva y visual
+    </p>
   </div>
 </header>
 
 <main class="class-wrap">
 
-  <!-- PRESENTACIÓN -->
+  <!-- PRESENTACIÓN DE LA CLASE -->
 
   <section class="class-hero u2">
+
     <div class="class-meta">
-      <span class="class-number">TFI</span>
-      <span class="class-date">NOVIEMBRE DE 2026</span>
+      <span class="class-number">CLASE 0</span>
+      <span class="class-date">UNIDAD 3</span>
     </div>
 
-    <h1>Trabajo Final Integrador</h1>
+    <h1>Medios y recursos para estudiantes con discapacidad auditiva y visual</h1>
 
     <p class="lead">
-      Recuperar lo aprendido, crear un medio didáctico y fundamentar
-      nuestras decisiones pedagógicas.
+      Accesibilidad, comunicación y participación: diseñar propuestas
+      educativas que contemplen distintas formas de percibir y comprender
+      el mundo.
     </p>
+
   </section>
 
   <!-- NAVEGACIÓN -->
 
   <nav class="anchor-nav">
     <a href="#inicio">PARA EMPEZAR</a>
-    <a href="#consignas">CONSIGNAS</a>
-    <a href="#entrega">FORMATO DE ENTREGA</a>
-    <a href="#coloquio">COLOQUIO</a>
-    <a href="#evaluacion">EVALUACIÓN</a>
-    <a href="#cierre">PARA CERRAR</a>
+    <a href="#presentacion">PRESENTACIÓN</a>
+    <a href="#auditiva">DISCAPACIDAD AUDITIVA</a>
+    <a href="#visual">DISCAPACIDAD VISUAL</a>
+    <a href="#tic">RECURSOS TIC</a>
+    <a href="#materiales">MATERIALES</a>
+    <a href="#reflexion">PARA REFLEXIONAR</a>
   </nav>
 
   <!-- 01 · PARA EMPEZAR -->
@@ -295,544 +238,625 @@
       <div class="section-icon">01</div>
       <div>
         <h2>Para empezar</h2>
-        <p>Una propuesta para integrar lo aprendido</p>
+        <p>Una nueva unidad, nuevas formas de enseñar y aprender</p>
       </div>
     </div>
 
     <div class="section-body">
 
-      <div class="tfi-intro">
-        <p><strong>Hola, ¿cómo estás?</strong></p>
+      <div class="unit3-callout">
+
+        <p>¡Hola! ¿Cómo estás?</p>
 
         <p>
-          Llegamos al cierre de nuestro recorrido por el Taller de
-          Recursos y Medios Didácticos. Durante la cursada, nos
-          preguntamos qué entendemos por medios y recursos, cómo
-          intervienen en las propuestas de enseñanza y qué decisiones
-          necesitamos tomar para que todas las personas puedan
-          participar y aprender.
+          En esta unidad vamos a detenernos en una pregunta fundamental
+          para nuestras prácticas docentes: ¿qué sucede cuando los
+          materiales, las explicaciones o las actividades que proponemos
+          no contemplan las distintas formas de percibir y acceder a la
+          información?
         </p>
 
         <p>
-          También revisamos nuestras experiencias escolares, el lugar
-          de las tecnologías y la importancia de reconocer las
-          características de los y las estudiantes para diseñar
-          propuestas educativas significativas.
+          Muchas veces pensamos una clase desde nuestra propia manera
+          de comunicar, explicar y mostrar los contenidos. Sin embargo,
+          no todas las personas acceden a la información por los mismos
+          canales ni necesitan los mismos apoyos para participar.
         </p>
 
         <p>
-          En este trabajo les proponemos recuperar esos aprendizajes
-          para construir un medio didáctico concreto, pensado para un
-          grupo de estudiantes determinado, e integrarlo en una
-          secuencia didáctica.
+          Por eso, vamos a trabajar sobre los medios y recursos
+          didácticos que pueden favorecer el aprendizaje de estudiantes
+          con discapacidad auditiva y visual. Nos interesa conocer
+          herramientas concretas, pero también revisar las decisiones
+          pedagógicas que hacen que una propuesta sea más o menos
+          accesible.
         </p>
 
         <p>
-          El desafío no es solamente crear un material. Es poder
-          explicar por qué lo elegimos, qué posibilidades ofrece,
-          qué barreras intenta reducir y cómo puede enriquecer
-          una situación de enseñanza.
+          La invitación es a dejar de pensar la accesibilidad como una
+          adaptación que se agrega al final y comenzar a considerarla
+          desde el diseño de nuestras propuestas.
         </p>
+
       </div>
 
     </div>
   </section>
 
-  <!-- 02 · CONSIGNAS -->
+  <!-- 02 · PRESENTACIÓN -->
 
-  <section class="class-section s-resource" id="consignas">
+  <section class="class-section s-slides" id="presentacion">
 
     <div class="section-title">
       <div class="section-icon">02</div>
       <div>
-        <h2>Consignas del trabajo</h2>
-        <p>¿Qué tenemos que hacer?</p>
+        <h2>El desafío de enseñar desde la accesibilidad</h2>
+        <p>Comunicación, recursos y eliminación de barreras</p>
       </div>
     </div>
 
     <div class="section-body">
 
-      <div class="tfi-highlight">
+      <div class="unit3-card">
+
+        <h3>¿Qué vamos a aprender en esta unidad?</h3>
+
         <p>
-          El trabajo propone una instancia de producción y otra de
-          fundamentación. Lean todas las consignas antes de comenzar
-          para organizar el proceso y anticipar los materiales que
-          van a necesitar.
+          Vamos a explorar cómo se relacionan las características de
+          los y las estudiantes con las decisiones que tomamos al
+          seleccionar, crear y utilizar medios didácticos.
         </p>
-      </div>
 
-      <div class="tfi-highlight">
+        <div class="unit3-grid">
 
-        <div class="tfi-step">
-          <div class="tfi-step-number">1</div>
-          <div>
-            <h3>Elegir y caracterizar un tipo de discapacidad</h3>
+          <div class="unit3-topic">
+            <h3>Discapacidad auditiva</h3>
 
             <p>
-              Elijan uno de los siguientes tipos de discapacidad:
-              <strong>intelectual, neuromotora, visual, auditiva o TEA</strong>.
-            </p>
-
-            <p>
-              Describan sus características generales y tengan en cuenta
-              las necesidades, posibilidades y particularidades de los y
-              las estudiantes a quienes estará destinado el recurso.
+              Nos centraremos en la accesibilidad comunicacional,
+              la Lengua de Señas Argentina, los apoyos visuales,
+              los subtítulos y las tecnologías que favorecen el
+              acceso a la información.
             </p>
           </div>
-        </div>
 
-        <div class="tfi-step">
-          <div class="tfi-step-number">2</div>
-          <div>
-            <h3>Construir un medio didáctico</h3>
+          <div class="unit3-topic">
+            <h3>Discapacidad visual</h3>
 
             <p>
-              Elaboren un <strong>medio didáctico tangible y presencial</strong>
-              que responda a las características y necesidades del grupo
-              de estudiantes elegido.
-            </p>
-
-            <p>
-              El medio debe ser construido y adaptado para su utilización.
-              No alcanza con presentar una idea o describir un recurso:
-              es necesario producirlo y fundamentar las decisiones tomadas.
-            </p>
-
-            <p>
-              Consideren los materiales, el tamaño, la forma de uso,
-              la accesibilidad, la seguridad y las posibilidades de
-              participación que ofrece.
-            </p>
-
-            <div class="tfi-note">
-              <strong>Para tener en cuenta:</strong>
-              las decisiones de diseño deben estar relacionadas con las
-              características del grupo destinatario. Por ejemplo, si el
-              recurso está pensado para estudiantes con dificultades en
-              la motricidad fina, pueden contemplar el tamaño de las
-              piezas, el tipo de agarre y la facilidad de manipulación.
-            </div>
-          </div>
-        </div>
-
-        <div class="tfi-step">
-          <div class="tfi-step-number">3</div>
-          <div>
-            <h3>Diseñar una secuencia didáctica</h3>
-
-            <p>
-              Elaboren una secuencia didáctica contextualizada que
-              incorpore el medio construido.
-            </p>
-
-            <p>
-              Recuperen los contenidos trabajados en la Unidad 2 y
-              diseñen una propuesta centrada en los y las estudiantes,
-              sus posibilidades de participación y la construcción
-              de aprendizajes.
-            </p>
-
-            <p>
-              La secuencia debe permitir comprender para qué se utiliza
-              el medio, en qué momento de la propuesta se incorpora y
-              qué aprendizajes se espera favorecer.
+              Abordaremos el acceso a la información cuando la
+              percepción visual se encuentra limitada o no es
+              el canal principal. Consideraremos recursos táctiles,
+              auditivos, digitales y formatos accesibles.
             </p>
           </div>
-        </div>
 
-        <div class="tfi-step">
-          <div class="tfi-step-number">4</div>
-          <div>
-            <h3>Presentar y fundamentar el trabajo</h3>
+          <div class="unit3-topic">
+            <h3>Diseño de recursos</h3>
 
             <p>
-              Durante el coloquio, presentarán el medio didáctico,
-              explicarán cómo fue elaborado y fundamentarán su relación
-              con el grupo destinatario y la secuencia propuesta.
-            </p>
-
-            <p>
-              Será importante recuperar los conceptos trabajados
-              durante la cursada y poder explicar las decisiones
-              pedagógicas y didácticas que orientaron la producción.
+              Revisaremos cómo elegir y producir materiales que
+              respondan a propósitos pedagógicos concretos y
+              favorezcan la autonomía.
             </p>
           </div>
+
+          <div class="unit3-topic">
+            <h3>Participación e inclusión</h3>
+
+            <p>
+              Identificaremos barreras que aparecen en las
+              propuestas de enseñanza y pensaremos alternativas
+              para que todos y todas puedan participar.
+            </p>
+          </div>
+
         </div>
 
       </div>
 
-      <div class="tfi-link-box">
-        <h3>Documento completo de consignas</h3>
-
-        <p>
-          Consulten el documento original para revisar las indicaciones
-          del Trabajo Final Integrador.
-        </p>
-
-        <a
-          class="tfi-link-button"
-          href="https://drive.google.com/file/d/1AGPl8Ia8TpupkIp79NqU9NtTHPC1dgwf/view?usp=drive_link"
-          target="_blank"
-          rel="noopener noreferrer">
-          ABRIR CONSIGNAS DEL TFI →
-        </a>
+      <div class="unit3-quote">
+        La pregunta no es solamente qué recurso necesita un estudiante,
+        sino qué barreras podemos eliminar para que tenga oportunidades
+        reales de aprender, comunicarse y participar.
       </div>
 
     </div>
   </section>
 
-  <!-- 03 · FORMATO DE ENTREGA -->
+  <!-- 03 · DISCAPACIDAD AUDITIVA -->
 
-  <section class="class-section s-written" id="entrega">
+  <section class="class-section s-written" id="auditiva">
 
     <div class="section-title">
       <div class="section-icon">03</div>
       <div>
-        <h2>Organización de la entrega</h2>
-        <p>¿Qué materiales tenemos que presentar?</p>
+        <h2>Discapacidad auditiva</h2>
+        <p>Comunicación accesible y recursos para aprender</p>
       </div>
     </div>
 
     <div class="section-body">
 
-      <div class="tfi-highlight">
+      <div class="unit3-card">
 
-        <div class="tfi-step">
-          <div class="tfi-step-number">1</div>
-          <div>
-            <h3>Carátula</h3>
-            <p>
-              Incluyan los datos personales de quienes integran
-              el trabajo.
-            </p>
-          </div>
-        </div>
+        <h3>Más allá de la oralidad</h3>
 
-        <div class="tfi-step">
-          <div class="tfi-step-number">2</div>
-          <div>
-            <h3>Secuencia didáctica impresa</h3>
-            <p>
-              Presenten la secuencia que contextualiza el uso del medio
-              didáctico y explica cómo se integra en la propuesta
-              de enseñanza.
-            </p>
-          </div>
-        </div>
+        <p>
+          Enseñar no es solamente hablar. En el aula, buena parte de
+          la información suele transmitirse mediante explicaciones
+          orales, intercambios espontáneos, videos con sonido o
+          indicaciones que no siempre quedan registradas por escrito.
+        </p>
 
-        <div class="tfi-step">
-          <div class="tfi-step-number">3</div>
-          <div>
-            <h3>Medio didáctico elaborado</h3>
-            <p>
-              El recurso deberá presentarse de manera presencial
-              para poder observarlo, conocer su funcionamiento y
-              comprender sus posibilidades de uso.
-            </p>
-          </div>
-        </div>
+        <p>
+          Cuando una propuesta depende exclusivamente de estos
+          canales, puede generar barreras para estudiantes sordos
+          e hipoacúsicos.
+        </p>
 
-        <div class="tfi-step">
-          <div class="tfi-step-number">4</div>
-          <div>
-            <h3>Reflexión individual final</h3>
-            <p>
-              Cada integrante escribirá un párrafo de conclusión
-              en el que exprese brevemente en qué lo o la transformó
-              el taller y qué aprendizajes considera significativos
-              para sus futuras prácticas.
-            </p>
-          </div>
-        </div>
+        <p>
+          Desde una perspectiva social de la discapacidad, resulta
+          fundamental reconocer la diversidad de experiencias
+          comunicativas y construir entornos en los que la información
+          pueda comprenderse por distintos medios.
+        </p>
 
-      </div>
+        <h3>Algunas decisiones que favorecen la accesibilidad</h3>
 
-      <div class="tfi-data">
+        <ul>
+          <li>
+            Acompañar las explicaciones con palabras clave,
+            esquemas, imágenes y organizadores visuales.
+          </li>
+          <li>
+            Ofrecer videos con subtítulos y, cuando corresponda,
+            interpretación en Lengua de Señas Argentina (LSA).
+          </li>
+          <li>
+            Presentar las consignas por escrito y con una
+            estructura clara.
+          </li>
+          <li>
+            Cuidar la iluminación, la ubicación de las personas
+            y las condiciones para la comunicación visual.
+          </li>
+          <li>
+            Anticipar los contenidos y poner a disposición
+            los materiales antes de la clase.
+          </li>
+          <li>
+            Evitar que la información importante dependa únicamente
+            de intercambios orales que no quedan registrados.
+          </li>
+        </ul>
 
-        <div class="tfi-data-item">
-          <strong>FECHA DE ENTREGA</strong>
-          16 de noviembre de 2026
-        </div>
-
-        <div class="tfi-data-item">
-          <strong>COLOQUIOS</strong>
-          16 de noviembre de 2026, en el horario de la clase.
-          Las presentaciones se realizarán por grupos.
+        <div class="unit3-note">
+          <strong>Una idea central:</strong>
+          los apoyos deben elegirse de acuerdo con las preferencias
+          comunicativas y las necesidades de cada estudiante.
+          No todas las personas sordas o hipoacúsicas utilizan
+          los mismos recursos.
         </div>
 
       </div>
 
-      <div class="tfi-note">
-        <strong>Importante:</strong>
-        revisen las consignas originales y las indicaciones compartidas
-        en el campus para organizar la presentación de todos los
-        componentes del trabajo.
+      <div class="unit3-card">
+
+        <h3>Clase escrita: discapacidad auditiva y recursos didácticos accesibles</h3>
+
+        <p>
+          Este material profundiza en el modelo social de la
+          discapacidad auditiva, las barreras comunicacionales
+          y las estrategias que podemos incorporar a nuestras
+          prácticas educativas.
+        </p>
+
+        <a
+          class="unit3-button"
+          href="https://drive.google.com/file/d/152TjZnWzqtx3stt8szjY4jXD3A9fSFfl/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer">
+          LEER CLASE ESCRITA →
+        </a>
+
       </div>
 
     </div>
   </section>
 
-  <!-- 04 · COLOQUIO -->
+  <!-- 04 · DISCAPACIDAD VISUAL -->
 
-  <section class="class-section s-slides" id="coloquio">
+  <section class="class-section s-resource" id="visual">
 
     <div class="section-title">
       <div class="section-icon">04</div>
       <div>
-        <h2>El coloquio</h2>
-        <p>Compartir, explicar y fundamentar</p>
+        <h2>Discapacidad visual</h2>
+        <p>Otros modos de acceder a la información</p>
       </div>
     </div>
 
     <div class="section-body">
 
-      <div class="tfi-highlight">
+      <div class="unit3-card">
+
+        <h3>Cuando la información no puede depender solo de la vista</h3>
 
         <p>
-          El coloquio es una instancia para compartir el proceso de
-          producción, explicar las decisiones tomadas y recuperar
-          los contenidos de la cursada.
+          En muchas propuestas escolares, la información se presenta
+          mediante textos impresos, imágenes, gráficos, mapas,
+          presentaciones o videos. Estos materiales pueden resultar
+          inaccesibles si no contemplan otras formas de exploración
+          y comprensión.
         </p>
 
         <p>
-          Durante la presentación, deberán poder caracterizar el medio
-          didáctico y relacionarlo con el contexto en el que se propone
-          utilizarlo.
+          Para favorecer la participación de estudiantes con
+          discapacidad visual, es importante considerar tanto
+          las características del material como las condiciones
+          en las que se utiliza.
         </p>
 
-        <h3>Preguntas para orientar la presentación</h3>
+        <h3>Recursos y estrategias posibles</h3>
 
         <ul>
           <li>
-            ¿Qué tipo de medio didáctico construyeron?
+            Textos digitales compatibles con lectores de pantalla.
           </li>
           <li>
-            ¿Es un medio eventual, permanente o rutinario?
+            Documentos correctamente estructurados, con títulos,
+            encabezados y enlaces descriptivos.
           </li>
           <li>
-            ¿Es técnico, práctico o estratégico?
+            Descripciones textuales de imágenes, gráficos y
+            contenidos visuales relevantes.
           </li>
           <li>
-            ¿Cómo presenta la información?
+            Materiales táctiles, relieves, objetos concretos
+            y modelos tridimensionales.
           </li>
           <li>
-            ¿Qué características del grupo destinatario tuvieron
-            en cuenta para diseñarlo?
+            Textos en braille cuando corresponda a las necesidades
+            y formas de lectura de la persona.
           </li>
           <li>
-            ¿Qué barreras busca reducir y qué posibilidades de
-            participación ofrece?
+            Contraste adecuado, tipografía legible y posibilidad
+            de ampliar el texto para quienes utilizan visión
+            funcional.
           </li>
           <li>
-            ¿Cómo se integra en la secuencia didáctica?
-          </li>
-          <li>
-            ¿Qué aprendizajes esperan favorecer con su utilización?
+            Explicaciones orales que describan la información
+            visual necesaria para comprender una actividad.
           </li>
         </ul>
 
+        <div class="unit3-note">
+          <strong>Importante:</strong>
+          agrandar la letra no resuelve todas las barreras visuales.
+          La accesibilidad requiere considerar cómo se presenta
+          la información, qué tecnologías se utilizan y qué
+          apoyos necesita cada estudiante.
+        </div>
+
+      </div>
+
+      <div class="unit3-card">
+
+        <h3>Clase escrita: discapacidad visual</h3>
+
         <p>
-          Estas preguntas son una guía para organizar la exposición.
-          Lo central es que puedan explicar el sentido pedagógico
-          de la producción y fundamentar sus decisiones.
+          Accedé al material de lectura para profundizar en las
+          características de la discapacidad visual y en los
+          recursos didácticos que pueden favorecer la autonomía,
+          el acceso a los contenidos y la participación.
         </p>
+
+        <a
+          class="unit3-button"
+          href="https://drive.google.com/file/d/1eXwaVpXRVs3z3ZraqwZeM1yd6mqYCcLZ/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer">
+          LEER CLASE ESCRITA →
+        </a>
 
       </div>
 
     </div>
   </section>
 
-  <!-- 05 · EVALUACIÓN -->
+  <!-- 05 · RECURSOS TIC -->
 
-  <section class="class-section s-biblio" id="evaluacion">
+  <section class="class-section s-slides" id="tic">
 
     <div class="section-title">
       <div class="section-icon">05</div>
       <div>
-        <h2>Criterios de evaluación</h2>
-        <p>¿Qué aspectos vamos a considerar?</p>
+        <h2>Recursos TIC e inclusión</h2>
+        <p>Tecnología para reducir barreras de participación</p>
       </div>
     </div>
 
     <div class="section-body">
 
-      <p>
-        La evaluación contempla cinco criterios vinculados con la
-        comprensión de los contenidos, la construcción del medio,
-        su integración en la propuesta didáctica y la reflexión
-        sobre los aprendizajes.
-      </p>
+      <div class="unit3-card">
 
-      <div class="tfi-rubric-scroll" role="region" aria-label="Rúbrica de evaluación del trabajo final" tabindex="0">
+        <h3>La tecnología no es accesible por sí sola</h3>
 
-        <table class="tfi-rubric">
+        <p>
+          Las tecnologías de la información y la comunicación pueden
+          ampliar las posibilidades de aprender, comunicarse y
+          participar. Sin embargo, su incorporación no garantiza
+          automáticamente la inclusión.
+        </p>
 
-          <thead>
-            <tr>
-              <th>Criterio</th>
-              <th>Excelente<br>2 puntos</th>
-              <th>Muy bien<br>1 punto</th>
-              <th>Bien<br>0,5 puntos</th>
-              <th>Insuficiente<br>0 puntos</th>
-            </tr>
-          </thead>
+        <p>
+          Un video sin subtítulos, una imagen sin descripción o
+          una plataforma que no puede utilizarse con tecnologías
+          de apoyo pueden convertirse en nuevas barreras.
+        </p>
 
-          <tbody>
+        <p>
+          Por eso, al seleccionar herramientas digitales necesitamos
+          preguntarnos quiénes podrán utilizarlas, cómo se presenta
+          la información y qué alternativas ofrecemos para acceder
+          a los contenidos.
+        </p>
 
-            <tr>
-              <td><strong>1. Comprensión de la discapacidad</strong></td>
-              <td>
-                Describe con claridad, profundidad y pertinencia
-                las características del grupo elegido.
-              </td>
-              <td>
-                Presenta una buena descripción general con
-                detalles relevantes.
-              </td>
-              <td>
-                Muestra una comprensión básica, con poca elaboración.
-              </td>
-              <td>
-                La información es muy limitada o incorrecta.
-              </td>
-            </tr>
+        <h3>Materiales para profundizar</h3>
 
-            <tr>
-              <td><strong>2. Medio didáctico: adecuación y originalidad</strong></td>
-              <td>
-                El medio es funcional, creativo e innovador y
-                está adaptado a las necesidades del grupo.
-              </td>
-              <td>
-                Es adecuado y presenta una idea original interesante.
-              </td>
-              <td>
-                Tiene un buen enfoque, pero necesita más adaptación
-                o elaboración.
-              </td>
-              <td>
-                No responde a las necesidades del grupo o no presenta
-                una adaptación pertinente.
-              </td>
-            </tr>
+        <div class="unit3-resource">
+          <div class="unit3-resource-content">
+            <h3>Inclusión TIC para estudiantes sordos</h3>
+            <p>
+              Material para explorar el papel de las tecnologías
+              en el acceso a la información, la comunicación y
+              las propuestas educativas de estudiantes sordos.
+            </p>
+          </div>
 
-            <tr>
-              <td><strong>3. Integración en la secuencia didáctica</strong></td>
-              <td>
-                El medio está claramente integrado en una secuencia
-                coherente y centrada en los y las estudiantes.
-              </td>
-              <td>
-                El medio se incluye adecuadamente y las actividades
-                están claras.
-              </td>
-              <td>
-                La relación entre el medio y las actividades es débil.
-              </td>
-              <td>
-                No se identifica una conexión clara entre el medio
-                y la propuesta didáctica.
-              </td>
-            </tr>
+          <a
+            class="unit3-button"
+            href="https://drive.google.com/file/d/1Dadp9KA9NtmbMhblQB_rSt7Be5j4Tz0g/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            ABRIR MATERIAL →
+          </a>
+        </div>
 
-            <tr>
-              <td><strong>4. Fundamentación pedagógica</strong></td>
-              <td>
-                Presenta una mirada crítica y actual del rol docente
-                y de la inclusión.
-              </td>
-              <td>
-                Vincula adecuadamente el trabajo con los contenidos
-                teóricos, aunque de manera general.
-              </td>
-              <td>
-                Incluye referencias básicas a la teoría, con poca
-                profundidad.
-              </td>
-              <td>
-                No presenta una fundamentación pedagógica clara.
-              </td>
-            </tr>
+        <div class="unit3-resource">
+          <div class="unit3-resource-content">
+            <h3>Inclusión TIC para estudiantes sordos · Material complementario</h3>
+            <p>
+              Segundo material para ampliar la reflexión sobre
+              tecnologías y accesibilidad para estudiantes sordos.
+            </p>
+          </div>
 
-            <tr>
-              <td><strong>5. Reflexión individual final</strong></td>
-              <td>
-                Es crítica y profunda, y expresa transformaciones
-                en la mirada sobre la práctica.
-              </td>
-              <td>
-                Es clara y personal, con una reflexión significativa.
-              </td>
-              <td>
-                Recupera parte de lo trabajado, pero de manera
-                superficial.
-              </td>
-              <td>
-                No presenta una reflexión o resulta muy escasa.
-              </td>
-            </tr>
+          <a
+            class="unit3-button"
+            href="https://drive.google.com/file/d/1lMnG8bHW0Eq33A_VjS7pQFRaGiKu9aR3/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            ABRIR MATERIAL →
+          </a>
+        </div>
 
-          </tbody>
-        </table>
+        <div class="unit3-resource">
+          <div class="unit3-resource-content">
+            <h3>Educación digital inclusiva para estudiantes sordos</h3>
+            <p>
+              Recurso para pensar cómo diseñar experiencias digitales
+              que contemplen la diversidad comunicativa y favorezcan
+              la participación.
+            </p>
+          </div>
+
+          <a
+            class="unit3-button"
+            href="https://drive.google.com/file/d/1boJln6ZUwYN_rryzljCcINEHdGOBDxQb/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            ABRIR MATERIAL →
+          </a>
+        </div>
+
+        <div class="unit3-resource">
+          <div class="unit3-resource-content">
+            <h3>Inclusión TIC para estudiantes sordos · Recurso complementario</h3>
+            <p>
+              Material adicional para seguir explorando la relación
+              entre tecnología, accesibilidad y enseñanza.
+            </p>
+          </div>
+
+          <a
+            class="unit3-button"
+            href="https://drive.google.com/file/d/196_9zmdTomL-GWeRtMUP78awhZMJ8GKR/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            ABRIR MATERIAL →
+          </a>
+        </div>
 
       </div>
 
-      <p class="biblio-note">
-        En celulares, deslicen la tabla horizontalmente para consultar
-        todos los criterios y niveles de desempeño.
-      </p>
+      <div class="unit3-card">
+
+        <h3>Eliminar barreras de participación en estudiantes sordos</h3>
+
+        <p>
+          Este material invita a identificar los obstáculos que
+          pueden aparecer en las propuestas de enseñanza y a pensar
+          alternativas para ampliar la participación.
+        </p>
+
+        <a
+          class="unit3-button"
+          href="https://drive.google.com/file/d/1BlJifXxFbpsijIpub-4IsNQPWsL-dhk8/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer">
+          ABRIR MATERIAL →
+        </a>
+
+      </div>
 
     </div>
   </section>
 
-  <!-- 06 · CIERRE -->
+  <!-- 06 · MATERIALES Y DECISIONES DIDÁCTICAS -->
 
-  <section class="class-section s-intro" id="cierre">
+  <section class="class-section s-biblio" id="materiales">
 
     <div class="section-title">
       <div class="section-icon">06</div>
       <div>
-        <h2>Para cerrar</h2>
-        <p>Lo que construimos también nos transforma</p>
+        <h2>Elegir recursos con sentido pedagógico</h2>
+        <p>Del material a la experiencia de aprendizaje</p>
       </div>
     </div>
 
     <div class="section-body">
 
-      <div class="tfi-reflection">
-
-        <h3>Una invitación a mirar nuestras prácticas</h3>
+      <div class="unit3-card">
 
         <p>
-          A lo largo del taller fuimos construyendo una mirada sobre
-          los medios y recursos didácticos que va más allá de los
-          materiales en sí mismos. Cada recurso expresa decisiones:
-          qué enseñamos, cómo presentamos la información, qué
-          posibilidades ofrecemos y quiénes pueden participar.
+          Conocer diferentes recursos es un primer paso. El siguiente
+          es poder elegirlos y utilizarlos en función de los objetivos
+          de enseñanza y de las características de los y las estudiantes.
         </p>
 
         <p>
-          Por eso, les proponemos que este trabajo sea una oportunidad
-          para poner en juego lo aprendido, experimentar, revisar
-          ideas y construir una propuesta propia.
+          Antes de incorporar un medio didáctico, podemos revisar
+          algunas preguntas orientadoras:
+        </p>
+
+        <ul>
+          <li>
+            ¿Qué contenido quiero enseñar y qué espero que aprendan?
+          </li>
+          <li>
+            ¿Cómo se presenta la información en el recurso?
+          </li>
+          <li>
+            ¿Puede utilizarse con las tecnologías de apoyo que
+            necesita el grupo?
+          </li>
+          <li>
+            ¿Qué barreras de acceso, comprensión o participación
+            podrían aparecer?
+          </li>
+          <li>
+            ¿Existen otras formas de presentar la información
+            o de expresar lo aprendido?
+          </li>
+          <li>
+            ¿El recurso promueve la autonomía o genera dependencia
+            innecesaria de otra persona?
+          </li>
+          <li>
+            ¿Cómo voy a saber si el recurso favoreció el aprendizaje?
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="unit3-quote">
+        Un recurso didáctico no es inclusivo solamente por su formato
+        o por la tecnología que utiliza. Su valor depende también de
+        las oportunidades de acceso, comprensión, expresión y
+        participación que ofrece.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 07 · PARA REFLEXIONAR -->
+
+  <section class="class-section s-resource" id="reflexion">
+
+    <div class="section-title">
+      <div class="section-icon">07</div>
+      <div>
+        <h2>Para reflexionar</h2>
+        <p>Revisar nuestras propias propuestas</p>
+      </div>
+    </div>
+
+    <div class="section-body">
+
+      <div class="unit3-card">
+
+        <h3>Una mirada sobre nuestras prácticas</h3>
+
+        <p>
+          Te proponemos recuperar una clase que hayas dado,
+          observado o planificado. Pensá en los materiales que
+          utilizaste y en las formas en que presentaste la información.
         </p>
 
         <p>
-          No buscamos un recurso perfecto, sino una producción
-          fundamentada, situada y pensada para estudiantes reales,
-          con sus características, intereses y modos de aprender.
+          Imaginá que en ese grupo participa una persona sorda
+          o una persona con discapacidad visual.
+        </p>
+
+        <ul>
+          <li>
+            ¿Qué partes de la propuesta podrían convertirse en
+            una barrera?
+          </li>
+          <li>
+            ¿Qué información depende exclusivamente de la oralidad
+            o de la percepción visual?
+          </li>
+          <li>
+            ¿Qué recurso o estrategia podrías incorporar para
+            favorecer el acceso a los contenidos?
+          </li>
+          <li>
+            ¿Qué cambiarías desde el inicio si pensaras la
+            accesibilidad como parte del diseño de la clase?
+          </li>
+        </ul>
+
+        <div class="unit3-note">
+          No hace falta encontrar una única respuesta correcta.
+          Lo importante es empezar a mirar nuestras decisiones
+          docentes desde las posibilidades de participación que
+          habilitan y las barreras que pueden producir.
+        </div>
+
+      </div>
+
+      <div class="unit3-final">
+
+        <h3>Para cerrar este encuentro</h3>
+
+        <p>
+          Trabajar con medios y recursos accesibles nos invita a
+          ampliar nuestra idea de enseñanza. Podemos comunicar
+          mediante la palabra, la escritura, las imágenes, el tacto,
+          los objetos, los apoyos tecnológicos y muchas otras formas.
         </p>
 
         <p>
-          Para terminar, recuerden incluir la reflexión individual:
-          <strong>¿en qué los y las transformó este taller y qué se
-          llevan para sus futuras prácticas docentes?</strong>
+          No se trata de preparar una clase diferente para cada
+          estudiante, sino de construir propuestas que contemplen
+          la diversidad desde el comienzo y ofrezcan distintas
+          oportunidades para acceder al conocimiento.
         </p>
 
         <p>
-          Gracias por el recorrido compartido, por las preguntas y
-          por el compromiso con la construcción de propuestas
-          educativas más accesibles e inclusivas.
+          En esta unidad vamos a seguir profundizando en esas
+          decisiones. La pregunta que nos acompañará será:
+          <strong>¿qué podemos transformar en nuestras prácticas
+          para que las barreras no definan quiénes pueden aprender
+          y participar?</strong>
+        </p>
+
+        <p>
+          Nos seguimos encontrando para continuar aprendiendo,
+          creando y transformando nuestras propuestas educativas.
         </p>
 
       </div>
@@ -840,7 +864,7 @@
     </div>
   </section>
 
-  <!-- NAVEGACIÓN -->
+  <!-- NAVEGACIÓN FINAL -->
 
   <div class="class-footer-nav">
     <a href="../index.html">← HOJA DE RUTA</a>
@@ -856,7 +880,7 @@
 </footer>
 
 <script>
-  function actualizarAltura() {
+  function enviarAlturaAMoodle() {
     const altura = Math.max(
       document.body.scrollHeight,
       document.documentElement.scrollHeight
@@ -871,17 +895,20 @@
     );
   }
 
-  window.addEventListener("load", actualizarAltura);
-  window.addEventListener("resize", actualizarAltura);
+  window.addEventListener("load", enviarAlturaAMoodle);
+  window.addEventListener("resize", enviarAlturaAMoodle);
 
   if (typeof ResizeObserver !== "undefined") {
-    const observador = new ResizeObserver(actualizarAltura);
-    observador.observe(document.body);
+    const observer = new ResizeObserver(function() {
+      enviarAlturaAMoodle();
+    });
+
+    observer.observe(document.body);
   }
 
-  setTimeout(actualizarAltura, 300);
-  setTimeout(actualizarAltura, 1000);
-  setTimeout(actualizarAltura, 2000);
+  setTimeout(enviarAlturaAMoodle, 300);
+  setTimeout(enviarAlturaAMoodle, 1000);
+  setTimeout(enviarAlturaAMoodle, 2000);
 </script>
 
 </body>
