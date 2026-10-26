@@ -247,3 +247,45 @@ video {
   }
 
 }
+
+/* BOTÓN TRABAJO FINAL INTEGRADOR */
+
+.tfi-access {
+  display: flex;
+  justify-content: center;
+  margin: -12px 0 32px;
+}
+
+.tfi-access[hidden] {
+  display: none;
+}
+
+.tfi-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 260px;
+  padding: 13px 23px;
+  border-radius: 28px;
+  background: #8f1010;
+  color: #fff !important;
+  text-decoration: none !important;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .4px;
+  box-shadow: 0 5px 14px rgba(70,45,20,.10);
+  transition: transform .2s ease, background .2s ease;
+}
+
+.tfi-button:hover {
+  background: #751010;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .tfi-button {
+    width: 100%;
+    min-width: 0;
+  }
+}
