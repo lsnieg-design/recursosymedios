@@ -1,0 +1,682 @@
+
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trabajo Final Integrador · Recursos y Medios Didácticos</title>
+  <link rel="stylesheet" href="../styles.css">
+
+  <style>
+    html,
+    body {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .class-wrap {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 auto !important;
+      padding-left: clamp(12px, 2.5vw, 36px) !important;
+      padding-right: clamp(12px, 2.5vw, 36px) !important;
+      box-sizing: border-box;
+    }
+
+    .class-wrap *,
+    .class-wrap *::before,
+    .class-wrap *::after {
+      box-sizing: border-box;
+    }
+
+    .tfi-card {
+      background: #fffdf8;
+      border: 1px solid #e5d6bd;
+      border-radius: 16px;
+      padding: clamp(20px, 3vw, 34px);
+      margin-bottom: 22px;
+    }
+
+    .tfi-card h3 {
+      margin-top: 0;
+      color: #8f1010;
+    }
+
+    .tfi-card p,
+    .tfi-card li {
+      line-height: 1.8;
+    }
+
+    .tfi-callout {
+      padding: clamp(20px, 3vw, 30px);
+      background: #fbf1e5;
+      border-left: 5px solid #c8a45d;
+      border-radius: 10px;
+      line-height: 1.8;
+    }
+
+    .tfi-main-button {
+      display: inline-block;
+      padding: 16px 25px;
+      border-radius: 28px;
+      background: #8f1010;
+      color: #ffffff !important;
+      text-decoration: none !important;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: .3px;
+      text-align: center;
+      transition: background .2s ease;
+    }
+
+    .tfi-main-button:hover {
+      background: #6f0c0c;
+    }
+
+    .tfi-secondary-button {
+      display: inline-block;
+      padding: 11px 17px;
+      border-radius: 24px;
+      border: 1px solid #8f1010;
+      color: #8f1010 !important;
+      text-decoration: none !important;
+      font-size: 12px;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .tfi-secondary-button:hover {
+      background: #fbf1e5;
+    }
+
+    .tfi-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      padding: 22px 0;
+      border-bottom: 1px solid #e5d6bd;
+    }
+
+    .tfi-step:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .tfi-step:first-child {
+      padding-top: 0;
+    }
+
+    .tfi-step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #8f1010;
+      color: #ffffff;
+      font-weight: 800;
+    }
+
+    .tfi-step-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .tfi-step-content h3 {
+      margin: 0 0 8px;
+      color: #8f1010;
+    }
+
+    .tfi-resource {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid #e5d6bd;
+    }
+
+    .tfi-resource:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .tfi-resource:first-child {
+      padding-top: 0;
+    }
+
+    .tfi-resource-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .tfi-resource-content h3 {
+      margin: 0 0 7px;
+      color: #8f1010;
+    }
+
+    .tfi-resource-content p {
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    .tfi-closing {
+      padding: clamp(24px, 3vw, 36px);
+      background: #8f1010;
+      border-bottom: 5px solid #c8a45d;
+      border-radius: 14px;
+      color: #ffffff;
+      line-height: 1.8;
+    }
+
+    .tfi-closing h2 {
+      color: #ffffff;
+      margin-top: 0;
+    }
+
+    @media (max-width: 700px) {
+      .tfi-resource {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .tfi-secondary-button,
+      .tfi-main-button {
+        width: 100%;
+      }
+
+      .tfi-step {
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="brand">RASPANTI</div>
+    <div class="eyebrow">
+      RECURSOS Y MEDIOS DIDÁCTICOS
+    </div>
+    <h1>TRABAJO FINAL INTEGRADOR</h1>
+    <p class="subtitle">
+      Una oportunidad para integrar, crear y transformar nuestras prácticas
+    </p>
+  </div>
+</header>
+
+<main class="class-wrap">
+
+  <!-- ENCABEZADO -->
+
+  <section class="class-hero u2">
+
+    <div class="class-meta">
+      <span class="class-number">TFI</span>
+      <span class="class-date">CIERRE DE LA CURSADA</span>
+    </div>
+
+    <h1>Trabajo Final Integrador</h1>
+
+    <p class="lead">
+      Recuperar lo aprendido, ponerlo en diálogo con nuestras prácticas
+      y construir una propuesta educativa con sentido pedagógico.
+    </p>
+
+  </section>
+
+  <!-- NAVEGACIÓN -->
+
+  <nav class="anchor-nav">
+    <a href="#presentacion">PRESENTACIÓN</a>
+    <a href="#consignas">CONSIGNAS</a>
+    <a href="#recursos">MATERIALES DE APOYO</a>
+    <a href="#organizacion">ORGANIZACIÓN</a>
+    <a href="#cierre">PARA CERRAR</a>
+  </nav>
+
+  <!-- 01 · PRESENTACIÓN -->
+
+  <section class="class-section s-intro" id="presentacion">
+
+    <div class="section-title">
+      <div class="section-icon">01</div>
+      <div>
+        <h2>Una propuesta para integrar lo aprendido</h2>
+        <p>Del recorrido de la cursada a nuestras decisiones docentes</p>
+      </div>
+    </div>
+
+    <div class="section-body">
+
+      <div class="tfi-callout">
+
+        <p>¡Llegamos al Trabajo Final Integrador!</p>
+
+        <p>
+          A lo largo de la cursada fuimos recorriendo conceptos,
+          perspectivas, medios y recursos didácticos para pensar
+          propuestas educativas que contemplen la diversidad.
+        </p>
+
+        <p>
+          Este trabajo es una oportunidad para recuperar ese recorrido,
+          establecer relaciones entre los contenidos y llevarlos a una
+          producción que dialogue con nuestras prácticas educativas.
+        </p>
+
+        <p>
+          La intención no es solamente demostrar lo que aprendimos,
+          sino también poner en juego una mirada pedagógica reflexiva:
+          reconocer barreras, revisar decisiones y pensar otras formas
+          de enseñar que amplíen las posibilidades de participación
+          y aprendizaje.
+        </p>
+
+        <p>
+          Leé las consignas completas antes de comenzar. Allí vas a
+          encontrar las indicaciones específicas para desarrollar
+          y presentar el trabajo.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 02 · CONSIGNAS -->
+
+  <section class="class-section s-written" id="consignas">
+
+    <div class="section-title">
+      <div class="section-icon">02</div>
+      <div>
+        <h2>Consignas del trabajo</h2>
+        <p>Indicaciones para desarrollar el TFI</p>
+      </div>
+    </div>
+
+    <div class="section-body">
+
+      <div class="tfi-card">
+
+        <h3>Leé el documento completo</h3>
+
+        <p>
+          En el siguiente documento vas a encontrar las consignas
+          oficiales del Trabajo Final Integrador. Consultalo para
+          conocer las actividades solicitadas, las pautas de
+          elaboración y las condiciones de entrega.
+        </p>
+
+        <p>
+          Te recomendamos tenerlo disponible mientras trabajás,
+          para poder revisar las indicaciones y organizar el proceso
+          de producción.
+        </p>
+
+        <p style="margin-top:25px;text-align:center;">
+          <a
+            class="tfi-main-button"
+            href="https://drive.google.com/file/d/1AGPl8Ia8TpupkIp79NqU9NtTHPC1dgwf/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            ABRIR CONSIGNAS DEL TFI →
+          </a>
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 03 · MATERIALES DE APOYO -->
+
+  <section class="class-section s-biblio" id="recursos">
+
+    <div class="section-title">
+      <div class="section-icon">03</div>
+      <div>
+        <h2>Materiales de apoyo</h2>
+        <p>Recursos para acompañar la elaboración</p>
+      </div>
+    </div>
+
+    <div class="section-body">
+
+      <div class="tfi-card">
+
+        <p>
+          Para enriquecer tu producción, podés volver a consultar
+          los materiales trabajados durante la cursada y recuperar
+          aquellos que resulten pertinentes para el desarrollo
+          de tu propuesta.
+        </p>
+
+        <div class="tfi-resource">
+
+          <div class="tfi-resource-content">
+            <h3>Clase escrita: discapacidad auditiva</h3>
+            <p>
+              Material para recuperar contenidos sobre accesibilidad
+              comunicacional, barreras y recursos didácticos.
+            </p>
+          </div>
+
+          <a
+            class="tfi-secondary-button"
+            href="https://drive.google.com/file/d/152TjZnWzqtx3stt8szjY4jXD3A9fSFfl/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            CONSULTAR →
+          </a>
+
+        </div>
+
+        <div class="tfi-resource">
+
+          <div class="tfi-resource-content">
+            <h3>Clase escrita: discapacidad visual</h3>
+            <p>
+              Material para profundizar en las formas de acceso
+              a la información y los recursos accesibles.
+            </p>
+          </div>
+
+          <a
+            class="tfi-secondary-button"
+            href="https://drive.google.com/file/d/1eXwaVpXRVs3z3ZraqwZeM1yd6mqYCcLZ/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            CONSULTAR →
+          </a>
+
+        </div>
+
+        <div class="tfi-resource">
+
+          <div class="tfi-resource-content">
+            <h3>Inclusión TIC para estudiantes sordos</h3>
+            <p>
+              Material complementario para pensar el papel de
+              las tecnologías en las propuestas educativas.
+            </p>
+          </div>
+
+          <a
+            class="tfi-secondary-button"
+            href="https://drive.google.com/file/d/1Dadp9KA9NtmbMhblQB_rSt7Be5j4Tz0g/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            CONSULTAR →
+          </a>
+
+        </div>
+
+        <div class="tfi-resource">
+
+          <div class="tfi-resource-content">
+            <h3>Eliminar barreras de participación en estudiantes sordos</h3>
+            <p>
+              Un recurso para revisar obstáculos y pensar
+              alternativas que favorezcan la participación.
+            </p>
+          </div>
+
+          <a
+            class="tfi-secondary-button"
+            href="https://drive.google.com/file/d/1BlJifXxFbpsijIpub-4IsNQPWsL-dhk8/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            CONSULTAR →
+          </a>
+
+        </div>
+
+        <div class="tfi-resource">
+
+          <div class="tfi-resource-content">
+            <h3>Educación digital inclusiva para estudiantes sordos</h3>
+            <p>
+              Material para reflexionar sobre tecnologías,
+              accesibilidad y participación.
+            </p>
+          </div>
+
+          <a
+            class="tfi-secondary-button"
+            href="https://drive.google.com/file/d/1boJln6ZUwYN_rryzljCcINEHdGOBDxQb/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            CONSULTAR →
+          </a>
+
+        </div>
+
+        <div class="tfi-resource">
+
+          <div class="tfi-resource-content">
+            <h3>Inclusión TIC para estudiantes sordos · Material complementario</h3>
+            <p>
+              Otro material disponible para ampliar el recorrido
+              sobre recursos tecnológicos y educación inclusiva.
+            </p>
+          </div>
+
+          <a
+            class="tfi-secondary-button"
+            href="https://drive.google.com/file/d/1lMnG8bHW0Eq33A_VjS7pQFRaGiKu9aR3/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            CONSULTAR →
+          </a>
+
+        </div>
+
+        <div class="tfi-resource">
+
+          <div class="tfi-resource-content">
+            <h3>Inclusión TIC para estudiantes sordos · Recurso adicional</h3>
+            <p>
+              Material complementario para retomar conceptos
+              y decisiones pedagógicas.
+            </p>
+          </div>
+
+          <a
+            class="tfi-secondary-button"
+            href="https://drive.google.com/file/d/196_9zmdTomL-GWeRtMUP78awhZMJ8GKR/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            CONSULTAR →
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 04 · ORGANIZACIÓN -->
+
+  <section class="class-section s-resource" id="organizacion">
+
+    <div class="section-title">
+      <div class="section-icon">04</div>
+      <div>
+        <h2>Organizá tu trabajo</h2>
+        <p>Algunas recomendaciones para avanzar</p>
+      </div>
+    </div>
+
+    <div class="section-body">
+
+      <div class="tfi-card">
+
+        <div class="tfi-step">
+          <div class="tfi-step-number">1</div>
+          <div class="tfi-step-content">
+            <h3>Leé las consignas</h3>
+            <p>
+              Identificá qué se solicita, qué partes debe incluir
+              la producción y cuáles son las condiciones de entrega.
+            </p>
+          </div>
+        </div>
+
+        <div class="tfi-step">
+          <div class="tfi-step-number">2</div>
+          <div class="tfi-step-content">
+            <h3>Recuperá los contenidos</h3>
+            <p>
+              Volvé a los materiales de la cursada y seleccioná
+              los conceptos y recursos que te ayuden a fundamentar
+              tus decisiones.
+            </p>
+          </div>
+        </div>
+
+        <div class="tfi-step">
+          <div class="tfi-step-number">3</div>
+          <div class="tfi-step-content">
+            <h3>Planificá la producción</h3>
+            <p>
+              Organizá las tareas, distribuí los tiempos y revisá
+              que cada parte responda a lo solicitado en las consignas.
+            </p>
+          </div>
+        </div>
+
+        <div class="tfi-step">
+          <div class="tfi-step-number">4</div>
+          <div class="tfi-step-content">
+            <h3>Revisá antes de entregar</h3>
+            <p>
+              Comprobá que el trabajo esté completo, que las ideas
+              se comprendan con claridad y que el archivo cumpla
+              con las pautas establecidas.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="tfi-callout">
+        <strong>Importante:</strong>
+        las fechas, los formatos y los requisitos específicos
+        de presentación son los que figuran en el documento
+        oficial de consignas. Consultalo ante cualquier duda.
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 05 · CIERRE -->
+
+  <section class="class-section s-intro" id="cierre">
+
+    <div class="section-title">
+      <div class="section-icon">05</div>
+      <div>
+        <h2>Un cierre para seguir transformando</h2>
+        <p>Lo aprendido también se construye en nuestras decisiones</p>
+      </div>
+    </div>
+
+    <div class="section-body">
+
+      <div class="tfi-closing">
+
+        <h2>¡Gracias por el recorrido compartido!</h2>
+
+        <p>
+          El Trabajo Final Integrador es una oportunidad para
+          recuperar lo transitado y convertirlo en nuevas preguntas,
+          ideas y posibilidades para nuestras prácticas.
+        </p>
+
+        <p>
+          Esperamos que esta producción les permita reconocer
+          todo lo que construyeron durante la cursada y seguir
+          pensando propuestas educativas más accesibles,
+          significativas e inclusivas.
+        </p>
+
+        <p>
+          Recuerden que no se trata de incorporar recursos
+          simplemente porque están disponibles, sino de elegirlos
+          con intención pedagógica, teniendo en cuenta a las
+          personas, los contextos y las barreras que podemos
+          transformar.
+        </p>
+
+        <p>
+          Les deseamos un buen proceso de trabajo. Ante cualquier
+          duda sobre las consignas, pueden consultar por los
+          canales de comunicación de la cursada.
+        </p>
+
+        <p><strong>Seguimos aprendiendo, creando y transformando.</strong></p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NAVEGACIÓN FINAL -->
+
+  <div class="class-footer-nav">
+    <a href="../index.html">← HOJA DE RUTA</a>
+  </div>
+
+</main>
+
+<footer>
+  <div>Aprender · crear · transformar</div>
+  <small>
+    Recursos y Medios Didácticos · Instituto Miguel Raspanti
+  </small>
+</footer>
+
+<script>
+  function enviarAlturaAMoodle() {
+    const altura = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight
+    );
+
+    window.parent.postMessage(
+      {
+        type: "recursos-medios-height",
+        height: altura
+      },
+      "https://campus.raspanti.website"
+    );
+  }
+
+  window.addEventListener("load", enviarAlturaAMoodle);
+  window.addEventListener("resize", enviarAlturaAMoodle);
+
+  if (typeof ResizeObserver !== "undefined") {
+    const observer = new ResizeObserver(function() {
+      enviarAlturaAMoodle();
+    });
+
+    observer.observe(document.body);
+  }
+
+  setTimeout(enviarAlturaAMoodle, 300);
+  setTimeout(enviarAlturaAMoodle, 1000);
+  setTimeout(enviarAlturaAMoodle, 2000);
+</script>
+
+</body>
+</html>
