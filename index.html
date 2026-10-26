@@ -353,7 +353,17 @@
 
       transition:width .5s ease;
     }
+<!-- BOTÓN TRABAJO FINAL INTEGRADOR -->
 
+<section id="tfi-access" class="tfi-access" hidden>
+  <a
+    id="tfi-button"
+    class="tfi-button"
+    href="/clases/TFI.html"
+  >
+    TRABAJO FINAL INTEGRADOR →
+  </a>
+</section>
 
     /* =====================================================
        RECORRIDO
@@ -1481,7 +1491,16 @@ const clases = [
     t:"Encuentro de elaboración de trabajos finales",
     u:3,
     desc:"Elaboración de trabajos finales. Entrega de borrador."
-  }
+  },
+  {
+  n: "TFI",
+  d: "2026-10-26",
+  t: "Trabajo Final Integrador",
+  u: 3,
+  desc: "Consigna, materiales de consulta y orientaciones para elaborar el trabajo final.",
+  url: "/clases/TFI.html",
+  especial: true
+}
 
 ];
 
@@ -1510,7 +1529,21 @@ function bonito(fecha) {
 
 }
 
+function generarAccesoTFI() {
+  const tfi = clases.find(c => c.especial);
+  const contenedor = document.getElementById("tfi-access");
+  const boton = document.getElementById("tfi-button");
 
+  if (!tfi || !contenedor || !boton) return;
+
+  const ok = disponible(tfi.d);
+
+  contenedor.hidden = !ok;
+
+  if (ok) {
+    boton.href = tfi.url;
+  }
+}
 
 /* =====================================================
    GENERAR TARJETAS
@@ -1534,7 +1567,7 @@ function generarTarjetas() {
 
       clases
         .filter(
-          c => c.u === unidad
+          c => c.u === unidad && !c.especial
         )
         .forEach(
           function(c) {
@@ -1645,7 +1678,15 @@ function generarClaseDestacada() {
     clases.filter(
       c => disponible(c.d)
     );
+const clasesRegulares = clases.filter(c => !c.especial);
 
+const disponibles = clasesRegulares.filter(
+  c => disponible(c.d)
+);
+
+const proximas = clasesRegulares.filter(
+  c => !disponible(c.d)
+);
 
   const proximas =
     clases.filter(
@@ -1783,7 +1824,13 @@ function actualizarProgreso() {
     clases.filter(
       c => disponible(c.d)
     ).length;
+const clasesRegulares = clases.filter(c => !c.especial);
 
+const cantidad = clasesRegulares.filter(
+  c => disponible(c.d)
+).length;
+
+const porcentaje = (cantidad / clasesRegulares.length) * 100;
 
   document.getElementById(
     "progress-label"
@@ -1838,6 +1885,7 @@ generarTarjetas();
 generarClaseDestacada();
 
 actualizarProgreso();
+  generarAccesoTFI();
 
 
 
