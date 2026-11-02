@@ -1,0 +1,2344 @@
+
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Clase 11 · Discapacidad neuromotora, intelectual, TES y TEA</title>
+
+  <link rel="stylesheet" href="../styles.css">
+
+  <style>
+    /* =====================================================
+       CONFIGURACIÓN GENERAL
+       ===================================================== */
+
+    html,
+    body {
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .class-wrap {
+      width: 100% !important;
+      max-width: none !important;
+      margin: 0 auto !important;
+      padding-left: clamp(12px, 2.5vw, 36px) !important;
+      padding-right: clamp(12px, 2.5vw, 36px) !important;
+      box-sizing: border-box;
+    }
+
+    .class-wrap *,
+    .class-wrap *::before,
+    .class-wrap *::after {
+      box-sizing: border-box;
+    }
+
+    /* =====================================================
+       TARJETAS Y DESTACADOS
+       ===================================================== */
+
+    .unit3-callout {
+      background: #fbf1e5;
+      border-left: 5px solid #c8a45d;
+      border-radius: 10px;
+      padding: clamp(18px, 3vw, 30px);
+      line-height: 1.8;
+    }
+
+    .unit3-card {
+      background: #fffdf8;
+      border: 1px solid #e5d6bd;
+      border-radius: 14px;
+      padding: clamp(18px, 2.5vw, 28px);
+      margin-bottom: 20px;
+      min-width: 0;
+    }
+
+    .unit3-card h3 {
+      color: #8f1010;
+      margin-top: 0;
+    }
+
+    .unit3-card p,
+    .unit3-card li {
+      line-height: 1.75;
+    }
+
+    .unit3-resource {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid #e5d6bd;
+    }
+
+    .unit3-resource:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .unit3-resource:first-child {
+      padding-top: 0;
+    }
+
+    .unit3-resource-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .unit3-resource-content h3 {
+      margin: 0 0 8px;
+      color: #8f1010;
+    }
+
+    .unit3-resource-content p {
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    .unit3-button {
+      display: inline-block;
+      flex-shrink: 0;
+      padding: 12px 18px;
+      border-radius: 24px;
+      background: #8f1010;
+      color: #ffffff !important;
+      text-decoration: none !important;
+      font-size: 12px;
+      font-weight: 800;
+      text-align: center;
+      transition: background .2s ease;
+    }
+
+    .unit3-button:hover {
+      background: #6f0c0c;
+    }
+
+    .unit3-quote {
+      padding: 20px 24px;
+      border-left: 4px solid #c8a45d;
+      background: #fbf1e5;
+      color: #5f5143;
+      border-radius: 8px;
+      line-height: 1.8;
+      font-size: 1.05em;
+    }
+
+    .unit3-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .unit3-topic {
+      padding: 22px;
+      border: 1px solid #e5d6bd;
+      border-top: 4px solid #c8a45d;
+      background: #fffdf8;
+      border-radius: 10px;
+      min-width: 0;
+    }
+
+    .unit3-topic h3 {
+      margin-top: 0;
+      color: #8f1010;
+    }
+
+    .unit3-topic p,
+    .unit3-topic li {
+      line-height: 1.7;
+    }
+
+    .unit3-note {
+      margin-top: 20px;
+      padding: 18px 22px;
+      background: #fbf1e5;
+      border-left: 4px solid #8f1010;
+      border-radius: 8px;
+      line-height: 1.75;
+    }
+
+    .unit3-final {
+      padding: clamp(22px, 3vw, 34px);
+      background: #8f1010;
+      border-bottom: 5px solid #c8a45d;
+      color: #ffffff;
+      border-radius: 14px;
+      line-height: 1.8;
+    }
+
+    .unit3-final h3 {
+      color: #ffffff;
+      margin-top: 0;
+    }
+
+    /* =====================================================
+       TABLAS DE RECURSOS
+       ===================================================== */
+
+    .unit3-table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 20px 0;
+      border: 1px solid #e5d6bd;
+      border-radius: 10px;
+      background: #fffdf8;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .unit3-table {
+      width: 100%;
+      min-width: 570px;
+      border-collapse: collapse;
+    }
+
+    .unit3-table th {
+      padding: 14px;
+      background: #8f1010;
+      color: #ffffff;
+      font-size: 13px;
+      text-align: left;
+      line-height: 1.5;
+    }
+
+    .unit3-table td {
+      padding: 14px;
+      border-bottom: 1px solid #e5d6bd;
+      color: #5f584e;
+      font-size: 13px;
+      line-height: 1.7;
+      vertical-align: top;
+    }
+
+    .unit3-table tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .unit3-table tr:nth-child(even) {
+      background: #fbf7ef;
+    }
+
+    .unit3-table td:first-child {
+      color: #8f1010;
+      font-weight: 800;
+    }
+
+    /* =====================================================
+       VIDEO
+       ===================================================== */
+
+    .unit3-video {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #242424;
+      margin-top: 18px;
+    }
+
+    .unit3-video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* =====================================================
+       DESTACADO FINAL
+       ===================================================== */
+
+    .unit3-final a {
+      color: #ffffff !important;
+    }
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+
+    @media (max-width: 700px) {
+      .unit3-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .unit3-resource {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .unit3-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     ENCABEZADO
+     ===================================================== -->
+
+<header class="hero">
+
+  <div class="hero-inner">
+
+    <div class="brand">RASPANTI</div>
+
+    <div class="eyebrow">
+      RECURSOS Y MEDIOS DIDÁCTICOS · UNIDAD 3
+    </div>
+
+    <h1>CLASE 11</h1>
+
+    <p class="subtitle">
+      Discapacidad neuromotora, discapacidad intelectual, TES y TEA.
+      Medios y recursos.
+    </p>
+
+  </div>
+
+</header>
+
+
+<main class="class-wrap">
+
+  <!-- =====================================================
+       PRESENTACIÓN DE LA CLASE
+       ===================================================== -->
+
+  <section class="class-hero u2">
+
+    <div class="class-meta">
+      <span class="class-number">CLASE 11</span>
+      <span class="class-date">UNIDAD 3</span>
+    </div>
+
+    <h1>
+      Medios y recursos para acompañar distintas formas de aprender
+    </h1>
+
+    <p class="lead">
+      Accesibilidad, autonomía y participación: pensar propuestas
+      que reconozcan las características de cada persona y eliminen
+      las barreras que aparecen en los entornos educativos.
+    </p>
+
+  </section>
+
+
+  <!-- =====================================================
+       NAVEGACIÓN
+       ===================================================== -->
+
+  <nav class="anchor-nav">
+
+    <a href="#inicio">PARA EMPEZAR</a>
+
+    <a href="#presentacion">PRESENTACIÓN</a>
+
+    <a href="#neuromotora">DISCAPACIDAD NEUROMOTORA</a>
+
+    <a href="#intelectual">DISCAPACIDAD INTELECTUAL</a>
+
+    <a href="#tes-tea">TES Y TEA</a>
+
+    <a href="#dua">DISEÑO UNIVERSAL · DUA</a>
+
+    <a href="#materiales">MATERIALES</a>
+
+    <a href="#reflexion">PARA REFLEXIONAR</a>
+
+  </nav>
+
+
+  <!-- =====================================================
+       01 · PARA EMPEZAR
+       ===================================================== -->
+
+  <section class="class-section s-intro" id="inicio">
+
+    <div class="section-title">
+
+      <div class="section-icon">01</div>
+
+      <div>
+        <h2>Para empezar</h2>
+        <p>Distintas formas de aprender, distintas formas de enseñar</p>
+      </div>
+
+    </div>
+
+
+    <div class="section-body">
+
+      <div class="unit3-callout">
+
+        <p>¡Hola! ¿Cómo estás?</p>
+
+        <p>
+          Seguimos avanzando en nuestro recorrido por la Unidad 3.
+          En esta clase vamos a detenernos en distintas situaciones
+          y características que nos invitan a revisar cómo pensamos
+          los medios, los materiales y los recursos didácticos.
+        </p>
+
+        <p>
+          Cuando planificamos una propuesta de enseñanza, muchas
+          veces damos por sentado que todos los y las estudiantes
+          pueden realizar las mismas acciones: escribir, manipular
+          objetos pequeños, comprender consignas extensas, sostener
+          la atención durante el mismo tiempo o comunicarse
+          mediante el habla.
+        </p>
+
+        <p>
+          Pero las personas no aprenden de una única manera.
+          Tampoco necesitan los mismos apoyos para participar.
+          Algunas pueden necesitar otras formas de manipular
+          un material, otras maneras de expresar lo que saben,
+          más tiempo, apoyos visuales, anticipación o herramientas
+          de comunicación.
+        </p>
+
+        <p>
+          En esta clase vamos a trabajar sobre discapacidad
+          neuromotora, discapacidad intelectual, TES y TEA.
+          También vamos a recuperar el Diseño Universal para
+          el Aprendizaje como una perspectiva que nos ayuda
+          a pensar la accesibilidad desde el comienzo.
+        </p>
+
+        <p>
+          La pregunta que nos va a acompañar es:
+          <strong>¿qué podemos transformar en nuestras propuestas
+          para que las características de cada estudiante no se
+          conviertan en barreras para aprender y participar?</strong>
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       02 · PRESENTACIÓN
+       ===================================================== -->
+
+  <section class="class-section s-slides" id="presentacion">
+
+    <div class="section-title">
+
+      <div class="section-icon">02</div>
+
+      <div>
+        <h2>El desafío de enseñar desde la accesibilidad</h2>
+        <p>Personas, entornos, apoyos y decisiones pedagógicas</p>
+      </div>
+
+    </div>
+
+
+    <div class="section-body">
+
+      <div class="unit3-card">
+
+        <h3>¿Qué vamos a recorrer en este encuentro?</h3>
+
+        <p>
+          Vamos a conocer algunas características generales
+          de las personas con discapacidad neuromotora,
+          discapacidad intelectual y TEA, y a pensar qué
+          recursos y estrategias pueden favorecer el acceso
+          a la información, la comunicación y la participación.
+        </p>
+
+        <div class="unit3-grid">
+
+          <div class="unit3-topic">
+
+            <h3>Discapacidad neuromotora</h3>
+
+            <p>
+              El movimiento, la postura y la manipulación de
+              materiales pueden requerir apoyos específicos.
+              Vamos a conocer adaptaciones, tecnología asistiva
+              y recursos de comunicación aumentativa y alternativa.
+            </p>
+
+          </div>
+
+
+          <div class="unit3-topic">
+
+            <h3>Discapacidad intelectual</h3>
+
+            <p>
+              Vamos a pensar recursos que acompañen diferentes
+              ritmos y estilos de aprendizaje, la comprensión,
+              la memoria, la atención, la planificación
+              y la autonomía.
+            </p>
+
+          </div>
+
+
+          <div class="unit3-topic">
+
+            <h3>TES y TEA</h3>
+
+            <p>
+              Abordaremos la importancia de comprender a cada
+              persona en su singularidad y de construir entornos
+              accesibles, predecibles y respetuosos de diferentes
+              modos de comunicación, interacción y participación.
+            </p>
+
+          </div>
+
+
+          <div class="unit3-topic">
+
+            <h3>Diseño Universal para el Aprendizaje</h3>
+
+            <p>
+              Recuperaremos una perspectiva que propone ofrecer
+              múltiples formas de representación, expresión
+              y participación para diseñar desde el inicio
+              propuestas más accesibles.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="unit3-quote">
+
+        No se trata de encontrar un recurso para cada diagnóstico.
+        Se trata de reconocer a cada persona, identificar las barreras
+        del entorno y ofrecer los apoyos que permitan aprender,
+        comunicar y participar.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       03 · DISCAPACIDAD NEUROMOTORA
+       ===================================================== -->
+
+  <section class="class-section s-written" id="neuromotora">
+
+    <div class="section-title">
+
+      <div class="section-icon">03</div>
+
+      <div>
+        <h2>Discapacidad neuromotora</h2>
+        <p>Movimiento, comunicación, autonomía y recursos accesibles</p>
+      </div>
+
+    </div>
+
+
+    <div class="section-body">
+
+
+      <div class="unit3-card">
+
+        <h3>Más allá del movimiento</h3>
+
+        <p>
+          La discapacidad neuromotora puede afectar principalmente
+          el movimiento y la postura corporal. También puede tener
+          impacto en la comunicación, la autonomía, la escritura,
+          la exploración del entorno y la participación en
+          actividades cotidianas.
+        </p>
+
+        <p>
+          Desde el modelo social, la mirada se amplía:
+          no alcanza con observar las características del cuerpo.
+          También necesitamos mirar los espacios, los materiales,
+          los tiempos y las herramientas que ofrece el entorno.
+        </p>
+
+        <p>
+          La discapacidad neuromotora puede relacionarse con
+          alteraciones del sistema nervioso central o periférico
+          que afectan el control del movimiento, el tono muscular
+          o la coordinación. Puede tener diferentes causas y
+          manifestaciones.
+        </p>
+
+        <p>
+          Algunas personas pueden presentar movimientos lentos
+          o involuntarios, dificultades para mantener la postura,
+          cansancio físico o dificultades para manipular materiales.
+          En algunos casos también puede estar comprometida
+          la expresión oral.
+        </p>
+
+        <div class="unit3-note">
+
+          <strong>Una idea fundamental:</strong>
+          las dificultades motrices no implican necesariamente
+          dificultades en la comprensión o en las posibilidades
+          cognitivas. El desafío pedagógico es encontrar los
+          medios adecuados para que cada persona pueda expresar
+          lo que sabe, siente y piensa.
+
+        </div>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Características y recursos didácticos posibles</h3>
+
+        <p>
+          Las siguientes relaciones permiten pensar cómo
+          transformar los materiales y las condiciones de
+          enseñanza según las necesidades de cada estudiante.
+        </p>
+
+
+        <div class="unit3-table-wrap">
+
+          <table class="unit3-table">
+
+            <thead>
+              <tr>
+                <th>Características o desafíos</th>
+                <th>Recursos, apoyos y estrategias posibles</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>Dificultades en la motricidad fina</td>
+                <td>
+                  Adaptadores de lápiz, punzones, teclados virtuales,
+                  pulsadores, mouse de cabeza, mesas inclinadas,
+                  materiales con relieve o velcro.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Dificultades en la motricidad gruesa</td>
+                <td>
+                  Espacios accesibles, pasillos amplios, mesas
+                  regulables, sillas posturales, apoyos de espalda
+                  o pies y cambios de posición cuando sean necesarios.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Fatigabilidad o movimientos involuntarios</td>
+                <td>
+                  Actividades breves, descansos programados,
+                  tareas fragmentadas y tiempos flexibles.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Dificultades en la comunicación oral</td>
+                <td>
+                  Sistemas aumentativos y alternativos de comunicación,
+                  pictogramas, tableros, comunicadores electrónicos
+                  y aplicaciones con salida de voz.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Dificultad para manipular materiales tradicionales</td>
+                <td>
+                  Versiones digitales, audiolibros, hojas imantadas,
+                  elementos con velcro, materiales grandes y estables.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Necesidad de apoyo para desplazarse o participar</td>
+                <td>
+                  Mobiliario adaptado, organización del aula sin
+                  obstáculos, anticipación de tiempos y apoyos
+                  para la participación.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Dificultades para sostener la atención por cansancio</td>
+                <td>
+                  Alternancia de actividades, consignas breves,
+                  apoyos visuales y ritmos personalizados.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Uso de dispositivos tecnológicos</td>
+                <td>
+                  Pulsadores, pantallas táctiles, lectores de texto
+                  y tecnología asistiva, como VoiceOver, NVDA o Clicker.
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+
+        <div class="unit3-note">
+
+          <strong>Leer el cuadro entre líneas:</strong>
+          muchas veces, un mouse de cabeza, un pulsador,
+          una mesa regulable o un tablero de comunicación
+          pueden marcar la diferencia entre quedar afuera
+          de una actividad y participar activamente.
+
+          Los apoyos también forman parte del diseño didáctico.
+          No son elementos externos a la enseñanza.
+
+        </div>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>¿Cómo deben ser los materiales?</h3>
+
+        <p>
+          Los materiales para estudiantes con discapacidad
+          neuromotora necesitan contemplar tanto la accesibilidad
+          física como la digital.
+        </p>
+
+        <ul>
+
+          <li>
+            Formatos livianos, estables, gruesos y fáciles
+            de manipular.
+          </li>
+
+          <li>
+            Superficies amplias que no requieran precisión extrema.
+          </li>
+
+          <li>
+            Contrastes adecuados y tipografía clara.
+          </li>
+
+          <li>
+            Materiales digitales o multimedia, con posibilidades
+            de lectura por voz, audio o exploración táctil.
+          </li>
+
+          <li>
+            Organización del espacio con recorridos accesibles,
+            mobiliario adecuado y tiempos flexibles.
+          </li>
+
+          <li>
+            Actividades que permitan participar mediante
+            distintas acciones: elegir, señalar, observar,
+            comunicar, decidir o producir.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Un contenido para mirar y escuchar: Mundo con Rueditas</h3>
+
+        <p>
+          Antes de seguir, les recomiendo visitar el Instagram
+          de <strong>Mundo con Rueditas</strong>.
+        </p>
+
+        <p>
+          Se presentan como un espacio de
+          <strong>“CONTENIDO SIN FRENOS”</strong>:
+          un dúo que aborda humor negro, CAA, política
+          y temas que incomodan.
+        </p>
+
+        <p>
+          Una invitación a acercarnos a otras voces,
+          experiencias y formas de contar el mundo.
+        </p>
+
+        <a
+          class="unit3-button"
+          href="https://www.instagram.com/mudoconrueditas/"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          VISITAR INSTAGRAM →
+
+        </a>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Clase escrita: discapacidad neuromotora y recursos didácticos accesibles</h3>
+
+        <p>
+          En este material vamos a profundizar en el modelo social,
+          las características generales, los apoyos posibles,
+          la tecnología asistiva y las propuestas que favorecen
+          la participación.
+        </p>
+
+        <a
+          class="unit3-button"
+          href="https://drive.google.com/file/d/1iPAjRS3FHJKIoU7wolCc6vDHUkrhk86v/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          LEER CLASE ESCRITA →
+
+        </a>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Bibliografía: discapacidad neuromotora</h3>
+
+        <p>
+          Material bibliográfico para ampliar los contenidos
+          y acompañar la reflexión sobre los apoyos y los
+          recursos didácticos accesibles.
+        </p>
+
+        <a
+          class="unit3-button"
+          href="https://drive.google.com/file/d/1Xv96RtZVuydTrt_L8tu3NT6Sfb7p7jWA/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          CONSULTAR BIBLIOGRAFÍA →
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       04 · DISCAPACIDAD INTELECTUAL
+       ===================================================== -->
+
+  <section class="class-section s-resource" id="intelectual">
+
+    <div class="section-title">
+
+      <div class="section-icon">04</div>
+
+      <div>
+        <h2>Discapacidad intelectual</h2>
+        <p>Comprensión, apoyos, autonomía y aprendizaje</p>
+      </div>
+
+    </div>
+
+
+    <div class="section-body">
+
+
+      <div class="unit3-card">
+
+        <h3>Enseñar de distintos modos para llegar a todos</h3>
+
+        <p>
+          La discapacidad intelectual se relaciona con los procesos
+          de pensamiento, la comunicación, la resolución de problemas
+          y la toma de decisiones cotidianas.
+        </p>
+
+        <p>
+          Desde el modelo social, es importante comprender que
+          las dificultades no pueden pensarse separadas del
+          contexto. Las barreras u obstáculos que aparecen
+          alrededor de una persona pueden aumentar las dificultades
+          para aprender, comprender, comunicarse y participar.
+        </p>
+
+        <p>
+          El paradigma de apoyos propone pensar qué tipo de ayuda
+          necesita cada persona para desarrollar sus posibilidades.
+          No se trata de nivelar hacia abajo, sino de enseñar
+          de otros modos.
+        </p>
+
+        <div class="unit3-quote">
+
+          Un entorno más accesible puede ofrecer mayores
+          oportunidades para aprender, comunicarse y actuar
+          con autonomía.
+
+        </div>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Características cognitivas y recursos posibles</h3>
+
+        <p>
+          Las personas con discapacidad intelectual pueden
+          presentar diferentes ritmos y estilos para procesar
+          la información, atender, recordar y planificar.
+          Estas características orientan la selección de
+          apoyos y materiales.
+        </p>
+
+
+        <div class="unit3-table-wrap">
+
+          <table class="unit3-table">
+
+            <thead>
+              <tr>
+                <th>Características o desafíos</th>
+                <th>Recursos, apoyos y estrategias posibles</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>Atención dispersa o limitada</td>
+                <td>
+                  Actividades breves y visuales, temporizadores,
+                  pictogramas de pasos, materiales simples
+                  y juegos con retroalimentación.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Dificultades en la memoria de trabajo</td>
+                <td>
+                  Repetición sistemática, secuencias visuales,
+                  agendas pictográficas, videos demostrativos
+                  y apoyos para recordar consignas.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Ritmo de aprendizaje más lento</td>
+                <td>
+                  Materiales graduados, fichas de repaso,
+                  apoyos digitales, retroalimentación frecuente
+                  y enseñanza por pasos cortos.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Pensamiento concreto</td>
+                <td>
+                  Materiales manipulativos, dramatizaciones,
+                  objetos reales y experiencias vivenciales
+                  antes del pasaje a lo simbólico.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Limitaciones en la generalización</td>
+                <td>
+                  Actividades en distintos contextos, ejemplos
+                  cotidianos y proyectos relacionados con
+                  la vida diaria.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Dificultades en planificación y resolución de problemas</td>
+                <td>
+                  Guías visuales, plantillas de trabajo,
+                  agendas, modelado y rutinas predecibles.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Lenguaje expresivo y comprensivo reducido</td>
+                <td>
+                  Comunicación aumentativa y alternativa,
+                  tableros, pictogramas y aplicaciones como
+                  LetMeTalk o Cboard.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Motivación fluctuante o baja tolerancia a la frustración</td>
+                <td>
+                  Actividades lúdicas, metas breves,
+                  refuerzo positivo, gamificación e
+                  incorporación de intereses personales.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Necesidad de rutinas y previsibilidad</td>
+                <td>
+                  Horarios visuales, calendarios, anticipadores
+                  de actividad y señales de inicio y cierre.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Dificultades en autorregulación y funciones ejecutivas</td>
+                <td>
+                  Juegos para trabajar el control inhibitorio,
+                  apoyos visuales y herramientas como
+                  el semáforo emocional.
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>¿Cómo deben ser los materiales y cómo preparar el aula?</h3>
+
+        <p>
+          Los recursos didácticos pueden convertirse en herramientas
+          de inclusión cuando acompañan los modos de comprender
+          y participar de cada estudiante.
+        </p>
+
+        <ul>
+
+          <li>
+            <strong>Concretos y multisensoriales:</strong>
+            que permitan explorar mediante el tacto, la visión
+            y la audición.
+          </li>
+
+          <li>
+            <strong>Sencillos y claros:</strong>
+            con lenguaje directo, tipografía legible y buen contraste.
+          </li>
+
+          <li>
+            <strong>Manipulables y significativos:</strong>
+            conectados con experiencias cotidianas.
+          </li>
+
+          <li>
+            <strong>Flexibles:</strong>
+            que permitan diferentes formas de uso y respuesta.
+          </li>
+
+          <li>
+            <strong>Digitalmente accesibles:</strong>
+            con apoyos visuales, auditivos y navegación simple.
+          </li>
+
+        </ul>
+
+        <p>
+          El aula también es un recurso pedagógico. Su organización
+          puede eliminar o crear barreras. Las agendas pictográficas,
+          la señalización de los espacios y las rutinas estables
+          ayudan a comprender el entorno y anticipar las actividades.
+        </p>
+
+        <div class="unit3-note">
+
+          <strong>Para tener en cuenta:</strong>
+          un material accesible no es un material infantil.
+          Es un recurso legible, comprensible, significativo
+          y respetuoso de las posibilidades de cada persona.
+
+        </div>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>¿Qué actividades pueden favorecer la participación?</h3>
+
+        <p>
+          Las propuestas más potentes son aquellas que parten
+          de la vida cotidiana y promueven la autonomía.
+        </p>
+
+        <ul>
+
+          <li>
+            Cocinar, preparar una receta o realizar actividades
+            vinculadas con la alimentación.
+          </li>
+
+          <li>
+            Cuidar una planta, organizar una huerta o participar
+            en proyectos comunitarios.
+          </li>
+
+          <li>
+            Utilizar dinero, comprar productos o resolver
+            situaciones cotidianas.
+          </li>
+
+          <li>
+            Escribir mensajes, organizar tareas y utilizar
+            agendas visuales.
+          </li>
+
+          <li>
+            Participar en dramatizaciones, juegos cooperativos
+            y experiencias concretas.
+          </li>
+
+          <li>
+            Vincular los contenidos escolares con actividades
+            laborales y comunitarias.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Clase escrita: discapacidad intelectual y recursos didácticos accesibles</h3>
+
+        <p>
+          En este material se desarrollan las características
+          cognitivas, los apoyos posibles, los recursos didácticos
+          y las decisiones que pueden favorecer el aprendizaje
+          y la autonomía.
+        </p>
+
+        <a
+          class="unit3-button"
+          href="https://drive.google.com/file/d/1XDBxkeKCiwNGtnhYtCMr7scoG3TKnmem/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          LEER CLASE ESCRITA →
+
+        </a>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Para mirar: ¿Qué es la discapacidad intelectual?</h3>
+
+        <p>
+          Este video fue elaborado por Plena Inclusión
+          junto con personas con discapacidad intelectual.
+          Nos invita a acercarnos al tema desde sus propias voces
+          y experiencias.
+        </p>
+
+        <div class="unit3-video">
+
+          <iframe
+            src="https://www.youtube.com/embed/WZj97uGQ37I"
+            title="¿Qué es la discapacidad intelectual? · Plena Inclusión"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Bibliografía 1: incorporación de TIC para personas con discapacidad intelectual</h3>
+
+        <p>
+          Material para ampliar la reflexión sobre la incorporación
+          de tecnologías y recursos digitales en propuestas
+          educativas destinadas a personas con discapacidad intelectual.
+        </p>
+
+        <a
+          class="unit3-button"
+          href="https://drive.google.com/file/d/1RoVAjVsV2IUsZIlK7P1Tt1YwqRGQ2_qF/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          CONSULTAR BIBLIOGRAFÍA →
+
+        </a>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Bibliografía 2: eliminando barreras para estudiantes con discapacidad intelectual</h3>
+
+        <p>
+          Documento para profundizar en la identificación de
+          barreras y en la construcción de propuestas educativas
+          más accesibles.
+        </p>
+
+        <a
+          class="unit3-button"
+          href="https://drive.google.com/file/d/1muU_ImM6BRWYti9GiA8Ekmk0FKi8DYuK/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          CONSULTAR BIBLIOGRAFÍA →
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       05 · TES Y TEA
+       ===================================================== -->
+
+  <section class="class-section s-slides" id="tes-tea">
+
+    <div class="section-title">
+
+      <div class="section-icon">05</div>
+
+      <div>
+        <h2>TES y TEA</h2>
+        <p>Comunicación, interacción, anticipación y participación</p>
+      </div>
+
+    </div>
+
+
+    <div class="section-body">
+
+
+      <div class="unit3-card">
+
+        <h3>Reconocer distintas formas de percibir y vincularse</h3>
+
+        <p>
+          En este eje vamos a acercarnos al Trastorno del Espectro
+          Autista (TEA), los Trastornos Emocionales Severos (TES)
+          y los recursos didácticos que pueden favorecer
+          la comunicación, la interacción y el aprendizaje.
+        </p>
+
+        <p>
+          El material de lectura propone pensar el TEA desde
+          el paradigma de la neurodiversidad. Esto implica
+          reconocer que existen distintas maneras de procesar
+          la información, comunicar y vincularse.
+        </p>
+
+        <p>
+          Cada persona dentro del espectro es única.
+          Por eso, es importante respetar sus fortalezas,
+          intereses, ritmos y formas de comunicación.
+        </p>
+
+        <div class="unit3-quote">
+
+          El desafío no es corregir las formas de ser o de
+          comunicarse de una persona, sino revisar los entornos,
+          los tiempos y los recursos para favorecer la comprensión
+          y la participación.
+
+        </div>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Características y apoyos posibles en TEA</h3>
+
+        <p>
+          Las personas con TEA pueden presentar combinaciones
+          muy diversas de características. Algunas de ellas
+          se relacionan con la comunicación social, la flexibilidad,
+          los intereses y el procesamiento sensorial.
+        </p>
+
+
+        <div class="unit3-table-wrap">
+
+          <table class="unit3-table">
+
+            <thead>
+              <tr>
+                <th>Características o desafíos</th>
+                <th>Recursos, apoyos y estrategias posibles</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <td>Dificultades en la comunicación verbal</td>
+                <td>
+                  Comunicación aumentativa y alternativa:
+                  pictogramas, tableros, aplicaciones de comunicación,
+                  apoyos gestuales y visuales.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Lenguaje literal y dificultades para comprender metáforas o bromas</td>
+                <td>
+                  Lenguaje claro, directo y concreto.
+                  Acompañar expresiones con imágenes o ejemplos reales.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Necesidad de estructura y previsibilidad</td>
+                <td>
+                  Agendas visuales, calendarios, rutinas estables,
+                  anticipadores y secuencias paso a paso.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Dificultades para la flexibilidad cognitiva</td>
+                <td>
+                  Anticipar los cambios, utilizar apoyos visuales
+                  y ofrecer referencias como “ahora-después”.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Intereses restringidos o focalizados</td>
+                <td>
+                  Integrar los intereses personales en las
+                  actividades y los contenidos curriculares.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Hipersensibilidad sensorial</td>
+                <td>
+                  Cuidar los estímulos, evitar ruidos fuertes
+                  o luces parpadeantes y ofrecer espacios tranquilos.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Dificultades para la interacción social y el juego compartido</td>
+                <td>
+                  Juegos cooperativos guiados, actividades por turnos
+                  y acompañamiento del adulto como mediador.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Preferencia por lo visual y concreto</td>
+                <td>
+                  Imágenes, secuencias, videos, apoyos manipulativos,
+                  dramatizaciones y experiencias estructuradas.
+                </td>
+              </tr>
+
+              <tr>
+                <td>Ansiedad ante situaciones imprevisibles</td>
+                <td>
+                  Espacios de calma, anticipación de actividades
+                  y apoyos para la autorregulación.
+                </td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>¿Cómo organizar el entorno y los materiales?</h3>
+
+        <p>
+          Los materiales y los espacios educativos pueden
+          favorecer la comprensión cuando son claros,
+          organizados y previsibles.
+        </p>
+
+        <ul>
+
+          <li>
+            Utilizar imágenes, esquemas, pictogramas y secuencias.
+          </li>
+
+          <li>
+            Presentar consignas claras, directas y concretas.
+          </li>
+
+          <li>
+            Anticipar cambios de actividad, de espacio o de docente.
+          </li>
+
+          <li>
+            Organizar los tiempos y las tareas de manera previsible.
+          </li>
+
+          <li>
+            Contemplar las particularidades sensoriales y ofrecer
+            pausas cuando sean necesarias.
+          </li>
+
+          <li>
+            Incorporar herramientas de comunicación aumentativa
+            y alternativa cuando corresponda.
+          </li>
+
+          <li>
+            Diseñar interfaces digitales simples, con navegación
+            clara y retroalimentación comprensible.
+          </li>
+
+        </ul>
+
+        <div class="unit3-note">
+
+          <strong>Una idea para recuperar:</strong>
+          un pictograma, una rutina visual o un tiempo de pausa
+          no son privilegios. Pueden ser condiciones necesarias
+          para comprender el entorno, comunicarse y participar.
+
+        </div>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Actividades que habilitan la participación</h3>
+
+        <ul>
+
+          <li>
+            Juegos con secuencias y turnos, utilizando pictogramas
+            o cartas visuales.
+          </li>
+
+          <li>
+            Proyectos que integren los intereses personales
+            de cada estudiante.
+          </li>
+
+          <li>
+            Historias sociales para trabajar emociones,
+            reglas o situaciones cotidianas.
+          </li>
+
+          <li>
+            Actividades sensoriales guiadas, con texturas,
+            música o materiales para explorar.
+          </li>
+
+          <li>
+            Uso de tablets y aplicaciones de comunicación
+            o aprendizaje estructurado.
+          </li>
+
+          <li>
+            Producciones visuales y audiovisuales, como
+            fotografías, videos, collages y maquetas.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Clase escrita: TES y TEA. Recursos didácticos accesibles</h3>
+
+        <p>
+          Este material aborda el Trastorno del Espectro Autista,
+          los Trastornos Emocionales Severos y los recursos
+          didácticos que favorecen la comunicación, la interacción
+          y el aprendizaje.
+        </p>
+
+        <a
+          class="unit3-button"
+          href="https://drive.google.com/file/d/1P0hUzFGt8WQ-FsnzYiCQiXibOCEVQVuE/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          LEER CLASE ESCRITA →
+
+        </a>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Bibliografía: eliminando barreras para la inclusión de estudiantes con TEA</h3>
+
+        <p>
+          Material de consulta para profundizar en la identificación
+          de barreras y en las condiciones que pueden favorecer
+          la participación de estudiantes con TEA.
+        </p>
+
+        <a
+          class="unit3-button"
+          href="https://drive.google.com/file/d/1muGvLlZ-n3y4WGMxHRhlvm3pf8HunO0A/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          CONSULTAR BIBLIOGRAFÍA →
+
+        </a>
+
+      </div>
+
+      <div class="unit3-note">
+
+        <strong>Para tener presente:</strong>
+        el material de lectura aborda TEA y TES. Las características
+        y los apoyos no deben generalizarse a todas las personas.
+        Es necesario conocer cada trayectoria y pensar los recursos
+        de acuerdo con sus necesidades, preferencias y contexto.
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       06 · DISEÑO UNIVERSAL PARA EL APRENDIZAJE
+       ===================================================== -->
+
+  <section class="class-section s-resource" id="dua">
+
+    <div class="section-title">
+
+      <div class="section-icon">06</div>
+
+      <div>
+        <h2>Diseño Universal para el Aprendizaje</h2>
+        <p>Diseñar la accesibilidad desde el comienzo</p>
+      </div>
+
+    </div>
+
+
+    <div class="section-body">
+
+
+      <div class="unit3-card">
+
+        <h3>¿Qué es el DUA?</h3>
+
+        <p>
+          El Diseño Universal para el Aprendizaje (DUA) es
+          una mirada pedagógica que reconoce que no existe
+          una única forma válida de aprender ni una única
+          forma válida de enseñar.
+        </p>
+
+        <p>
+          Nos invita a dejar de pensar la accesibilidad como
+          una modificación que se realiza después, cuando
+          aparece una dificultad.
+        </p>
+
+        <p>
+          En cambio, propone diseñar desde el inicio entornos
+          de aprendizaje accesibles, flexibles y significativos,
+          contemplando la diversidad de quienes participan.
+        </p>
+
+        <div class="unit3-quote">
+
+          Una pedagogía del “para todos desde el principio”,
+          y no del “para algunos cuando ya es tarde”.
+
+        </div>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Los tres principios del DUA</h3>
+
+        <p>
+          El DUA propone ofrecer distintas alternativas para
+          acceder a la información, expresar lo aprendido
+          y participar en las experiencias educativas.
+        </p>
+
+
+        <div class="unit3-grid">
+
+          <div class="unit3-topic">
+
+            <h3>01 · Múltiples medios de representación</h3>
+
+            <p>
+              El qué del aprendizaje.
+            </p>
+
+            <p>
+              La información puede presentarse de diferentes
+              maneras: texto, audio, imágenes, videos, gráficos,
+              dramatizaciones y materiales manipulativos.
+            </p>
+
+            <p>
+              Cuantas más formas de representar la información
+              ofrecemos, más oportunidades de comprensión
+              habilitamos.
+            </p>
+
+          </div>
+
+
+          <div class="unit3-topic">
+
+            <h3>02 · Múltiples medios de expresión</h3>
+
+            <p>
+              El cómo del aprendizaje.
+            </p>
+
+            <p>
+              No todas las personas expresan lo que saben
+              de la misma manera. Algunas pueden escribir,
+              otras dibujar, hablar, actuar, grabar un audio
+              o construir una producción.
+            </p>
+
+            <p>
+              La propuesta es ofrecer distintas maneras
+              de demostrar lo aprendido.
+            </p>
+
+          </div>
+
+
+          <div class="unit3-topic">
+
+            <h3>03 · Múltiples medios de participación</h3>
+
+            <p>
+              El por qué del aprendizaje.
+            </p>
+
+            <p>
+              Las personas tienen diferentes intereses,
+              motivaciones, ritmos y formas de involucrarse.
+            </p>
+
+            <p>
+              El desafío es generar ambientes activos,
+              cooperativos y con opciones reales de participación.
+            </p>
+
+          </div>
+
+
+          <div class="unit3-topic">
+
+            <h3>Diseñar para la diversidad</h3>
+
+            <p>
+              El DUA permite anticipar diferentes necesidades
+              y ofrecer opciones desde la planificación.
+            </p>
+
+            <p>
+              No significa hacer una actividad diferente
+              para cada persona, sino ampliar las oportunidades
+              de acceso, expresión y participación.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>DUA y discapacidad: pensar la diversidad desde el diseño</h3>
+
+        <p>
+          El diseño universal permite revisar nuestras propuestas
+          y anticipar alternativas para distintas formas de acceder,
+          comprender y participar.
+        </p>
+
+        <ul>
+
+          <li>
+            <strong>Discapacidad visual:</strong>
+            materiales digitales accesibles, lectores de pantalla,
+            descripciones orales y contrastes adecuados.
+          </li>
+
+          <li>
+            <strong>Discapacidad auditiva:</strong>
+            subtítulos, apoyos visuales, interpretación en LSA
+            y escritura clara.
+          </li>
+
+          <li>
+            <strong>Discapacidad neuromotora:</strong>
+            actividades que no dependan exclusivamente de escribir
+            a mano o desplazarse.
+          </li>
+
+          <li>
+            <strong>Discapacidad intelectual:</strong>
+            consignas claras, apoyos visuales, repetición con sentido
+            y distintas formas de respuesta.
+          </li>
+
+          <li>
+            <strong>Discapacidad psicosocial o emocional:</strong>
+            espacios predecibles, tiempos flexibles, actividades
+            con sentido personal y acompañamiento.
+          </li>
+
+        </ul>
+
+        <div class="unit3-note">
+
+          <strong>Una idea central del DUA:</strong>
+          el diseño se adapta a la persona, no la persona al diseño.
+
+        </div>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Lectura fácil: accesibilidad comunicacional</h3>
+
+        <p>
+          La lectura fácil es una forma de hacer más accesible
+          la información escrita, tanto en formatos digitales
+          como impresos.
+        </p>
+
+        <p>
+          Utiliza un lenguaje claro, directo y sencillo.
+          También puede incorporar imágenes, dibujos,
+          pictogramas, audios y videos para acompañar
+          la comprensión.
+        </p>
+
+        <p>Algunas pautas para elaborar materiales:</p>
+
+        <ul>
+
+          <li>
+            Organizar la información de manera clara.
+          </li>
+
+          <li>
+            Utilizar frases cortas.
+          </li>
+
+          <li>
+            Expresar una idea por frase.
+          </li>
+
+          <li>
+            Utilizar lenguaje simple y directo.
+          </li>
+
+          <li>
+            Evitar información confusa o ambigua.
+          </li>
+
+          <li>
+            Mantener un orden coherente.
+          </li>
+
+          <li>
+            Incorporar imágenes o pictogramas que apoyen
+            el texto sin sumar distractores.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Comunicación aumentativa y alternativa (CAA)</h3>
+
+        <p>
+          La CAA reúne herramientas, estrategias y sistemas
+          que permiten ampliar o reemplazar el habla cuando
+          una persona encuentra dificultades para comunicarse
+          mediante el lenguaje oral.
+        </p>
+
+        <div class="unit3-grid">
+
+          <div class="unit3-topic">
+
+            <h3>Comunicación aumentativa</h3>
+
+            <p>
+              Complementa la comunicación oral cuando la persona
+              puede hablar, pero necesita otros recursos para
+              ampliar su vocabulario o expresarse con mayor claridad.
+            </p>
+
+            <p>
+              Puede incorporar símbolos, gestos, imágenes
+              o dispositivos tecnológicos.
+            </p>
+
+          </div>
+
+
+          <div class="unit3-topic">
+
+            <h3>Comunicación alternativa</h3>
+
+            <p>
+              Ofrece otros sistemas de comunicación cuando
+              el habla no está disponible o no resulta suficiente
+              para expresar pensamientos, deseos y necesidades.
+            </p>
+
+            <p>
+              Puede utilizar tableros, pictogramas o dispositivos
+              electrónicos que generan voz.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <h3 style="margin-top:25px;">
+          ¿Cómo se organizan los sistemas de CAA?
+        </h3>
+
+        <ul>
+
+          <li>
+            <strong>Sistemas sin ayuda:</strong>
+            incluyen gestos, lenguaje corporal y lengua de señas.
+          </li>
+
+          <li>
+            <strong>Sistemas con ayuda:</strong>
+            utilizan herramientas como tableros de símbolos,
+            aplicaciones móviles y comunicadores electrónicos.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Clase escrita: Diseño Universal para el Aprendizaje</h3>
+
+        <p>
+          Este material desarrolla los principios del DUA,
+          sus fundamentos, la lectura fácil y la comunicación
+          aumentativa y alternativa.
+        </p>
+
+        <a
+          class="unit3-button"
+          href="https://drive.google.com/file/d/1JS-T9BJ7iBMEQRie2HJhw3g_8p4RZxOe/view?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          LEER CLASE ESCRITA →
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       07 · MATERIALES
+       ===================================================== -->
+
+  <section class="class-section s-biblio" id="materiales">
+
+    <div class="section-title">
+
+      <div class="section-icon">07</div>
+
+      <div>
+        <h2>Materiales de consulta</h2>
+        <p>Todos los recursos de esta clase reunidos en un solo lugar</p>
+      </div>
+
+    </div>
+
+
+    <div class="section-body">
+
+      <div class="unit3-card">
+
+        <h3>Discapacidad neuromotora</h3>
+
+        <div class="unit3-resource">
+          <div class="unit3-resource-content">
+            <h3>Clase escrita</h3>
+            <p>
+              Discapacidad neuromotora y recursos didácticos accesibles.
+            </p>
+          </div>
+
+          <a
+            class="unit3-button"
+            href="https://drive.google.com/file/d/1iPAjRS3FHJKIoU7wolCc6vDHUkrhk86v/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            ABRIR →
+          </a>
+        </div>
+
+        <div class="unit3-resource">
+          <div class="unit3-resource-content">
+            <h3>Instagram · Mundo con Rueditas</h3>
+            <p>
+              Contenido sin frenos: humor, CAA, política y
+              temas que invitan a revisar nuestras miradas.
+            </p>
+          </div>
+
+          <a
+            class="unit3-button"
+            href="https://www.instagram.com/mudoconrueditas/"
+            target="_blank"
+            rel="noopener noreferrer">
+            VISITAR →
+          </a>
+        </div>
+
+        <div class="unit3-resource">
+          <div class="unit3-resource-content">
+            <h3>Bibliografía</h3>
+            <p>
+              Material bibliográfico sobre discapacidad neuromotora.
+            </p>
+          </div>
+
+          <a
+            class="unit3-button"
+            href="https://drive.google.com/file/d/1Xv96RtZVuydTrt_L8tu3NT6Sfb7p7jWA/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
+            ABRIR →
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Discapacidad intelectual</h3>
+
+        <div class="unit3-resource">
+          <div class="unit3-resource-content">
+            <h3>Clase escrita</h3>
+            <p>
+              Discapacidad intelectual y recursos didácticos accesibles.
+            </p>
+          </div>
+
+          <a
+            class="unit3-button"
+            href="https://drive.google.com/file/d/1XDBxkeKCiwNGtnhYtCMr7scoG3TKnmem/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            ABRIR →
+          </a>
+        </div>
+
+        <div class="unit3-resource">
+          <div class="unit3-resource-content">
+            <h3>Video: ¿Qué es la discapacidad intelectual?</h3>
+            <p>
+              Material elaborado por Plena Inclusión y personas
+              con discapacidad intelectual.
+            </p>
+          </div>
+
+          <a
+            class="unit3-button"
+            href="https://www.youtube.com/watch?v=WZj97uGQ37I"
+            target="_blank"
+            rel="noopener noreferrer">
+            VER VIDEO →
+          </a>
+        </div>
+
+        <div class="unit3-resource">
+          <div class="unit3-resource-content">
+            <h3>Bibliografía 1 · Incorporación de TIC para DI</h3>
+            <p>
+              Material de consulta sobre tecnologías y discapacidad intelectual.
+            </p>
+          </div>
+
+          <a
+            class="unit3-button"
+            href="https://drive.google.com/file/d/1RoVAjVsV2IUsZIlK7P1Tt1YwqRGQ2_qF/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            ABRIR →
+          </a>
+        </div>
+
+        <div class="unit3-resource">
+          <div class="unit3-resource-content">
+            <h3>Bibliografía 2 · Eliminando barreras para estudiantes con DI</h3>
+            <p>
+              Material para profundizar en accesibilidad y participación.
+            </p>
+          </div>
+
+          <a
+            class="unit3-button"
+            href="https://drive.google.com/file/d/1muU_ImM6BRWYti9GiA8Ekmk0FKi8DYuK/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            ABRIR →
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>TES y TEA</h3>
+
+        <div class="unit3-resource">
+          <div class="unit3-resource-content">
+            <h3>Clase escrita</h3>
+            <p>
+              TES, TEA y recursos didácticos accesibles.
+            </p>
+          </div>
+
+          <a
+            class="unit3-button"
+            href="https://drive.google.com/file/d/1P0hUzFGt8WQ-FsnzYiCQiXibOCEVQVuE/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            ABRIR →
+          </a>
+        </div>
+
+        <div class="unit3-resource">
+          <div class="unit3-resource-content">
+            <h3>Bibliografía · Eliminando barreras para la inclusión de estudiantes con TEA</h3>
+            <p>
+              Material complementario para ampliar los contenidos.
+            </p>
+          </div>
+
+          <a
+            class="unit3-button"
+            href="https://drive.google.com/file/d/1muGvLlZ-n3y4WGMxHRhlvm3pf8HunO0A/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            ABRIR →
+          </a>
+        </div>
+
+      </div>
+
+
+      <div class="unit3-card">
+
+        <h3>Diseño Universal para el Aprendizaje</h3>
+
+        <div class="unit3-resource">
+          <div class="unit3-resource-content">
+            <h3>Clase escrita · DUA</h3>
+            <p>
+              Diseño Universal para el Aprendizaje, lectura fácil
+              y comunicación aumentativa y alternativa.
+            </p>
+          </div>
+
+          <a
+            class="unit3-button"
+            href="https://drive.google.com/file/d/1JS-T9BJ7iBMEQRie2HJhw3g_8p4RZxOe/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer">
+            ABRIR →
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       08 · PARA REFLEXIONAR
+       ===================================================== -->
+
+  <section class="class-section s-resource" id="reflexion">
+
+    <div class="section-title">
+
+      <div class="section-icon">08</div>
+
+      <div>
+        <h2>Para reflexionar</h2>
+        <p>Volver sobre nuestras decisiones docentes</p>
+      </div>
+
+    </div>
+
+
+    <div class="section-body">
+
+      <div class="unit3-card">
+
+        <h3>Una propuesta para mirar nuestras prácticas</h3>
+
+        <p>
+          Te propongo recuperar una actividad que hayas planificado,
+          realizado u observado en una institución educativa.
+        </p>
+
+        <p>
+          Pensá en los materiales que se utilizaron, las consignas,
+          los tiempos y las formas en que se esperaba que participaran
+          los y las estudiantes.
+        </p>
+
+        <p>Después, detenete en estas preguntas:</p>
+
+        <ul>
+
+          <li>
+            ¿La actividad depende de una única manera de escribir,
+            hablar, moverse o manipular materiales?
+          </li>
+
+          <li>
+            ¿Qué apoyos podrían facilitar la comprensión
+            de las consignas?
+          </li>
+
+          <li>
+            ¿Qué alternativas podrían ofrecerse para expresar
+            lo aprendido?
+          </li>
+
+          <li>
+            ¿Qué barreras aparecen en el espacio, los tiempos
+            o los materiales?
+          </li>
+
+          <li>
+            ¿Cómo podríamos anticipar algunas necesidades
+            desde el momento de planificar?
+          </li>
+
+          <li>
+            ¿Qué principios del DUA podrían ayudarnos
+            a transformar esa propuesta?
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="unit3-final">
+
+        <h3>Para cerrar este encuentro</h3>
+
+        <p>
+          A lo largo de esta clase recorrimos diferentes
+          características, necesidades y formas de participación.
+          También conocimos recursos que pueden ampliar las
+          posibilidades de aprender, comunicar y crear.
+        </p>
+
+        <p>
+          Un teclado adaptado, un pulsador, una secuencia visual,
+          un tablero de comunicación, un material concreto
+          o una propuesta con diferentes formas de expresión
+          pueden transformar una experiencia educativa.
+        </p>
+
+        <p>
+          Pero ningún recurso tiene sentido por sí solo.
+          Su valor depende de las decisiones pedagógicas que
+          tomamos, del contexto en el que se utiliza y de las
+          oportunidades que habilita para cada estudiante.
+        </p>
+
+        <p>
+          La accesibilidad no es una tarea que se agrega al final.
+          Es una forma de pensar la enseñanza desde el comienzo.
+        </p>
+
+        <p>
+          <strong>
+            Sigamos construyendo propuestas en las que todas
+            las personas puedan encontrar una forma de participar,
+            aprender y expresarse.
+          </strong>
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       NAVEGACIÓN FINAL
+       ===================================================== -->
+
+  <div class="class-footer-nav">
+    <a href="../index.html">← HOJA DE RUTA</a>
+  </div>
+
+</main>
+
+
+<!-- =====================================================
+     PIE
+     ===================================================== -->
+
+<footer>
+
+  <div>Aprender · crear · transformar</div>
+
+  <small>
+    Recursos y Medios Didácticos · Instituto Miguel Raspanti
+  </small>
+
+</footer>
+
+
+<!-- =====================================================
+     ALTURA PARA MOODLE
+     ===================================================== -->
+
+<script>
+
+  function enviarAlturaAMoodle() {
+
+    const altura = Math.max(
+      document.body.scrollHeight,
+      document.documentElement.scrollHeight
+    );
+
+    window.parent.postMessage(
+      {
+        type: "recursos-medios-height",
+        height: altura
+      },
+      "https://campus.raspanti.website"
+    );
+
+  }
+
+  window.addEventListener("load", enviarAlturaAMoodle);
+
+  window.addEventListener("resize", enviarAlturaAMoodle);
+
+  if (typeof ResizeObserver !== "undefined") {
+
+    const observer = new ResizeObserver(function() {
+      enviarAlturaAMoodle();
+    });
+
+    observer.observe(document.body);
+
+  }
+
+  setTimeout(enviarAlturaAMoodle, 300);
+  setTimeout(enviarAlturaAMoodle, 1000);
+  setTimeout(enviarAlturaAMoodle, 2000);
+
+</script>
+
+</body>
+</html>
